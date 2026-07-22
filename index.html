@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>BLACK WHALE COMMAND</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">♜</div>
+        <p>BLACK WHALE</p>
+        <strong>COMMAND</strong>
+      </div>
+
+      <nav class="global-nav" aria-label="メインメニュー">
+        <button class="nav-button active" data-view="forces" type="button">
+          <span class="nav-icon">♜</span><span><strong>勢力</strong><small>FORCES</small></span>
+        </button>
+        <button class="nav-button" data-view="people" type="button">
+          <span class="nav-icon">●</span><span><strong>人物</strong><small>PERSONNEL</small></span>
+        </button>
+        <button class="nav-button" data-view="network" type="button">
+          <span class="nav-icon">◇</span><span><strong>相関</strong><small>NETWORK</small></span>
+        </button>
+        <button class="nav-button" data-view="timeline" type="button">
+          <span class="nav-icon">◷</span><span><strong>時系列</strong><small>LOG</small></span>
+        </button>
+      </nav>
+
+      <section class="spoiler-control" aria-labelledby="spoilerTitle">
+        <p id="spoilerTitle">SPOILER CONTROL</p>
+        <button id="safeModeButton" class="spoiler-button active" type="button">◉ SAFE MODE</button>
+        <button id="latestModeButton" class="spoiler-button" type="button">◌ LATEST</button>
+        <div class="classified-label">▣ CLASSIFIED<br><small>LEVEL 7 / BLACK</small></div>
+      </section>
+    </aside>
+
+    <main class="main-area">
+      <header class="mobile-header">
+        <button id="menuButton" class="icon-button" type="button" aria-label="メニューを開く">☰</button>
+        <span>BLACK WHALE COMMAND</span>
+        <span id="mobileMode">SAFE</span>
+      </header>
+
+      <section class="page-heading">
+        <div>
+          <div class="heading-line">
+            <h1 id="pageTitle">勢力</h1>
+            <span id="pageEnglish">FORCES DATABASE</span>
+          </div>
+          <p id="pageDescription">王子陣営・マフィアの構成と戦力を確認</p>
+        </div>
+        <div class="system-status"><i></i> SYSTEM ONLINE</div>
+      </section>
+
+      <section id="toolbar" class="toolbar">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="勢力名・代表者名で検索" autocomplete="off">
+        </label>
+
+        <div class="toolbar-row">
+          <div id="groupTabs" class="segmented" aria-label="グループ種別">
+            <button class="active" data-group="すべて" type="button">すべて</button>
+            <button data-group="王子陣営" type="button">王子陣営</button>
+            <button data-group="マフィア" type="button">マフィア</button>
+          </div>
+          <button id="filterButton" class="outline-button" type="button">▽ 絞り込み</button>
+        </div>
+
+        <div id="filterPanel" class="filter-panel" hidden>
+          <label>所属勢力<select id="forceFilter"><option value="">すべて</option></select></label>
+          <label>カテゴリー<select id="categoryFilter"><option value="">すべて</option></select></label>
+          <button id="clearFilters" class="text-button" type="button">条件をクリア</button>
+        </div>
+      </section>
+
+      <section id="viewContent" class="view-content" aria-live="polite"></section>
+    </main>
+
+    <nav class="mobile-nav" aria-label="スマートフォンメニュー">
+      <button class="active" data-view="forces" type="button"><span>♜</span>勢力</button>
+      <button data-view="people" type="button"><span>●</span>人物</button>
+      <button data-view="network" type="button"><span>◇</span>相関</button>
+      <button data-view="timeline" type="button"><span>◷</span>時系列</button>
+    </nav>
+  </div>
+
+  <script src="characters.js"></script>
+  <script src="timelineEvents.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
