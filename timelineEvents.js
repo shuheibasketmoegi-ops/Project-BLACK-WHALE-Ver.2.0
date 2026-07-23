@@ -21,7 +21,7 @@ const timelineEvents = [
   {
     id: "event-0001",
     title: "ブラック・ホエール号出航",
-    summary: "ブラック・ホエール号が新大陸へ向けて出航する。",
+    summary: "ブラック・ホエール号出航",
     detail: "",
     episode: { number: 359, order: 1 },
     voyage: {
@@ -35,8 +35,8 @@ const timelineEvents = [
     },
     location: {
       tier: null,
-      place: "ブラック・ホエール号",
-      certainty: "confirmed"
+      place: "",
+      certainty: "unknown"
     },
     primaryType: "王室",
     tags: ["出航", "ブラック・ホエール号"],
@@ -48,26 +48,54 @@ const timelineEvents = [
   },
   {
     id: "event-0002",
-    title: "王子たちの念獣発現",
-    summary: "壺中卵の儀によって、王子たちの守護霊獣が発現する。",
+    title: "ウッディ死亡",
+    summary: "ウッディ死亡",
     detail: "",
-    episode: { number: 361, order: 1 },
+    episode: { number: 359, order: 2 },
     voyage: {
       day: 1,
       dayCertainty: "confirmed",
-      time: "14:00",
-      timeLabel: "14:00",
+      time: null,
+      timeLabel: "未明（昼）",
       orderInDay: 2,
       orderCertainty: "confirmed",
-      chronologyNote: ""
+      chronologyNote: "正確な時刻は不明。提示順に基づき配置"
     },
     location: {
-      tier: "第1層",
-      place: "王子居住区",
+      tier: null,
+      place: "1014号室",
+      certainty: "confirmed"
+    },
+    primaryType: "死亡・離脱",
+    tags: ["死亡", "1014号室"],
+    relatedPersonIds: ["011"],
+    relatedForces: ["第14王子陣営"],
+    occurrenceCertainty: "confirmed",
+    spoiler: { visibleFromEpisode: 359, hideInSafeMode: true },
+    displayOrder: 2
+  },
+  {
+    id: "event-0003",
+    title: "王子たちの守護霊獣が発現",
+    summary: "王子たちの守護霊獣が発現",
+    detail: "",
+    episode: { number: 360, order: 1 },
+    voyage: {
+      day: 1,
+      dayCertainty: "confirmed",
+      time: null,
+      timeLabel: "未明（昼）",
+      orderInDay: 3,
+      orderCertainty: "confirmed",
+      chronologyNote: "正確な時刻は不明。提示順に基づき配置"
+    },
+    location: {
+      tier: null,
+      place: "1014号室",
       certainty: "confirmed"
     },
     primaryType: "念能力",
-    tags: ["王子", "守護霊獣", "壺中卵の儀"],
+    tags: ["王子", "守護霊獣", "1014号室"],
     relatedPersonIds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
     relatedForces: [
       "第1王子陣営", "第2王子陣営", "第3王子陣営", "第4王子陣営",
@@ -76,91 +104,63 @@ const timelineEvents = [
       "第13王子陣営", "第14王子陣営"
     ],
     occurrenceCertainty: "confirmed",
-    spoiler: { visibleFromEpisode: 361, hideInSafeMode: true },
-    displayOrder: 2
-  },
-  {
-    id: "event-0003",
-    title: "クラピカとチョウライが面会",
-    summary: "クラピカが第3王子チョウライと面会する。",
-    detail: "",
-    episode: { number: 366, order: 1 },
-    voyage: {
-      day: 1,
-      dayCertainty: "confirmed",
-      time: "16:00",
-      timeLabel: "16:00",
-      orderInDay: 3,
-      orderCertainty: "confirmed",
-      chronologyNote: ""
-    },
-    location: {
-      tier: "第1層",
-      place: "第3王子居住区",
-      certainty: "confirmed"
-    },
-    primaryType: "交渉",
-    tags: ["面会", "王子陣営"],
-    relatedPersonIds: [1401, 3],
-    relatedForces: ["第14王子陣営", "第3王子陣営"],
-    occurrenceCertainty: "confirmed",
-    spoiler: { visibleFromEpisode: 366, hideInSafeMode: true },
+    spoiler: { visibleFromEpisode: 360, hideInSafeMode: false },
     displayOrder: 3
   },
   {
     id: "event-0004",
-    title: "モモゼ暗殺",
-    summary: "第12王子モモゼが居住区内で暗殺される。",
+    title: "1014号室の警護が2人になる",
+    summary: "1014号室の警護が2人になる",
     detail: "",
-    episode: { number: 368, order: 1 },
+    episode: { number: 361, order: 1 },
     voyage: {
       day: 1,
       dayCertainty: "confirmed",
-      time: null,
-      timeLabel: "未明（夜）",
+      time: "14:00",
+      timeLabel: "14:00",
       orderInDay: 4,
-      orderCertainty: "estimated",
-      chronologyNote: "正確な時刻は不明。1日目の夜に発生した出来事として配置"
-    },
-    location: {
-      tier: "第1層",
-      place: "第12王子居住区",
-      certainty: "confirmed"
-    },
-    primaryType: "死亡・離脱",
-    tags: ["暗殺", "王子", "死亡"],
-    relatedPersonIds: [12],
-    relatedForces: ["第12王子陣営"],
-    occurrenceCertainty: "confirmed",
-    spoiler: { visibleFromEpisode: 368, hideInSafeMode: true },
-    displayOrder: 4
-  },
-  {
-    id: "event-0005",
-    title: "第1回念能力講習会",
-    summary: "クラピカによる第1回念能力講習会が開始される。",
-    detail: "",
-    episode: { number: 369, order: 1 },
-    voyage: {
-      day: 2,
-      dayCertainty: "confirmed",
-      time: "09:00",
-      timeLabel: "9:00",
-      orderInDay: 1,
       orderCertainty: "confirmed",
       chronologyNote: ""
     },
     location: {
-      tier: "第1層",
-      place: "第14王子居住区",
+      tier: null,
+      place: "1014号室",
       certainty: "confirmed"
     },
-    primaryType: "念能力",
-    tags: ["念能力講習会", "ハンター", "王子陣営"],
-    relatedPersonIds: [1401],
-    relatedForces: ["第14王子陣営"],
+    primaryType: "監視・配置",
+    tags: ["警護", "1014号室"],
+    relatedPersonIds: [],
+    relatedForces: [],
     occurrenceCertainty: "confirmed",
-    spoiler: { visibleFromEpisode: 369, hideInSafeMode: true },
+    spoiler: { visibleFromEpisode: 361, hideInSafeMode: false },
+    displayOrder: 4
+  },
+  {
+    id: "event-0005",
+    title: "1014号室にビンセントが襲撃",
+    summary: "1014号室にビンセントが襲撃",
+    detail: "クラピカの絶対時間（エンペラータイム）開始。1秒につき1時間寿命が縮まる。",
+    episode: { number: 364, order: 1 },
+    voyage: {
+      day: 1,
+      dayCertainty: "confirmed",
+      time: null,
+      timeLabel: "未明（昼）",
+      orderInDay: 5,
+      orderCertainty: "confirmed",
+      chronologyNote: "正確な時刻は不明。提示順に基づき配置"
+    },
+    location: {
+      tier: null,
+      place: "1014号室",
+      certainty: "confirmed"
+    },
+    primaryType: "戦闘",
+    tags: ["襲撃", "絶対時間", "エンペラータイム", "1014号室"],
+    relatedPersonIds: [102, 1401],
+    relatedForces: ["第1王子陣営", "第14王子陣営"],
+    occurrenceCertainty: "confirmed",
+    spoiler: { visibleFromEpisode: 364, hideInSafeMode: false },
     displayOrder: 5
   }
 ];
