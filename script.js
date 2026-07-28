@@ -616,10 +616,10 @@ function sortTimelineEvents(events) {
     const aDay = a.voyage.day ?? 9999;
     const bDay = b.voyage.day ?? 9999;
     return (
+      (a.displayOrder ?? 9999) - (b.displayOrder ?? 9999) ||
       aDay - bDay ||
       (a.voyage.orderInDay ?? 9999) - (b.voyage.orderInDay ?? 9999) ||
-      a.episode.number - b.episode.number ||
-      a.displayOrder - b.displayOrder
+      a.episode.number - b.episode.number
     );
   });
   return app.timelineSort === "desc" ? sorted.reverse() : sorted;

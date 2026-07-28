@@ -365,5 +365,2050 @@ const timelineEvents = [
     occurrenceCertainty: "confirmed",
     spoiler: { visibleFromEpisode: 370, hideInSafeMode: true },
     displayOrder: 12
+  },
+
+  {
+    "id": "event-0013",
+    "title": "第１回念能力講習会再開",
+    "summary": "第１回念能力講習会再開",
+    "detail": "",
+    "episode": {
+      "number": 371,
+      "order": 1
+    },
+    "voyage": {
+      "day": 2,
+      "dayCertainty": "confirmed",
+      "time": "10:00",
+      "timeLabel": "10:00",
+      "orderInDay": 4,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1014号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "念能力講習会",
+      "再開",
+      "1014号室"
+    ],
+    "relatedPersonIds": [],
+    "relatedForces": [],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 371,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 13
+  },
+  {
+    "id": "event-0014",
+    "title": "第１回念能力講習会終了",
+    "summary": "第１回念能力講習会終了",
+    "detail": "",
+    "episode": {
+      "number": 372,
+      "order": 1
+    },
+    "voyage": {
+      "day": 2,
+      "dayCertainty": "confirmed",
+      "time": "12:00",
+      "timeLabel": "12:00",
+      "orderInDay": 5,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1014号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "念能力講習会",
+      "終了",
+      "1014号室"
+    ],
+    "relatedPersonIds": [],
+    "relatedForces": [],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 372,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 14
+  },
+  {
+    "id": "event-0015",
+    "title": "マラヤームの守護霊獣が能力を発動",
+    "summary": "マラヤームの守護霊獣が能力を発動",
+    "detail": "",
+    "episode": {
+      "number": 372,
+      "order": 2
+    },
+    "voyage": {
+      "day": 2,
+      "dayCertainty": "confirmed",
+      "time": null,
+      "timeLabel": "未明（昼）",
+      "orderInDay": 6,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": null,
+      "place": "1013号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "守護霊獣",
+      "能力発動",
+      "1013号室"
+    ],
+    "relatedPersonIds": [
+      13
+    ],
+    "relatedForces": [
+      "第13王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 372,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 15
+  },
+  {
+    "id": "event-0016",
+    "title": "カミーラvsムッセ",
+    "summary": "カミーラvsムッセ",
+    "detail": "ムッセ死亡。\"裏窓の鳥（シークレットウインドウ）\"発動。",
+    "episode": {
+      "number": 373,
+      "order": 1
+    },
+    "voyage": {
+      "day": 2,
+      "dayCertainty": "confirmed",
+      "time": null,
+      "timeLabel": "未明（夕）",
+      "orderInDay": 7,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": null,
+      "place": "1002号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "戦闘",
+    "tags": [
+      "戦闘",
+      "ムッセ死亡",
+      "裏窓の鳥",
+      "シークレットウインドウ",
+      "1002号室"
+    ],
+    "relatedPersonIds": [
+      2,
+      107
+    ],
+    "relatedForces": [
+      "第2王子陣営",
+      "第1王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 373,
+      "hideInSafeMode": true
+    },
+    "displayOrder": 16
+  },
+  {
+    "id": "event-0017",
+    "title": "フウゲツが守護霊獣の能力を発動",
+    "summary": "フウゲツが守護霊獣の能力を発動",
+    "detail": "\"魔法の抜け道\"（マジカルワーム）を発動",
+    "episode": {
+      "number": 374,
+      "order": 1
+    },
+    "voyage": {
+      "day": 3,
+      "dayCertainty": "confirmed",
+      "time": "01:30",
+      "timeLabel": "1:30",
+      "orderInDay": 1,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1011号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "守護霊獣",
+      "魔法の抜け道",
+      "マジカルワーム",
+      "1011号室"
+    ],
+    "relatedPersonIds": [
+      11
+    ],
+    "relatedForces": [
+      "第11王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 374,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 17
+  },
+  {
+    "id": "event-0018",
+    "title": "ハルケンブルグの守護霊獣による鳴動",
+    "summary": "ハルケンブルグの守護霊獣による鳴動",
+    "detail": "",
+    "episode": {
+      "number": 375,
+      "order": 1
+    },
+    "voyage": {
+      "day": 3,
+      "dayCertainty": "confirmed",
+      "time": null,
+      "timeLabel": "未明",
+      "orderInDay": 2,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": null,
+      "place": "1009号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "守護霊獣",
+      "鳴動",
+      "1009号室"
+    ],
+    "relatedPersonIds": [
+      9
+    ],
+    "relatedForces": [
+      "第9王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 375,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 18
+  },
+  {
+    "id": "event-0019",
+    "title": "\"11人いる！（サイレントマジョリティー）\"発動【②回目】",
+    "summary": "\"11人いる！（サイレントマジョリティー）\"発動【②回目】",
+    "detail": "ミュハン死亡",
+    "episode": {
+      "number": 376,
+      "order": 1
+    },
+    "voyage": {
+      "day": 3,
+      "dayCertainty": "confirmed",
+      "time": "10:05",
+      "timeLabel": "10:05",
+      "orderInDay": 3,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1014号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "11人いる！",
+      "サイレントマジョリティー",
+      "②回目",
+      "ミュハン死亡",
+      "1014号室"
+    ],
+    "relatedPersonIds": [
+      403
+    ],
+    "relatedForces": [
+      "第4王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 376,
+      "hideInSafeMode": true
+    },
+    "displayOrder": 19
+  },
+  {
+    "id": "event-0020",
+    "title": "ツェリードニヒが水見式で念系統が判明する",
+    "summary": "ツェリードニヒが水見式で念系統が判明する",
+    "detail": "",
+    "episode": {
+      "number": 376,
+      "order": 2
+    },
+    "voyage": {
+      "day": 4,
+      "dayCertainty": "confirmed",
+      "time": null,
+      "timeLabel": "未明",
+      "orderInDay": 1,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": null,
+      "place": "1004号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "水見式",
+      "念系統",
+      "1004号室"
+    ],
+    "relatedPersonIds": [
+      4
+    ],
+    "relatedForces": [
+      "第4王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 376,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 20
+  },
+  {
+    "id": "event-0021",
+    "title": "幻影旅団が集結する。",
+    "summary": "幻影旅団が集結する。",
+    "detail": "",
+    "episode": {
+      "number": 377,
+      "order": 1
+    },
+    "voyage": {
+      "day": 4,
+      "dayCertainty": "confirmed",
+      "time": null,
+      "timeLabel": "未明",
+      "orderInDay": 2,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": "第５層",
+      "place": "",
+      "certainty": "confirmed"
+    },
+    "primaryType": "その他",
+    "tags": [
+      "幻影旅団",
+      "集結",
+      "第５層"
+    ],
+    "relatedPersonIds": [],
+    "relatedForces": [],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 377,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 21
+  },
+  {
+    "id": "event-0022",
+    "title": "フウゲツが第３層に逃亡",
+    "summary": "フウゲツが第３層に逃亡",
+    "detail": "",
+    "episode": {
+      "number": 380,
+      "order": 1
+    },
+    "voyage": {
+      "day": 4,
+      "dayCertainty": "confirmed",
+      "time": "10:00",
+      "timeLabel": "10:00",
+      "orderInDay": 3,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": "第３層",
+      "place": "",
+      "certainty": "confirmed"
+    },
+    "primaryType": "その他",
+    "tags": [
+      "逃亡",
+      "第３層"
+    ],
+    "relatedPersonIds": [
+      11
+    ],
+    "relatedForces": [
+      "第11王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 380,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 22
+  },
+  {
+    "id": "event-0023",
+    "title": "センリツとカイザルが密談",
+    "summary": "センリツとカイザルが密談",
+    "detail": "",
+    "episode": {
+      "number": 381,
+      "order": 1
+    },
+    "voyage": {
+      "day": 5,
+      "dayCertainty": "confirmed",
+      "time": "16:00",
+      "timeLabel": "16:00",
+      "orderInDay": 1,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "交渉",
+    "tags": [
+      "センリツ",
+      "カイザル",
+      "密談"
+    ],
+    "relatedPersonIds": [
+      1003
+    ],
+    "relatedForces": [
+      "第10王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 381,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 23
+  },
+  {
+    "id": "event-0024",
+    "title": "リハンの\"異邦人（プレデター）\"がサレサレの守護霊獣を捕食",
+    "summary": "リハンの\"異邦人（プレデター）\"がサレサレの守護霊獣を捕食",
+    "detail": "",
+    "episode": {
+      "number": 381,
+      "order": 2
+    },
+    "voyage": {
+      "day": 5,
+      "dayCertainty": "confirmed",
+      "time": "20:00",
+      "timeLabel": "20:00",
+      "orderInDay": 2,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1008号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "異邦人",
+      "プレデター",
+      "守護霊獣",
+      "捕食",
+      "1008号室"
+    ],
+    "relatedPersonIds": [
+      110,
+      8
+    ],
+    "relatedForces": [
+      "第1王子陣営",
+      "第8王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 381,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 24
+  },
+  {
+    "id": "event-0025",
+    "title": "ハルケンブルグの守護霊獣による鳴動【2回目】",
+    "summary": "ハルケンブルグの守護霊獣による鳴動【2回目】",
+    "detail": "シカク⇔スミドリの人格転移",
+    "episode": {
+      "number": 382,
+      "order": 1
+    },
+    "voyage": {
+      "day": null,
+      "dayCertainty": "unknown",
+      "time": null,
+      "timeLabel": "日時不明（朝）",
+      "orderInDay": 1,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な航海日・時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": null,
+      "place": "1009号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "守護霊獣",
+      "鳴動",
+      "2回目",
+      "人格転移",
+      "1009号室"
+    ],
+    "relatedPersonIds": [
+      9,
+      111,
+      903
+    ],
+    "relatedForces": [
+      "第9王子陣営",
+      "第1王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 382,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 25
+  },
+  {
+    "id": "event-0026",
+    "title": "サレサレ死亡",
+    "summary": "サレサレ死亡",
+    "detail": "",
+    "episode": {
+      "number": 382,
+      "order": 2
+    },
+    "voyage": {
+      "day": null,
+      "dayCertainty": "unknown",
+      "time": null,
+      "timeLabel": "日時不明",
+      "orderInDay": 2,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な航海日・時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": null,
+      "place": "1008号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "死亡・離脱",
+    "tags": [
+      "死亡",
+      "1008号室"
+    ],
+    "relatedPersonIds": [
+      8
+    ],
+    "relatedForces": [
+      "第8王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 382,
+      "hideInSafeMode": true
+    },
+    "displayOrder": 26
+  },
+  {
+    "id": "event-0027",
+    "title": "第一回晩餐会開始",
+    "summary": "第一回晩餐会開始",
+    "detail": "",
+    "episode": {
+      "number": 383,
+      "order": 1
+    },
+    "voyage": {
+      "day": 8,
+      "dayCertainty": "confirmed",
+      "time": "20:00",
+      "timeLabel": "20:00",
+      "orderInDay": 2,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "王室",
+    "tags": [
+      "第一回晩餐会",
+      "晩餐会"
+    ],
+    "relatedPersonIds": [],
+    "relatedForces": [],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 383,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 29
+  },
+  {
+    "id": "event-0028",
+    "title": "カチョウ死亡",
+    "summary": "カチョウ死亡",
+    "detail": "",
+    "episode": {
+      "number": 383,
+      "order": 2
+    },
+    "voyage": {
+      "day": 8,
+      "dayCertainty": "confirmed",
+      "time": null,
+      "timeLabel": "未明（夜）",
+      "orderInDay": 3,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "死亡・離脱",
+    "tags": [
+      "死亡"
+    ],
+    "relatedPersonIds": [
+      10
+    ],
+    "relatedForces": [
+      "第10王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 383,
+      "hideInSafeMode": true
+    },
+    "displayOrder": 30
+  },
+  {
+    "id": "event-0029",
+    "title": "旅団、シャ=ア一家会談",
+    "summary": "旅団、シャ=ア一家会談",
+    "detail": "",
+    "episode": {
+      "number": 384,
+      "order": 1
+    },
+    "voyage": {
+      "day": 7,
+      "dayCertainty": "confirmed",
+      "time": "22:30",
+      "timeLabel": "22:30",
+      "orderInDay": 1,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": "第５層",
+      "place": "",
+      "certainty": "confirmed"
+    },
+    "primaryType": "交渉",
+    "tags": [
+      "幻影旅団",
+      "シャ=ア一家",
+      "会談",
+      "第５層"
+    ],
+    "relatedPersonIds": [],
+    "relatedForces": [
+      "シャ＝ア一家"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 384,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 27
+  },
+  {
+    "id": "event-0030",
+    "title": "ツェリードニヒが発を習得して能力発動",
+    "summary": "ツェリードニヒが発を習得して能力発動",
+    "detail": "",
+    "episode": {
+      "number": 385,
+      "order": 1
+    },
+    "voyage": {
+      "day": 8,
+      "dayCertainty": "confirmed",
+      "time": "19:35",
+      "timeLabel": "19:35",
+      "orderInDay": 1,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "発",
+      "能力発動"
+    ],
+    "relatedPersonIds": [
+      4
+    ],
+    "relatedForces": [
+      "第4王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 385,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 28
+  },
+  {
+    "id": "event-0031",
+    "title": "センリツとカイザルが対面",
+    "summary": "センリツとカイザルが対面",
+    "detail": "",
+    "episode": {
+      "number": 386,
+      "order": 1
+    },
+    "voyage": {
+      "day": 9,
+      "dayCertainty": "confirmed",
+      "time": null,
+      "timeLabel": "未明",
+      "orderInDay": 1,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": "第２層",
+      "place": "司法局",
+      "certainty": "confirmed"
+    },
+    "primaryType": "交渉",
+    "tags": [
+      "センリツ",
+      "カイザル",
+      "対面",
+      "司法局"
+    ],
+    "relatedPersonIds": [
+      1003
+    ],
+    "relatedForces": [
+      "第10王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 386,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 31
+  },
+  {
+    "id": "event-0032",
+    "title": "ハルケンブルグの守護霊獣による鳴動【3回目】",
+    "summary": "ハルケンブルグの守護霊獣による鳴動【3回目】",
+    "detail": "シカクが1007号室前で自害",
+    "episode": {
+      "number": 386,
+      "order": 2
+    },
+    "voyage": {
+      "day": 9,
+      "dayCertainty": "confirmed",
+      "time": null,
+      "timeLabel": "未明",
+      "orderInDay": 2,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": null,
+      "place": "1009号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "守護霊獣",
+      "鳴動",
+      "3回目",
+      "自害",
+      "1009号室",
+      "1007号室"
+    ],
+    "relatedPersonIds": [
+      9,
+      111
+    ],
+    "relatedForces": [
+      "第9王子陣営",
+      "第1王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 386,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 32
+  },
+  {
+    "id": "event-0033",
+    "title": "ハルケンブルグの守護霊獣による鳴動【4回目】",
+    "summary": "ハルケンブルグの守護霊獣による鳴動【4回目】",
+    "detail": "ビクトに人格転移が発生",
+    "episode": {
+      "number": 388,
+      "order": 1
+    },
+    "voyage": {
+      "day": 10,
+      "dayCertainty": "confirmed",
+      "time": "11:30",
+      "timeLabel": "11:30",
+      "orderInDay": 1,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1009号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "守護霊獣",
+      "鳴動",
+      "4回目",
+      "人格転移",
+      "1009号室"
+    ],
+    "relatedPersonIds": [
+      9,
+      105
+    ],
+    "relatedForces": [
+      "第9王子陣営",
+      "第1王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 388,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 34
+  },
+  {
+    "id": "event-0034",
+    "title": "バルサミルコとカンジドルが会議",
+    "summary": "バルサミルコとカンジドルが会議",
+    "detail": "",
+    "episode": {
+      "number": 389,
+      "order": 1
+    },
+    "voyage": {
+      "day": 9,
+      "dayCertainty": "confirmed",
+      "time": "10:00",
+      "timeLabel": "10:00",
+      "orderInDay": 3,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1001号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "交渉",
+    "tags": [
+      "会議",
+      "1001号室"
+    ],
+    "relatedPersonIds": [
+      101,
+      113
+    ],
+    "relatedForces": [
+      "第1王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 389,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 33
+  },
+  {
+    "id": "event-0035",
+    "title": "ヒンリギとエイ＝イが抗争を開始する",
+    "summary": "ヒンリギとエイ＝イが抗争を開始する",
+    "detail": "",
+    "episode": {
+      "number": 390,
+      "order": 1
+    },
+    "voyage": {
+      "day": 10,
+      "dayCertainty": "confirmed",
+      "time": null,
+      "timeLabel": "未明",
+      "orderInDay": 2,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": "第３層",
+      "place": "",
+      "certainty": "confirmed"
+    },
+    "primaryType": "戦闘",
+    "tags": [
+      "ヒンリギ",
+      "エイ＝イ",
+      "抗争",
+      "第３層"
+    ],
+    "relatedPersonIds": [
+      "shu-1001"
+    ],
+    "relatedForces": [
+      "シュウ＝ウ一家",
+      "エイ＝イ一家"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 390,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 35
+  },
+  {
+    "id": "event-0036",
+    "title": "王立軍学校４期が会議",
+    "summary": "王立軍学校４期が会議",
+    "detail": "",
+    "episode": {
+      "number": 394,
+      "order": 1
+    },
+    "voyage": {
+      "day": 10,
+      "dayCertainty": "confirmed",
+      "time": null,
+      "timeLabel": "未明",
+      "orderInDay": 3,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "交渉",
+    "tags": [
+      "王立軍学校４期",
+      "会議"
+    ],
+    "relatedPersonIds": [],
+    "relatedForces": [],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 394,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 36
+  },
+  {
+    "id": "event-0037",
+    "title": "クラピカが第5王子警護兵ロンギと密約を交わす。",
+    "summary": "クラピカが第5王子警護兵ロンギと密約を交わす。",
+    "detail": "ロンギの\"透明言葉（ゲッコウジョウレイ）\"発動",
+    "episode": {
+      "number": 401,
+      "order": 1
+    },
+    "voyage": {
+      "day": 10,
+      "dayCertainty": "confirmed",
+      "time": "11:45",
+      "timeLabel": "11:45",
+      "orderInDay": 4,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "交渉",
+    "tags": [
+      "密約",
+      "透明言葉",
+      "ゲッコウジョウレイ"
+    ],
+    "relatedPersonIds": [
+      1401,
+      502
+    ],
+    "relatedForces": [
+      "第14王子陣営",
+      "第5王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 401,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 37
+  },
+  {
+    "id": "event-0038",
+    "title": "ビヨンドが誰かを呼ぶ",
+    "summary": "ビヨンドが誰かを呼ぶ",
+    "detail": "",
+    "episode": {
+      "number": 401,
+      "order": 2
+    },
+    "voyage": {
+      "day": 10,
+      "dayCertainty": "confirmed",
+      "time": "14:00",
+      "timeLabel": "14:00",
+      "orderInDay": 6,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "その他",
+    "tags": [
+      "ビヨンド"
+    ],
+    "relatedPersonIds": [],
+    "relatedForces": [],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 401,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 39
+  },
+  {
+    "id": "event-0039",
+    "title": "第３・５・１４王子の和平協定が成立",
+    "summary": "第３・５・１４王子の和平協定が成立",
+    "detail": "",
+    "episode": {
+      "number": 402,
+      "order": 1
+    },
+    "voyage": {
+      "day": 10,
+      "dayCertainty": "confirmed",
+      "time": "13:30",
+      "timeLabel": "13:30",
+      "orderInDay": 5,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "交渉",
+    "tags": [
+      "和平協定",
+      "第３王子",
+      "第５王子",
+      "第１４王子"
+    ],
+    "relatedPersonIds": [
+      3,
+      5,
+      14
+    ],
+    "relatedForces": [
+      "第3王子陣営",
+      "第5王子陣営",
+      "第14王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 402,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 38
+  },
+  {
+    "id": "event-0040",
+    "title": "センリツ、カイザル、カチョウが手紙の作戦を練る",
+    "summary": "センリツ、カイザル、カチョウが手紙の作戦を練る",
+    "detail": "",
+    "episode": {
+      "number": 402,
+      "order": 2
+    },
+    "voyage": {
+      "day": 11,
+      "dayCertainty": "confirmed",
+      "time": "06:00",
+      "timeLabel": "6:00",
+      "orderInDay": 1,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "交渉",
+    "tags": [
+      "センリツ",
+      "カイザル",
+      "カチョウ",
+      "手紙",
+      "作戦"
+    ],
+    "relatedPersonIds": [
+      1003,
+      10
+    ],
+    "relatedForces": [
+      "第10王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 402,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 42
+  },
+  {
+    "id": "event-0041",
+    "title": "ツェリードニヒの絶が10秒を切る",
+    "summary": "ツェリードニヒの絶が10秒を切る",
+    "detail": "",
+    "episode": {
+      "number": 402,
+      "order": 3
+    },
+    "voyage": {
+      "day": 11,
+      "dayCertainty": "confirmed",
+      "time": "08:00",
+      "timeLabel": "8:00",
+      "orderInDay": 4,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1004号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "絶",
+      "10秒",
+      "1004号室"
+    ],
+    "relatedPersonIds": [
+      4
+    ],
+    "relatedForces": [
+      "第4王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 402,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 45
+  },
+  {
+    "id": "event-0042",
+    "title": "フウゲツが各王子に手紙を渡し終える",
+    "summary": "フウゲツが各王子に手紙を渡し終える",
+    "detail": "",
+    "episode": {
+      "number": 402,
+      "order": 4
+    },
+    "voyage": {
+      "day": 11,
+      "dayCertainty": "confirmed",
+      "time": "08:50",
+      "timeLabel": "8:50",
+      "orderInDay": 5,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "王室",
+    "tags": [
+      "手紙",
+      "王子"
+    ],
+    "relatedPersonIds": [
+      11
+    ],
+    "relatedForces": [
+      "第11王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 402,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 46
+  },
+  {
+    "id": "event-0043",
+    "title": "バルサミルコとビクトが対峙する",
+    "summary": "バルサミルコとビクトが対峙する",
+    "detail": "",
+    "episode": {
+      "number": 403,
+      "order": 1
+    },
+    "voyage": {
+      "day": 11,
+      "dayCertainty": "confirmed",
+      "time": "06:45",
+      "timeLabel": "6:45",
+      "orderInDay": 2,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": "第２層",
+      "place": "司法局",
+      "certainty": "confirmed"
+    },
+    "primaryType": "戦闘",
+    "tags": [
+      "対峙",
+      "司法局"
+    ],
+    "relatedPersonIds": [
+      101,
+      105
+    ],
+    "relatedForces": [
+      "第1王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 403,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 43
+  },
+  {
+    "id": "event-0044",
+    "title": "バルサミルコがベンジャミンに定期報告を行う",
+    "summary": "バルサミルコがベンジャミンに定期報告を行う",
+    "detail": "",
+    "episode": {
+      "number": 403,
+      "order": 2
+    },
+    "voyage": {
+      "day": 11,
+      "dayCertainty": "confirmed",
+      "time": "07:50",
+      "timeLabel": "7:50",
+      "orderInDay": 3,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": "第２層",
+      "place": "司法局",
+      "certainty": "confirmed"
+    },
+    "primaryType": "監視・配置",
+    "tags": [
+      "定期報告",
+      "司法局"
+    ],
+    "relatedPersonIds": [
+      101,
+      1
+    ],
+    "relatedForces": [
+      "第1王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 403,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 44
+  },
+  {
+    "id": "event-0045",
+    "title": "ハルケンブルグの肉体が死亡する",
+    "summary": "ハルケンブルグの肉体が死亡する",
+    "detail": "",
+    "episode": {
+      "number": 404,
+      "order": 1
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": null,
+      "timeLabel": "未明",
+      "orderInDay": 1,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "死亡・離脱",
+    "tags": [
+      "肉体",
+      "死亡"
+    ],
+    "relatedPersonIds": [
+      9
+    ],
+    "relatedForces": [
+      "第9王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 404,
+      "hideInSafeMode": true
+    },
+    "displayOrder": 47
+  },
+  {
+    "id": "event-0046",
+    "title": "ハルケンブルグの葬列が始まる",
+    "summary": "ハルケンブルグの葬列が始まる",
+    "detail": "",
+    "episode": {
+      "number": 406,
+      "order": 1
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "12:00",
+      "timeLabel": "12:00",
+      "orderInDay": 6,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "王室",
+    "tags": [
+      "葬列"
+    ],
+    "relatedPersonIds": [
+      9
+    ],
+    "relatedForces": [
+      "第9王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 406,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 52
+  },
+  {
+    "id": "event-0047",
+    "title": "ボークセンとモレナが交渉ゲームを始める",
+    "summary": "ボークセンとモレナが交渉ゲームを始める",
+    "detail": "",
+    "episode": {
+      "number": 407,
+      "order": 1
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "13:00",
+      "timeLabel": "13:00",
+      "orderInDay": 7,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "エイ＝イ一家アジト",
+      "certainty": "confirmed"
+    },
+    "primaryType": "交渉",
+    "tags": [
+      "ボークセン",
+      "モレナ",
+      "交渉ゲーム",
+      "エイ＝イ一家アジト"
+    ],
+    "relatedPersonIds": [
+      "ei-2000"
+    ],
+    "relatedForces": [
+      "エイ＝イ一家"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 407,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 53
+  },
+  {
+    "id": "event-0048",
+    "title": "特殊戒厳令発動",
+    "summary": "特殊戒厳令発動",
+    "detail": "",
+    "episode": {
+      "number": 408,
+      "order": 1
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "14:15",
+      "timeLabel": "14:15",
+      "orderInDay": 12,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "王室",
+    "tags": [
+      "特殊戒厳令",
+      "発動"
+    ],
+    "relatedPersonIds": [],
+    "relatedForces": [],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 408,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 58
+  },
+  {
+    "id": "event-0049",
+    "title": "司法省に総合指令本部設置（ベンジャミン）",
+    "summary": "司法省に総合指令本部設置（ベンジャミン）",
+    "detail": "",
+    "episode": {
+      "number": 410,
+      "order": 1
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "14:55",
+      "timeLabel": "14:55",
+      "orderInDay": 14,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": "第２層",
+      "place": "司法局",
+      "certainty": "confirmed"
+    },
+    "primaryType": "監視・配置",
+    "tags": [
+      "司法省",
+      "総合指令本部",
+      "ベンジャミン",
+      "司法局"
+    ],
+    "relatedPersonIds": [
+      1
+    ],
+    "relatedForces": [
+      "第1王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 410,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 60
+  },
+  {
+    "id": "event-0050",
+    "title": "バルサミルコがベンジャミンに定期報告を終える",
+    "summary": "バルサミルコがベンジャミンに定期報告を終える",
+    "detail": "",
+    "episode": {
+      "number": 411,
+      "order": 1
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "08:00",
+      "timeLabel": "8:00",
+      "orderInDay": 2,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": "第２層",
+      "place": "司法局",
+      "certainty": "confirmed"
+    },
+    "primaryType": "監視・配置",
+    "tags": [
+      "定期報告",
+      "司法局"
+    ],
+    "relatedPersonIds": [
+      101,
+      1
+    ],
+    "relatedForces": [
+      "第1王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 411,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 48
+  },
+  {
+    "id": "event-0051",
+    "title": "第２回念能力講習会",
+    "summary": "第２回念能力講習会",
+    "detail": "参加者⇒クラピカ、ヒュリコフ、バビマイナ、ベレレインテ、ハピエッチ、サトビ、ガトー、マオール、ダンジン、テンフトリ、イラルディア、ラジオラス、ユウリ、ロッコリー、サラヘル、ナイペイ、トネアスタ、リズルラ、サカキ、ハシトウ、スラッカ",
+    "episode": {
+      "number": 411,
+      "order": 2
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "09:00",
+      "timeLabel": "9:00",
+      "orderInDay": 3,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1014号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "第２回念能力講習会",
+      "1014号室",
+      "クラピカ",
+      "ヒュリコフ",
+      "バビマイナ",
+      "ベレレインテ",
+      "ハピエッチ",
+      "サトビ",
+      "ガトー",
+      "マオール",
+      "ダンジン",
+      "テンフトリ",
+      "イラルディア",
+      "ラジオラス",
+      "ユウリ",
+      "ロッコリー",
+      "サラヘル",
+      "ナイペイ",
+      "トネアスタ",
+      "リズルラ",
+      "サカキ",
+      "ハシトウ",
+      "スラッカ"
+    ],
+    "relatedPersonIds": [
+      1401,
+      108,
+      103,
+      1303,
+      702,
+      701,
+      501,
+      404,
+      303,
+      1103,
+      1104,
+      1007,
+      1008,
+      207,
+      1307,
+      1105,
+      1009,
+      302,
+      "021"
+    ],
+    "relatedForces": [
+      "第14王子陣営",
+      "第1王子陣営",
+      "第13王子陣営",
+      "第7王子陣営",
+      "第5王子陣営",
+      "第4王子陣営",
+      "第3王子陣営",
+      "第11王子陣営",
+      "第10王子陣営",
+      "第2王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 411,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 49
+  },
+  {
+    "id": "event-0052",
+    "title": "第２回念能力講習会が中断する",
+    "summary": "第２回念能力講習会が中断する",
+    "detail": "ワブルの秘密が暴露",
+    "episode": {
+      "number": 412,
+      "order": 1
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "09:15",
+      "timeLabel": "9:15",
+      "orderInDay": 4,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1014号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "第２回念能力講習会",
+      "中断",
+      "ワブルの秘密",
+      "1014号室"
+    ],
+    "relatedPersonIds": [
+      14
+    ],
+    "relatedForces": [
+      "第14王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 412,
+      "hideInSafeMode": true
+    },
+    "displayOrder": 50
+  },
+  {
+    "id": "event-0053",
+    "title": "ワブルの秘密が判明する",
+    "summary": "ワブルの秘密が判明する",
+    "detail": "",
+    "episode": {
+      "number": 412,
+      "order": 2
+    },
+    "voyage": {
+      "day": 10,
+      "dayCertainty": "confirmed",
+      "time": "14:15",
+      "timeLabel": "14:15",
+      "orderInDay": 7,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1014号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "王室",
+    "tags": [
+      "ワブル",
+      "秘密",
+      "1014号室"
+    ],
+    "relatedPersonIds": [
+      14
+    ],
+    "relatedForces": [
+      "第14王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 412,
+      "hideInSafeMode": true
+    },
+    "displayOrder": 40
+  },
+  {
+    "id": "event-0054",
+    "title": "第２回念能力講習会が再開する",
+    "summary": "第２回念能力講習会が再開する",
+    "detail": "",
+    "episode": {
+      "number": 412,
+      "order": 3
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "10:00",
+      "timeLabel": "10:00",
+      "orderInDay": 5,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1014号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "念能力",
+    "tags": [
+      "第２回念能力講習会",
+      "再開",
+      "1014号室"
+    ],
+    "relatedPersonIds": [],
+    "relatedForces": [],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 412,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 51
+  },
+  {
+    "id": "event-0055",
+    "title": "ビヨンドとクレオパトロが会う",
+    "summary": "ビヨンドとクレオパトロが会う",
+    "detail": "",
+    "episode": {
+      "number": 412,
+      "order": 4
+    },
+    "voyage": {
+      "day": 10,
+      "dayCertainty": "confirmed",
+      "time": null,
+      "timeLabel": "未明",
+      "orderInDay": 8,
+      "orderCertainty": "confirmed",
+      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "交渉",
+    "tags": [
+      "ビヨンド",
+      "クレオパトロ"
+    ],
+    "relatedPersonIds": [],
+    "relatedForces": [],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 412,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 41
+  },
+  {
+    "id": "event-0056",
+    "title": "ハルケンブルグの棺が納められる",
+    "summary": "ハルケンブルグの棺が納められる",
+    "detail": "",
+    "episode": {
+      "number": 413,
+      "order": 1
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "13:45",
+      "timeLabel": "13:45",
+      "orderInDay": 8,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "死亡・離脱",
+    "tags": [
+      "棺"
+    ],
+    "relatedPersonIds": [
+      9
+    ],
+    "relatedForces": [
+      "第9王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 413,
+      "hideInSafeMode": true
+    },
+    "displayOrder": 54
+  },
+  {
+    "id": "event-0057",
+    "title": "ベンジャミンがTSK-17発症",
+    "summary": "ベンジャミンがTSK-17発症",
+    "detail": "",
+    "episode": {
+      "number": 413,
+      "order": 2
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "14:00",
+      "timeLabel": "14:00",
+      "orderInDay": 10,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "",
+      "certainty": "unknown"
+    },
+    "primaryType": "その他",
+    "tags": [
+      "TSK-17",
+      "発症"
+    ],
+    "relatedPersonIds": [
+      1
+    ],
+    "relatedForces": [
+      "第1王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 413,
+      "hideInSafeMode": true
+    },
+    "displayOrder": 56
+  },
+  {
+    "id": "event-0058",
+    "title": "カンジドルとリッジが接敵",
+    "summary": "カンジドルとリッジが接敵",
+    "detail": "",
+    "episode": {
+      "number": 414,
+      "order": 1
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "14:10",
+      "timeLabel": "14:10",
+      "orderInDay": 11,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1007号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "戦闘",
+    "tags": [
+      "接敵",
+      "1007号室"
+    ],
+    "relatedPersonIds": [
+      113,
+      712
+    ],
+    "relatedForces": [
+      "第1王子陣営",
+      "第7王子陣営"
+    ],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 414,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 57
+  },
+  {
+    "id": "event-0059",
+    "title": "オイト王妃がヨロズヤで手紙を送る",
+    "summary": "オイト王妃がヨロズヤで手紙を送る",
+    "detail": "",
+    "episode": {
+      "number": 415,
+      "order": 1
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "13:50",
+      "timeLabel": "13:50",
+      "orderInDay": 9,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1014号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "王室",
+    "tags": [
+      "オイト王妃",
+      "ヨロズヤ",
+      "手紙",
+      "1014号室"
+    ],
+    "relatedPersonIds": [],
+    "relatedForces": [],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 415,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 55
+  },
+  {
+    "id": "event-0060",
+    "title": "オイト王妃に恩赦が下る",
+    "summary": "オイト王妃に恩赦が下る",
+    "detail": "",
+    "episode": {
+      "number": 415,
+      "order": 2
+    },
+    "voyage": {
+      "day": 12,
+      "dayCertainty": "confirmed",
+      "time": "14:35",
+      "timeLabel": "14:35",
+      "orderInDay": 13,
+      "orderCertainty": "confirmed",
+      "chronologyNote": ""
+    },
+    "location": {
+      "tier": null,
+      "place": "1014号室",
+      "certainty": "confirmed"
+    },
+    "primaryType": "王室",
+    "tags": [
+      "オイト王妃",
+      "恩赦",
+      "1014号室"
+    ],
+    "relatedPersonIds": [],
+    "relatedForces": [],
+    "occurrenceCertainty": "confirmed",
+    "spoiler": {
+      "visibleFromEpisode": 415,
+      "hideInSafeMode": false
+    },
+    "displayOrder": 59
   }
+
 ];
