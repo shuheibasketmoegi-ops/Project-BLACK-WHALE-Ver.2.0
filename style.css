@@ -320,6 +320,10 @@ button { color: inherit; }
 .timeline-event-card.monitoring { border-left-color: var(--steel); }
 .timeline-event-card.combat, .timeline-event-card.death, .timeline-event-card.mafia-event { border-left-color: var(--red); }
 .timeline-event-main { display: grid; grid-template-columns: 82px 1fr auto; gap: 13px; align-items: center; padding: 11px 12px; }
+.timeline-event-main.has-image { grid-template-columns: 82px minmax(120px,160px) 1fr auto; }
+.event-image { min-width: 0; margin: 0; }
+.event-image img { display: block; width: 100%; height: 92px; border: 1px solid rgba(255,255,255,.12); background: #f2f2f0; object-fit: contain; }
+.event-image figcaption { margin-top: 4px; color: #737d82; font-size: 8px; line-height: 1.4; }
 .event-meta-column { min-width: 0; padding-right: 10px; border-right: 1px solid rgba(255,255,255,.08); }
 .event-meta-column strong { display: block; color: var(--gold-soft); font: 14px monospace; }
 .event-meta-column small { display: block; margin-top: 5px; color: var(--muted); font: 9px monospace; }
@@ -383,6 +387,7 @@ button { color: inherit; }
   .timeline-control-row { grid-template-columns: auto 1fr; }
   .timeline-sort { grid-column: 1 / -1; justify-self: end; }
   .timeline-event-main { grid-template-columns: 70px 1fr; }
+  .timeline-event-main.has-image { grid-template-columns: 70px 130px 1fr; }
   .event-expand-button { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.07); border-left: 0; }
 }
 @media (max-width: 720px) {
@@ -441,7 +446,8 @@ button { color: inherit; }
   .timeline-group-marker { position: relative; top: auto; margin: 0 0 8px -34px; }
   .timeline-group-marker span { width: auto; min-height: 0; display: inline-block; border-radius: 999px; padding: 6px 12px; }
   .timeline-event-card::before { top: 24px; left: -16px; width: 13px; }
-  .timeline-event-main { grid-template-columns: 1fr; gap: 7px; }
+  .timeline-event-main, .timeline-event-main.has-image { grid-template-columns: 1fr; gap: 7px; }
+  .event-image img { height: clamp(150px,52vw,220px); }
   .event-meta-column { display: flex; gap: 10px; align-items: center; padding: 0; border: 0; }
   .event-meta-column small { margin: 0; }
   .event-title-row { align-items: flex-start; }

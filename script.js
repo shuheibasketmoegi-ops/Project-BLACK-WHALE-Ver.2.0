@@ -676,6 +676,16 @@ function timelineForceChips(event) {
     ${event.relatedForces.length > visible.length ? `<span class="more-chip">ほか${event.relatedForces.length - visible.length}勢力</span>` : ""}`;
 }
 
+function eventImageHtml(event) {
+  if (!event.image?.src) return "";
+
+  return `
+    <figure class="event-image">
+      <img src="${escapeHtml(event.image.src)}" alt="${escapeHtml(event.image.alt || "")}" loading="lazy" decoding="async" data-event-image>
+      ${event.image.caption ? `<figcaption>${escapeHtml(event.image.caption)}</figcaption>` : ""}
+    </figure>`;
+}
+
 function eventTimeText(event) {
   if (app.timelineAxis === "episode") {
     return event.voyage.day == null
@@ -692,8 +702,9 @@ function eventCardHtml(event) {
 
   return `
     <article class="timeline-event-card ${eventTypeClass(event.primaryType)} ${expanded ? "expanded" : ""}">
-      <div class="timeline-event-main">
+      <div class="timeline-event-main ${event.image?.src ? "has-image" : ""}">
         <div class="event-meta-column"><strong>${escapeHtml(event.voyage.timeLabel || "時刻不明")}</strong><small>${escapeHtml(eventTimeText(event))}</small></div>
+        ${eventImageHtml(event)}
         <div class="event-copy">
           <div class="event-title-row"><h3>${escapeHtml(event.title)}</h3><span class="event-type">${escapeHtml(event.primaryType)}</span></div>
           <p>${escapeHtml(event.summary)}</p>
@@ -753,6 +764,12 @@ function renderTimeline() {
           </section>`).join("")}
       </div>` : `<div class="no-results">条件に一致するイベントがありません。<br>検索語または絞り込み条件を変更してください。</div>`}`;
   hydrateImages();
+  elements.viewContent.querySelectorAll("img[data-event-image]").forEach(image => {
+    image.addEventListener("error", () => {
+      image.closest(".timeline-event-main")?.classList.remove("has-image");
+      image.closest(".event-image")?.setAttribute("hidden", "");
+    }, { once: true });
+  });
 }
 
 function renderPlaceholder(type) {
