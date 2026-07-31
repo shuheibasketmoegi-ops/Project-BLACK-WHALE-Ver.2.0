@@ -19,6 +19,7 @@ const app = {
 
 const elements = {
   sidebar: document.getElementById("sidebar"),
+  sidebarBackdrop: document.getElementById("sidebarBackdrop"),
   menuButton: document.getElementById("menuButton"),
   pageTitle: document.getElementById("pageTitle"),
   pageEnglish: document.getElementById("pageEnglish"),
@@ -98,8 +99,12 @@ function getForceRecords() {
         Array.isArray(character.monitorFor) &&
         character.monitorFor.includes(name)
       );
+      const monitoringMembers = [...new Map([
+        ...members.filter(character => character.category === "監視"),
+        ...monitoring
+      ].map(character => [character.id, character])).values()];
 
-      return { name, type, leader, members, monitoring };
+      return { name, type, leader, members, monitoring, monitoringMembers };
     })
     .sort((a, b) => getForceOrder(a.name) - getForceOrder(b.name));
 }
@@ -280,8 +285,8 @@ function summaryCategories(record) {
     className: classMap[category]
   })).filter(row => row.count > 0);
 
-  if (record.monitoring.length > 0) {
-    rows.push({ category: "監視", count: record.monitoring.length, className: "monitor" });
+  if (record.monitoringMembers.length > 0) {
+    rows.push({ category: "監視", count: record.monitoringMembers.length, className: "monitor" });
   }
   return rows;
 }
@@ -776,7 +781,7 @@ function setView(view, options = {}) {
   app.search = "";
   app.page = 1;
   elements.searchInput.value = "";
-  elements.sidebar.classList.remove("open");
+  setSidebarOpen(false);
 
   document.querySelectorAll("[data-view]").forEach(button => button.classList.toggle("active", button.dataset.view === view));
   const settings = viewSettings[view];
@@ -787,6 +792,11 @@ function setView(view, options = {}) {
   elements.searchInput.placeholder = settings.placeholder || "検索";
   render();
   window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function setSidebarOpen(isOpen) {
+  elements.sidebar.classList.toggle("open", isOpen);
+  elements.menuButton.setAttribute("aria-expanded", String(isOpen));
 }
 
 function render() {
@@ -855,7 +865,12 @@ function goBack(fallbackView) {
 }
 
 document.querySelectorAll("[data-view]").forEach(button => button.addEventListener("click", () => setView(button.dataset.view)));
-elements.menuButton.addEventListener("click", () => elements.sidebar.classList.toggle("open"));
+elements.menuButton.setAttribute("aria-expanded", "false");
+elements.menuButton.addEventListener("click", () => setSidebarOpen(!elements.sidebar.classList.contains("open")));
+elements.sidebarBackdrop.addEventListener("click", () => setSidebarOpen(false));
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && elements.sidebar.classList.contains("open")) setSidebarOpen(false);
+});
 elements.searchInput.addEventListener("input", event => {
   app.search = event.target.value;
   app.page = 1;
