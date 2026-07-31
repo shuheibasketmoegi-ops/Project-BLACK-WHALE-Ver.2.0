@@ -23,6 +23,11 @@ const timelineEvents = [
     title: "ブラック・ホエール号出航",
     summary: "ブラック・ホエール号出航",
     detail: "",
+    image: {
+      src: "images/timeline/event-0001.png",
+      alt: "海上を進むブラック・ホエール号",
+      caption: ""
+    },
     episode: { number: 359, order: 1 },
     voyage: {
       day: 1,
@@ -79,6 +84,11 @@ const timelineEvents = [
     title: "王子たちの守護霊獣が発現",
     summary: "王子たちの守護霊獣が発現",
     detail: "",
+    image: {
+      src: "images/timeline/event-0003.png",
+      alt: "1014号室に現れた王子たちの守護霊獣",
+      caption: ""
+    },
     episode: { number: 360, order: 1 },
     voyage: {
       day: 1,
@@ -112,6 +122,11 @@ const timelineEvents = [
     title: "1014号室の警護が2人になる",
     summary: "1014号室の警護が2人になる",
     detail: "",
+    image: {
+      src: "images/timeline/event-0004.png",
+      alt: "1014号室で警護人数について話すクラピカたち",
+      caption: ""
+    },
     episode: { number: 361, order: 1 },
     voyage: {
       day: 1,
