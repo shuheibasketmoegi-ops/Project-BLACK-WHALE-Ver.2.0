@@ -331,7 +331,7 @@ button { color: inherit; }
 .event-meta-column strong { display: block; color: var(--gold-soft); font: 14px monospace; }
 .event-meta-column small { display: block; margin-top: 5px; color: var(--muted); font: 9px monospace; }
 .event-title-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-.event-title-row h3 { margin: 0; color: #e1d5c1; font: 16px Georgia, "Yu Mincho", serif; font-weight: 500; }
+.event-title-row h3 { margin: 0; color: #e1d5c1; font: 20px "Hiragino Mincho ProN", "Yu Mincho", serif; font-weight: 500; }
 .event-type { flex: 0 0 auto; padding: 3px 7px; border: 1px solid #625239; color: #c09c61; font-size: 8px; }
 .combat .event-type, .death .event-type, .mafia-event .event-type { border-color: var(--red); color: var(--red-soft); }
 .event-copy > p { margin: 5px 0; color: #a9a49a; font-size: 11px; line-height: 1.5; }
