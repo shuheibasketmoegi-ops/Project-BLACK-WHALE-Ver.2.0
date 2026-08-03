@@ -56,6 +56,11 @@ const timelineEvents = [
     title: "ウッディ死亡",
     summary: "ウッディ死亡",
     detail: "",
+    image: {
+      src: "images/timeline/event-0002.png",
+      alt: "便器の前で座り込むウッディ",
+      caption: ""
+    },
     episode: { number: 359, order: 2 },
     voyage: {
       day: 1,
@@ -155,6 +160,11 @@ const timelineEvents = [
     title: "1014号室にビンセントが襲撃",
     summary: "1014号室にビンセントが襲撃",
     detail: "クラピカの絶対時間（エンペラータイム）開始。1秒につき1時間寿命が縮まる。",
+    image: {
+      src: "images/timeline/event-0005.png",
+      alt: "大柄な男性に肩を押さえられるクラピカ",
+      caption: ""
+    },
     episode: { number: 364, order: 1 },
     voyage: {
       day: 1,
@@ -183,6 +193,11 @@ const timelineEvents = [
     title: "クラピカがチョウライと面会",
     summary: "クラピカがチョウライと面会",
     detail: "",
+    image: {
+      src: "images/timeline/event-0006.png",
+      alt: "チョウライの背後に現れた守護霊獣",
+      caption: ""
+    },
     episode: { number: 365, order: 1 },
     voyage: {
       day: 1,
@@ -211,6 +226,11 @@ const timelineEvents = [
     title: "ツェリードニヒが念修行を開始する。",
     summary: "ツェリードニヒが念修行を開始する。",
     detail: "",
+    image: {
+      src: "images/timeline/event-0007.png",
+      alt: "指で輪を作る男性を見て驚く女性",
+      caption: ""
+    },
     episode: { number: 366, order: 1 },
     voyage: {
       day: 1,
@@ -239,6 +259,11 @@ const timelineEvents = [
     title: "第5王子陣営マオールが1014号室に入室",
     summary: "第5王子陣営マオールが1014号室に入室",
     detail: "",
+    image: {
+      src: "images/timeline/event-0008.png",
+      alt: "念能力の一端を見せると話すクラピカ",
+      caption: ""
+    },
     episode: { number: 367, order: 1 },
     voyage: {
       day: 1,
@@ -267,6 +292,11 @@ const timelineEvents = [
     title: "モモゼ暗殺",
     summary: "モモゼ暗殺",
     detail: "絶対時間（エンペラータイム）3時間経過し、クラピカ失神",
+    image: {
+      src: "images/timeline/event-0009.png",
+      alt: "ベッドの上に倒れているモモゼ",
+      caption: ""
+    },
     episode: { number: 368, order: 1 },
     voyage: {
       day: 1,
