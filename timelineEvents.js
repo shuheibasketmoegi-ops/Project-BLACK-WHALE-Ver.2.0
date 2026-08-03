@@ -325,6 +325,11 @@ const timelineEvents = [
     title: "クラピカが失神から目覚める",
     summary: "クラピカが失神から目覚める",
     detail: "絶対時間（エンペラータイム）12時間経過",
+    image: {
+      src: "images/timeline/event-0010.png",
+      alt: "ベッドで横になる人物を見守るオイトとワブル",
+      caption: ""
+    },
     episode: { number: 369, order: 1 },
     voyage: {
       day: 2,
@@ -353,6 +358,11 @@ const timelineEvents = [
     title: "第１回念能力講習会",
     summary: "第１回念能力講習会",
     detail: "",
+    image: {
+      src: "images/timeline/event-0011.png",
+      alt: "1014号室に集まった第1回念能力講習会の参加者",
+      caption: ""
+    },
     episode: { number: 369, order: 2 },
     voyage: {
       day: 2,
@@ -388,6 +398,11 @@ const timelineEvents = [
     title: "\"11人いる！（サイレントマジョリティー）\"発動",
     summary: "\"11人いる！（サイレントマジョリティー）\"発動",
     detail: "バリゲン死亡",
+    image: {
+      src: "images/timeline/event-0012.png",
+      alt: "床に座り込みバリゲンの名を叫ぶ男性",
+      caption: ""
+    },
     episode: { number: 370, order: 1 },
     voyage: {
       day: 2,
@@ -417,6 +432,11 @@ const timelineEvents = [
     "title": "第１回念能力講習会再開",
     "summary": "第１回念能力講習会再開",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0013.png",
+      "alt": "念能力講習会を再開すると告げるクラピカ",
+      "caption": ""
+    },
     "episode": {
       "number": 371,
       "order": 1
@@ -455,6 +475,11 @@ const timelineEvents = [
     "title": "第１回念能力講習会終了",
     "summary": "第１回念能力講習会終了",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0014.png",
+      "alt": "念能力講習会の終了時刻について話すクラピカ",
+      "caption": ""
+    },
     "episode": {
       "number": 372,
       "order": 1
@@ -493,6 +518,11 @@ const timelineEvents = [
     "title": "マラヤームの守護霊獣が能力を発動",
     "summary": "マラヤームの守護霊獣が能力を発動",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0015.png",
+      "alt": "マラヤームの守護霊獣と向き合う警護兵",
+      "caption": ""
+    },
     "episode": {
       "number": 372,
       "order": 2
@@ -535,6 +565,11 @@ const timelineEvents = [
     "title": "カミーラvsムッセ",
     "summary": "カミーラvsムッセ",
     "detail": "ムッセ死亡。\"裏窓の鳥（シークレットウインドウ）\"発動。",
+    "image": {
+      "src": "images/timeline/event-0016.png",
+      "alt": "カミーラの背後に現れた猫型の念獣",
+      "caption": ""
+    },
     "episode": {
       "number": 373,
       "order": 1
@@ -581,6 +616,11 @@ const timelineEvents = [
     "title": "フウゲツが守護霊獣の能力を発動",
     "summary": "フウゲツが守護霊獣の能力を発動",
     "detail": "\"魔法の抜け道\"（マジカルワーム）を発動",
+    "image": {
+      "src": "images/timeline/event-0017.png",
+      "alt": "寝室で守護霊獣の能力を使うフウゲツとカチョウ",
+      "caption": ""
+    },
     "episode": {
       "number": 374,
       "order": 1
@@ -624,6 +664,11 @@ const timelineEvents = [
     "title": "ハルケンブルグの守護霊獣による鳴動",
     "summary": "ハルケンブルグの守護霊獣による鳴動",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0018.png",
+      "alt": "ハルケンブルグ陣営の周囲で発生する鳴動",
+      "caption": ""
+    },
     "episode": {
       "number": 375,
       "order": 1
@@ -666,6 +711,11 @@ const timelineEvents = [
     "title": "\"11人いる！（サイレントマジョリティー）\"発動【②回目】",
     "summary": "\"11人いる！（サイレントマジョリティー）\"発動【②回目】",
     "detail": "ミュハン死亡",
+    "image": {
+      "src": "images/timeline/event-0019.png",
+      "alt": "1014号室で発生した異変を警戒する講習会参加者",
+      "caption": ""
+    },
     "episode": {
       "number": 376,
       "order": 1
