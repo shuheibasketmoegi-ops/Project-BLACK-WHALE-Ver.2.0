@@ -20,8 +20,8 @@ const timelineEventTypes = [
 const timelineEvents = [
   {
     id: "event-0001",
-    title: "ブラック・ホエール号出航",
-    summary: "ブラック・ホエール号出航",
+    title: "ブラック・ホエール号　出航",
+    summary: "",
     detail: "",
     image: {
       src: "images/timeline/event-0001.png",
@@ -54,7 +54,7 @@ const timelineEvents = [
   {
     id: "event-0002",
     title: "ウッディ死亡",
-    summary: "ウッディ死亡",
+    summary: "",
     detail: "",
     image: {
       src: "images/timeline/event-0002.png",
@@ -86,8 +86,8 @@ const timelineEvents = [
   },
   {
     id: "event-0003",
-    title: "王子たちの守護霊獣が発現",
-    summary: "王子たちの守護霊獣が発現",
+    title: "守護霊獣　発現",
+    summary: "王子たちの守護霊獣が一堂に会する",
     detail: "",
     image: {
       src: "images/timeline/event-0003.png",
@@ -124,7 +124,7 @@ const timelineEvents = [
   },
   {
     id: "event-0004",
-    title: "1014号室の警護が2人になる",
+    title: "ワブル王子警護兵　壊滅",
     summary: "1014号室の警護が2人になる",
     detail: "",
     image: {
