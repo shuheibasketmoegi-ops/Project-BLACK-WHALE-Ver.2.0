@@ -760,6 +760,11 @@ const timelineEvents = [
     "title": "ツェリードニヒが水見式で念系統が判明する",
     "summary": "ツェリードニヒが水見式で念系統が判明する",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0020.png",
+      "alt": "ツェリードニヒの水見式で変化する水",
+      "caption": ""
+    },
     "episode": {
       "number": 376,
       "order": 2
@@ -802,6 +807,11 @@ const timelineEvents = [
     "title": "幻影旅団が集結する。",
     "summary": "幻影旅団が集結する。",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0021.png",
+      "alt": "集結した幻影旅団の団員たち",
+      "caption": ""
+    },
     "episode": {
       "number": 377,
       "order": 1
@@ -840,6 +850,11 @@ const timelineEvents = [
     "title": "フウゲツが第３層に逃亡",
     "summary": "フウゲツが第３層に逃亡",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0022.png",
+      "alt": "防寒着姿で第11王子と呼ばれるフウゲツ",
+      "caption": ""
+    },
     "episode": {
       "number": 380,
       "order": 1
@@ -881,6 +896,11 @@ const timelineEvents = [
     "title": "センリツとカイザルが密談",
     "summary": "センリツとカイザルが密談",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0023.png",
+      "alt": "カイザルがセンリツへ王子監視について話す場面",
+      "caption": ""
+    },
     "episode": {
       "number": 381,
       "order": 1
@@ -923,6 +943,11 @@ const timelineEvents = [
     "title": "リハンの\"異邦人（プレデター）\"がサレサレの守護霊獣を捕食",
     "summary": "リハンの\"異邦人（プレデター）\"がサレサレの守護霊獣を捕食",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0024.png",
+      "alt": "サレサレの守護霊獣を捕食するリハンの異邦人",
+      "caption": ""
+    },
     "episode": {
       "number": 381,
       "order": 2
@@ -969,6 +994,11 @@ const timelineEvents = [
     "title": "ハルケンブルグの守護霊獣による鳴動【2回目】",
     "summary": "ハルケンブルグの守護霊獣による鳴動【2回目】",
     "detail": "シカク⇔スミドリの人格転移",
+    "image": {
+      "src": "images/timeline/event-0025.png",
+      "alt": "敬礼する兵士とその背後に立つ人物",
+      "caption": ""
+    },
     "episode": {
       "number": 382,
       "order": 1
@@ -1016,6 +1046,11 @@ const timelineEvents = [
     "title": "サレサレ死亡",
     "summary": "サレサレ死亡",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0026.png",
+      "alt": "ベッド上で死亡したサレサレ",
+      "caption": ""
+    },
     "episode": {
       "number": 382,
       "order": 2
