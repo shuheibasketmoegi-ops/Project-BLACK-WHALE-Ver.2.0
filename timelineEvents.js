@@ -20,7 +20,7 @@ const timelineEventTypes = [
 const timelineEvents = [
   {
     id: "event-0001",
-    title: "ブラック・ホエール号ーー出航",
+    title: "ブラック・ホエール号――出航",
     summary: "",
     detail: "",
     image: {
