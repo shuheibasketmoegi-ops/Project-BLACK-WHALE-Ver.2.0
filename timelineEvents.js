@@ -1939,6 +1939,11 @@ const timelineEvents = [
     "title": "ハルケンブルグの肉体が死亡する",
     "summary": "ハルケンブルグの肉体が死亡する",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0045.png",
+      "alt": "担架の上で死亡したハルケンブルグの肉体",
+      "caption": ""
+    },
     "episode": {
       "number": 404,
       "order": 1
@@ -1980,6 +1985,11 @@ const timelineEvents = [
     "title": "ハルケンブルグの葬列が始まる",
     "summary": "ハルケンブルグの葬列が始まる",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0046.png",
+      "alt": "大勢の群衆に見守られるハルケンブルグの葬列",
+      "caption": ""
+    },
     "episode": {
       "number": 406,
       "order": 1
@@ -2020,6 +2030,11 @@ const timelineEvents = [
     "title": "ボークセンとモレナが交渉ゲームを始める",
     "summary": "ボークセンとモレナが交渉ゲームを始める",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0047.png",
+      "alt": "ボークセンを迎えるモレナとエイ＝イ一家のアジト",
+      "caption": ""
+    },
     "episode": {
       "number": 407,
       "order": 1
@@ -2063,6 +2078,11 @@ const timelineEvents = [
     "title": "特殊戒厳令発動",
     "summary": "特殊戒厳令発動",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0048.png",
+      "alt": "ブラック・ホエール号で発令される特殊戒厳令",
+      "caption": ""
+    },
     "episode": {
       "number": 408,
       "order": 1
@@ -2100,6 +2120,11 @@ const timelineEvents = [
     "title": "司法省に総合指令本部設置（ベンジャミン）",
     "summary": "司法省に総合指令本部設置（ベンジャミン）",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0049.png",
+      "alt": "第1王子居住区へ向かう警護兵たち",
+      "caption": ""
+    },
     "episode": {
       "number": 410,
       "order": 1
@@ -2143,6 +2168,11 @@ const timelineEvents = [
     "title": "バルサミルコがベンジャミンに定期報告を終える",
     "summary": "バルサミルコがベンジャミンに定期報告を終える",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0050.png",
+      "alt": "司法局で定期報告を終えるバルサミルコ",
+      "caption": ""
+    },
     "episode": {
       "number": 411,
       "order": 1
@@ -2185,6 +2215,11 @@ const timelineEvents = [
     "title": "第２回念能力講習会",
     "summary": "第２回念能力講習会",
     "detail": "参加者⇒クラピカ、ヒュリコフ、バビマイナ、ベレレインテ、ハピエッチ、サトビ、ガトー、マオール、ダンジン、テンフトリ、イラルディア、ラジオラス、ユウリ、ロッコリー、サラヘル、ナイペイ、トネアスタ、リズルラ、サカキ、ハシトウ、スラッカ",
+    "image": {
+      "src": "images/timeline/event-0051.png",
+      "alt": "1014号室に集まった第2回念能力講習会の参加者",
+      "caption": ""
+    },
     "episode": {
       "number": 411,
       "order": 2
@@ -2274,6 +2309,11 @@ const timelineEvents = [
     "title": "第２回念能力講習会が中断する",
     "summary": "第２回念能力講習会が中断する",
     "detail": "ワブルの秘密が暴露",
+    "image": {
+      "src": "images/timeline/event-0052.png",
+      "alt": "第14王子が継承戦に参加していないと気づく講習会参加者たち",
+      "caption": ""
+    },
     "episode": {
       "number": 412,
       "order": 1
@@ -2364,6 +2404,11 @@ const timelineEvents = [
     "title": "第２回念能力講習会が再開する",
     "summary": "第２回念能力講習会が再開する",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0054.png",
+      "alt": "再開した第2回念能力講習会の参加者たち",
+      "caption": ""
+    },
     "episode": {
       "number": 412,
       "order": 3
@@ -2444,6 +2489,11 @@ const timelineEvents = [
     "title": "ハルケンブルグの棺が納められる",
     "summary": "ハルケンブルグの棺が納められる",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0056.png",
+      "alt": "特殊戒厳令発令前に配置された複数の棺",
+      "caption": ""
+    },
     "episode": {
       "number": 413,
       "order": 1
@@ -2484,6 +2534,11 @@ const timelineEvents = [
     "title": "ベンジャミンがTSK-17発症",
     "summary": "ベンジャミンがTSK-17発症",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0057.png",
+      "alt": "TSK-17への感染を疑うベンジャミン",
+      "caption": ""
+    },
     "episode": {
       "number": 413,
       "order": 2
@@ -2525,6 +2580,11 @@ const timelineEvents = [
     "title": "カンジドルとリッジが接敵",
     "summary": "カンジドルとリッジが接敵",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0058.png",
+      "alt": "倒れた人物を挟んで対峙するカンジドルとリッジ",
+      "caption": ""
+    },
     "episode": {
       "number": 414,
       "order": 1
@@ -2568,6 +2628,11 @@ const timelineEvents = [
     "title": "オイト王妃がヨロズヤで手紙を送る",
     "summary": "オイト王妃がヨロズヤで手紙を送る",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0059.png",
+      "alt": "ヨロズヤで手紙を送るオイト王妃",
+      "caption": ""
+    },
     "episode": {
       "number": 415,
       "order": 1
@@ -2607,6 +2672,11 @@ const timelineEvents = [
     "title": "オイト王妃に恩赦が下る",
     "summary": "オイト王妃に恩赦が下る",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0060.png",
+      "alt": "1014号室で恩赦について説明する人物",
+      "caption": ""
+    },
     "episode": {
       "number": 415,
       "order": 2
