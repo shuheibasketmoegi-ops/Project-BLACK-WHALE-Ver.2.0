@@ -1092,6 +1092,11 @@ const timelineEvents = [
     "title": "第一回晩餐会開始",
     "summary": "第一回晩餐会開始",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0027.png",
+      "alt": "晩餐会で演奏するセンリツと会場の出席者たち",
+      "caption": ""
+    },
     "episode": {
       "number": 383,
       "order": 1
@@ -1129,6 +1134,11 @@ const timelineEvents = [
     "title": "カチョウ死亡",
     "summary": "カチョウ死亡",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0028.png",
+      "alt": "魔法の抜け道で移動するカチョウとフウゲツ",
+      "caption": ""
+    },
     "episode": {
       "number": 383,
       "order": 2
@@ -1169,6 +1179,11 @@ const timelineEvents = [
     "title": "旅団、シャ=ア一家会談",
     "summary": "旅団、シャ=ア一家会談",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0029.png",
+      "alt": "会談する幻影旅団とシャ＝ア一家の関係者",
+      "caption": ""
+    },
     "episode": {
       "number": 384,
       "order": 1
@@ -1210,6 +1225,11 @@ const timelineEvents = [
     "title": "ツェリードニヒが発を習得して能力発動",
     "summary": "ツェリードニヒが発を習得して能力発動",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0030.png",
+      "alt": "念能力の修行を続けるツェリードニヒとテータ",
+      "caption": ""
+    },
     "episode": {
       "number": 385,
       "order": 1
@@ -1251,6 +1271,11 @@ const timelineEvents = [
     "title": "センリツとカイザルが対面",
     "summary": "センリツとカイザルが対面",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0031.png",
+      "alt": "センリツと話すカイザル",
+      "caption": ""
+    },
     "episode": {
       "number": 386,
       "order": 1
@@ -1294,6 +1319,11 @@ const timelineEvents = [
     "title": "ハルケンブルグの守護霊獣による鳴動【3回目】",
     "summary": "ハルケンブルグの守護霊獣による鳴動【3回目】",
     "detail": "シカクが1007号室前で自害",
+    "image": {
+      "src": "images/timeline/event-0032.png",
+      "alt": "スミドリへ任務を頼むハルケンブルグ",
+      "caption": ""
+    },
     "episode": {
       "number": 386,
       "order": 2
@@ -1341,6 +1371,11 @@ const timelineEvents = [
     "title": "ハルケンブルグの守護霊獣による鳴動【4回目】",
     "summary": "ハルケンブルグの守護霊獣による鳴動【4回目】",
     "detail": "ビクトに人格転移が発生",
+    "image": {
+      "src": "images/timeline/event-0033.png",
+      "alt": "4度目の鳴動を察知するクラピカ",
+      "caption": ""
+    },
     "episode": {
       "number": 388,
       "order": 1
@@ -1387,6 +1422,11 @@ const timelineEvents = [
     "title": "バルサミルコとカンジドルが会議",
     "summary": "バルサミルコとカンジドルが会議",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0034.png",
+      "alt": "第9王子への対応を協議するバルサミルコたち",
+      "caption": ""
+    },
     "episode": {
       "number": 389,
       "order": 1
@@ -1429,6 +1469,11 @@ const timelineEvents = [
     "title": "ヒンリギとエイ＝イが抗争を開始する",
     "summary": "ヒンリギとエイ＝イが抗争を開始する",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0035.png",
+      "alt": "エイ＝イ一家との抗争開始を告げる人物",
+      "caption": ""
+    },
     "episode": {
       "number": 390,
       "order": 1
@@ -1473,6 +1518,11 @@ const timelineEvents = [
     "title": "王立軍学校４期が会議",
     "summary": "王立軍学校４期が会議",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0036.png",
+      "alt": "王立軍学校4期の仲間たち",
+      "caption": ""
+    },
     "episode": {
       "number": 394,
       "order": 1
@@ -1510,6 +1560,11 @@ const timelineEvents = [
     "title": "クラピカが第5王子警護兵ロンギと密約を交わす。",
     "summary": "クラピカが第5王子警護兵ロンギと密約を交わす。",
     "detail": "ロンギの\"透明言葉（ゲッコウジョウレイ）\"発動",
+    "image": {
+      "src": "images/timeline/event-0037.png",
+      "alt": "密約を交わすロンギとクラピカ",
+      "caption": ""
+    },
     "episode": {
       "number": 401,
       "order": 1
@@ -1554,6 +1609,11 @@ const timelineEvents = [
     "title": "ビヨンドが誰かを呼ぶ",
     "summary": "ビヨンドが誰かを呼ぶ",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0038.png",
+      "alt": "拘束されたビヨンド",
+      "caption": ""
+    },
     "episode": {
       "number": 401,
       "order": 2
@@ -1590,6 +1650,11 @@ const timelineEvents = [
     "title": "第３・５・１４王子の和平協定が成立",
     "summary": "第３・５・１４王子の和平協定が成立",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0039.png",
+      "alt": "第3・5・14王子の和平について協議する関係者たち",
+      "caption": ""
+    },
     "episode": {
       "number": 402,
       "order": 1
@@ -1637,6 +1702,11 @@ const timelineEvents = [
     "title": "センリツ、カイザル、カチョウが手紙の作戦を練る",
     "summary": "センリツ、カイザル、カチョウが手紙の作戦を練る",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0040.png",
+      "alt": "手紙の作戦について話すセンリツとカイザル",
+      "caption": ""
+    },
     "episode": {
       "number": 402,
       "order": 2
@@ -1682,6 +1752,11 @@ const timelineEvents = [
     "title": "ツェリードニヒの絶が10秒を切る",
     "summary": "ツェリードニヒの絶が10秒を切る",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0041.png",
+      "alt": "絶の時間を計測するツェリードニヒたち",
+      "caption": ""
+    },
     "episode": {
       "number": 402,
       "order": 3
@@ -1724,6 +1799,11 @@ const timelineEvents = [
     "title": "フウゲツが各王子に手紙を渡し終える",
     "summary": "フウゲツが各王子に手紙を渡し終える",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0042.png",
+      "alt": "各王子へ手紙を渡すため移動するフウゲツたち",
+      "caption": ""
+    },
     "episode": {
       "number": 402,
       "order": 4
@@ -1765,6 +1845,11 @@ const timelineEvents = [
     "title": "バルサミルコとビクトが対峙する",
     "summary": "バルサミルコとビクトが対峙する",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0043.png",
+      "alt": "対峙するバルサミルコとビクト",
+      "caption": ""
+    },
     "episode": {
       "number": 403,
       "order": 1
@@ -1807,6 +1892,11 @@ const timelineEvents = [
     "title": "バルサミルコがベンジャミンに定期報告を行う",
     "summary": "バルサミルコがベンジャミンに定期報告を行う",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0044.png",
+      "alt": "電話で定期報告を行うバルサミルコ",
+      "caption": ""
+    },
     "episode": {
       "number": 403,
       "order": 2
@@ -2227,6 +2317,11 @@ const timelineEvents = [
     "title": "ワブルの秘密が判明する",
     "summary": "ワブルの秘密が判明する",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0053.png",
+      "alt": "目を見開く人物の顔",
+      "caption": ""
+    },
     "episode": {
       "number": 412,
       "order": 2
@@ -2307,6 +2402,11 @@ const timelineEvents = [
     "title": "ビヨンドとクレオパトロが会う",
     "summary": "ビヨンドとクレオパトロが会う",
     "detail": "",
+    "image": {
+      "src": "images/timeline/event-0055.png",
+      "alt": "ビヨンドと会うクレオパトロ",
+      "caption": ""
+    },
     "episode": {
       "number": 412,
       "order": 4
