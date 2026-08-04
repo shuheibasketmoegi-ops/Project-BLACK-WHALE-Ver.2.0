@@ -20,7 +20,7 @@ const timelineEventTypes = [
 const timelineEvents = [
   {
     id: "event-0001",
-    title: "ブラック・ホエール号 ――― 出航",
+    title: "ブラック・ホエール号―出航",
     summary: "",
     detail: "",
     image: {
@@ -86,7 +86,7 @@ const timelineEvents = [
   },
   {
     id: "event-0003",
-    title: "守護霊獣　発現",
+    title: "守護霊獣―発現",
     summary: "王子たちの守護霊獣が一堂に会する",
     detail: "",
     image: {
@@ -124,7 +124,7 @@ const timelineEvents = [
   },
   {
     id: "event-0004",
-    title: "ワブル王子警護兵　壊滅",
+    title: "ワブル王子警護兵が壊滅",
     summary: "1014号室の警護が2人になる",
     detail: "",
     image: {
@@ -157,8 +157,8 @@ const timelineEvents = [
   },
   {
     id: "event-0005",
-    title: "1014号室にビンセントが襲撃",
-    summary: "1014号室にビンセントが襲撃",
+    title: "ビンセント襲撃",
+    summary: "1014号室を第1王子私設兵ビンセントが襲撃",
     detail: "クラピカの絶対時間（エンペラータイム）開始。1秒につき1時間寿命が縮まる。",
     image: {
       src: "images/timeline/event-0005.png",
@@ -190,8 +190,8 @@ const timelineEvents = [
   },
   {
     id: "event-0006",
-    title: "クラピカがチョウライと面会",
-    summary: "クラピカがチョウライと面会",
+    title: "ワブル王子陣営、チョウライと面会",
+    summary: "クラピカの一斉アナウンスに第３王子チョウライが反応した。",
     detail: "",
     image: {
       src: "images/timeline/event-0006.png",
@@ -223,9 +223,9 @@ const timelineEvents = [
   },
   {
     id: "event-0007",
-    title: "ツェリードニヒが念修行を開始する。",
-    summary: "ツェリードニヒが念修行を開始する。",
-    detail: "",
+    title: "ツェリードニヒ、念修行開始",
+    summary: "第4王子ツェリードニヒが念修行を開始する。",
+    detail: "私設兵テータが指導を行う。",
     image: {
       src: "images/timeline/event-0007.png",
       alt: "指で輪を作る男性を見て驚く女性",
@@ -256,8 +256,8 @@ const timelineEvents = [
   },
   {
     id: "event-0008",
-    title: "第5王子陣営マオールが1014号室に入室",
-    summary: "第5王子陣営マオールが1014号室に入室",
+    title: "クラピカ、念能力を開示",
+    summary: "第1,3,5王子私設兵が1014号室に入室",
     detail: "",
     image: {
       src: "images/timeline/event-0008.png",
@@ -290,7 +290,7 @@ const timelineEvents = [
   {
     id: "event-0009",
     title: "モモゼ暗殺",
-    summary: "モモゼ暗殺",
+    summary: "第12王子モモゼが何者かによって暗殺される",
     detail: "絶対時間（エンペラータイム）3時間経過し、クラピカ失神",
     image: {
       src: "images/timeline/event-0009.png",
@@ -322,8 +322,8 @@ const timelineEvents = [
   },
   {
     id: "event-0010",
-    title: "クラピカが失神から目覚める",
-    summary: "クラピカが失神から目覚める",
+    title: "クラピカ、失神から目覚める",
+    summary: "",
     detail: "絶対時間（エンペラータイム）12時間経過",
     image: {
       src: "images/timeline/event-0010.png",
@@ -355,8 +355,8 @@ const timelineEvents = [
   },
   {
     id: "event-0011",
-    title: "第１回念能力講習会",
-    summary: "第１回念能力講習会",
+    title: "第1回念能力講習会",
+    summary: "",
     detail: "",
     image: {
       src: "images/timeline/event-0011.png",
