@@ -86,9 +86,9 @@ const timelineEvents = [
   },
   {
     id: "event-0003",
-    title: "守護霊獣―発現",
-    summary: "王子たちの守護霊獣が一堂に会する",
-    detail: "",
+    title: "壷中卵の儀―発現",
+    summary: "王子の守護霊獣たちが集結",
+    detail: "第6,7,12,13王子の守護霊獣が1014号室に集まる",
     image: {
       src: "images/timeline/event-0003.png",
       alt: "1014号室に現れた王子たちの守護霊獣",
@@ -111,11 +111,9 @@ const timelineEvents = [
     },
     primaryType: "念能力",
     tags: ["王子", "守護霊獣", "1014号室"],
-    relatedPersonIds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+    relatedPersonIds: [6, 7, 12, 13, 14],
     relatedForces: [
-      "第1王子陣営", "第2王子陣営", "第3王子陣営", "第4王子陣営",
-      "第5王子陣営", "第6王子陣営", "第7王子陣営", "第8王子陣営",
-      "第9王子陣営", "第10王子陣営", "第11王子陣営", "第12王子陣営",
+      "第6王子陣営", "第7王子陣営", "第12王子陣営",
       "第13王子陣営", "第14王子陣営"
     ],
     occurrenceCertainty: "confirmed",
@@ -158,7 +156,7 @@ const timelineEvents = [
   {
     id: "event-0005",
     title: "ビンセント襲撃",
-    summary: "1014号室を第1王子私設兵ビンセントが襲撃",
+    summary: "第1王子私設兵ビンセントが1014号室を襲撃",
     detail: "クラピカの絶対時間（エンペラータイム）開始。1秒につき1時間寿命が縮まる。",
     image: {
       src: "images/timeline/event-0005.png",
@@ -182,7 +180,7 @@ const timelineEvents = [
     },
     primaryType: "戦闘",
     tags: ["襲撃", "絶対時間", "エンペラータイム", "1014号室"],
-    relatedPersonIds: [102, 1401],
+    relatedPersonIds: [102],
     relatedForces: ["第1王子陣営", "第14王子陣営"],
     occurrenceCertainty: "confirmed",
     spoiler: { visibleFromEpisode: 364, hideInSafeMode: false },
@@ -191,7 +189,7 @@ const timelineEvents = [
   {
     id: "event-0006",
     title: "ワブル王子陣営、チョウライと面会",
-    summary: "クラピカの一斉アナウンスに第３王子チョウライが反応した。",
+    summary: "クラピカの一斉アナウンスにより第３王子チョウライが面会を希望",
     detail: "",
     image: {
       src: "images/timeline/event-0006.png",
