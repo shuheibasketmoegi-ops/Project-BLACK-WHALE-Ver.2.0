@@ -393,8 +393,8 @@ const timelineEvents = [
   },
   {
     id: "event-0012",
-    title: "\"11人いる！（サイレントマジョリティー）\"発動",
-    summary: "\"11人いる！（サイレントマジョリティー）\"発動",
+    title: "\"11人いる!\"（ｻｲﾚﾝﾄﾏｼﾞｮﾘﾃｨｰ）発動",
+    summary: "\"11人いる!\"（ｻｲﾚﾝﾄﾏｼﾞｮﾘﾃｨｰ）発動",
     detail: "バリゲン死亡",
     image: {
       src: "images/timeline/event-0012.png",
@@ -427,8 +427,8 @@ const timelineEvents = [
 
   {
     "id": "event-0013",
-    "title": "第１回念能力講習会再開",
-    "summary": "第１回念能力講習会再開",
+    "title": "第１回念能力講習会―再開",
+    "summary": "",
     "detail": "",
     "image": {
       "src": "images/timeline/event-0013.png",
@@ -470,8 +470,8 @@ const timelineEvents = [
   },
   {
     "id": "event-0014",
-    "title": "第１回念能力講習会終了",
-    "summary": "第１回念能力講習会終了",
+    "title": "第１回念能力講習会―終了",
+    "summary": "",
     "detail": "",
     "image": {
       "src": "images/timeline/event-0014.png",
@@ -513,8 +513,8 @@ const timelineEvents = [
   },
   {
     "id": "event-0015",
-    "title": "マラヤームの守護霊獣が能力を発動",
-    "summary": "マラヤームの守護霊獣が能力を発動",
+    "title": "マラヤームの守護霊獣、能力発動",
+    "summary": "",
     "detail": "",
     "image": {
       "src": "images/timeline/event-0015.png",
@@ -561,7 +561,7 @@ const timelineEvents = [
   {
     "id": "event-0016",
     "title": "カミーラvsムッセ",
-    "summary": "カミーラvsムッセ",
+    "summary": "第2王子カミーラと第1王子私設兵ムッセが接敵",
     "detail": "ムッセ死亡。\"裏窓の鳥（シークレットウインドウ）\"発動。",
     "image": {
       "src": "images/timeline/event-0016.png",
