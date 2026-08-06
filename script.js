@@ -91,7 +91,52 @@ function getForceOrder(forceName) {
   return mafiaOrder[forceName] || 999;
 }
 
-function getForceRecords() {
+function getMonitoringState(character) {
+  if (character.monitoring && Array.isArray(character.monitoring.targets)) {
+    return {
+      targets: character.monitoring.targets.filter(Boolean),
+      active: character.monitoring.active !== false
+    };
+  }
+
+  const targets = Array.isArray(character.monitorFor) ? character.monitorFor.filter(Boolean) : [];
+  return { targets, active: targets.length > 0 };
+}
+
+function getMonitorAssignments(character, statusMode = app.statusMode) {
+  const monitoring = getMonitoringState(character);
+  const visibleTargets = statusMode === "safe" ? monitoring.targets.slice(0, 1) : monitoring.targets;
+
+  return visibleTargets.map((targetForce, historyIndex) => ({
+    monitor: character,
+    targetForce,
+    historyIndex,
+    isLast: historyIndex === monitoring.targets.length - 1,
+    active: monitoring.active && historyIndex === monitoring.targets.length - 1
+  }));
+}
+
+function monitorAssignmentLabel(assignment, hasSuccessor = false) {
+  if (app.statusMode === "safe") return "監視担当";
+  if (!assignment.isLast) return "配置変更";
+  if (!assignment.active) return "任務終了";
+  if (hasSuccessor) return "以前";
+  return assignment.historyIndex > 0 ? "最新" : "監視担当";
+}
+
+function monitoringHistoryHtml(character) {
+  const monitoring = getMonitoringState(character);
+  const visibleTargets = app.statusMode === "safe" ? monitoring.targets.slice(0, 1) : monitoring.targets;
+  if (!visibleTargets.length) return "監視先なし";
+
+  const items = visibleTargets.map(target => `<span>${escapeHtml(target)}</span>`);
+  if (app.statusMode === "latest" && !monitoring.active) {
+    items.push('<span class="monitor-complete">任務終了</span>');
+  }
+  return `<span class="monitor-history">${items.join('<i aria-hidden="true">→</i>')}</span>`;
+}
+
+function getForceRecords(statusMode = app.statusMode) {
   const forceNames = [...new Set(characters.map(character => character.force).filter(Boolean))];
 
   return forceNames
@@ -101,22 +146,21 @@ function getForceRecords() {
       const leader = members.find(character =>
         type === "マフィア" ? character.category === "組長" : character.category === "王子"
       );
-      const monitoring = characters.filter(character =>
-        character.force !== name &&
-        Array.isArray(character.monitorFor) &&
-        character.monitorFor.includes(name)
-      );
+      const monitoringAssignments = characters
+        .filter(character => character.force !== name)
+        .flatMap(character => getMonitorAssignments(character, statusMode))
+        .filter(assignment => assignment.targetForce === name)
+        .sort((a, b) => a.historyIndex - b.historyIndex);
+      const monitoring = [...new Map(monitoringAssignments.map(assignment => [assignment.monitor.id, assignment.monitor])).values()];
       const monitoringMembers = [...new Map([
         ...members.filter(character => character.category === "監視"),
         ...monitoring
       ].map(character => [character.id, character])).values()];
 
-      return { name, type, leader, members, monitoring, monitoringMembers };
+      return { name, type, leader, members, monitoring, monitoringAssignments, monitoringMembers };
     })
     .sort((a, b) => getForceOrder(a.name) - getForceOrder(b.name));
 }
-
-const forceRecords = getForceRecords();
 
 // Ver.1.0の人物データには、王子とマフィアの後ろ盾関係がないため、
 // 相関画面と勢力表示で共用する小さな対応表として分離しています。
@@ -339,7 +383,7 @@ function forceCardHtml(record) {
 
 function filterForces() {
   const keyword = app.search.trim().toLowerCase();
-  return forceRecords.filter(record => {
+  return getForceRecords().filter(record => {
     const groupMatch = app.group === "すべて" || record.type === app.group;
     const forceMatch = !app.forceFilter || record.name === app.forceFilter;
     const categoryMatch = !app.categoryFilter || record.members.some(member => member.category === app.categoryFilter);
@@ -369,17 +413,17 @@ function renderForces() {
   hydrateImages();
 }
 
-function memberCardHtml(character, isMonitoring = false) {
+function memberCardHtml(character, isMonitoring = false, monitoringLabel = "監視担当") {
   const deadClass = app.statusMode === "latest" && character.status === "死亡" ? "is-dead" : "";
   return `
     <article class="member-card ${isMonitoring ? "monitor" : ""} ${deadClass}" data-person-id="${character.id}" tabindex="0" role="button">
       ${imageHtml(character, "")}
-      <div><h4>${escapeHtml(character.name)}</h4><p>${escapeHtml(isMonitoring ? "監視担当" : character.category)}</p><p>${escapeHtml(character.subName || "")}</p></div>
+      <div><h4>${escapeHtml(character.name)}</h4><p>${escapeHtml(isMonitoring ? monitoringLabel : character.category)}</p><p>${escapeHtml(character.subName || "")}</p></div>
     </article>`;
 }
 
 function renderForceDetail(forceName) {
-  const record = forceRecords.find(item => item.name === forceName);
+  const record = getForceRecords().find(item => item.name === forceName);
   if (!record) return renderForces();
   const leader = record.leader || record.members[0];
   const regularMembers = record.members.filter(member => member !== leader);
@@ -399,7 +443,10 @@ function renderForceDetail(forceName) {
     </section>
     ${record.type === "王子陣営" && leader ? princeExtraHtml(leader) : ""}
     ${record.monitoring.length ? `
-      <section class="member-section"><h3>外部からの監視担当</h3><div class="member-grid">${record.monitoring.map(member => memberCardHtml(member, true)).join("")}</div></section>` : ""}
+      <section class="member-section"><h3>外部からの監視担当</h3><div class="member-grid monitoring-member-grid">${record.monitoringAssignments.map((assignment, index) => `
+        ${app.statusMode === "latest" && index > 0 ? '<div class="monitor-transition" aria-hidden="true">→</div>' : ""}
+        ${memberCardHtml(assignment.monitor, true, monitorAssignmentLabel(assignment, index < record.monitoringAssignments.length - 1))}
+      `).join("")}</div></section>` : ""}
     <section class="member-section"><h3>${record.type === "マフィア" ? "組織構成" : "所属メンバー"}</h3><div class="member-grid">${regularMembers.map(member => memberCardHtml(member)).join("")}</div></section>`;
   hydrateImages();
 }
@@ -433,10 +480,11 @@ function princeExtraHtml(prince) {
 function renderPersonDetail(id) {
   const character = characters.find(item => String(item.id) === String(id));
   if (!character) return renderPeople();
-  const monitoring = Array.isArray(character.monitorFor) ? character.monitorFor : [];
   const ability = app.statusMode === "safe"
     ? `<span class="redaction"></span><span class="classified">CLASSIFIED</span>`
-    : escapeHtml(character.nenAbility?.name || "未判明");
+    : `<span class="ability-name">${escapeHtml(character.nenAbility?.name || "未判明")}</span>${character.nenAbility?.description
+      ? `<span class="ability-description">${escapeHtml(character.nenAbility.description)}</span>`
+      : ""}`;
 
   elements.viewContent.innerHTML = `
     <div class="person-detail">
@@ -454,7 +502,7 @@ function renderPersonDetail(id) {
       <div class="detail-blocks">
         <section class="detail-block"><h3>念能力</h3><p>${ability}</p></section>
         <section class="detail-block"><h3>所属勢力</h3><p><button class="text-button" data-force="${escapeHtml(character.force)}" type="button">${escapeHtml(character.force)} →</button></p></section>
-        <section class="detail-block"><h3>監視先</h3><p>${monitoring.length ? monitoring.map(escapeHtml).join("<br>") : "監視先なし"}</p></section>
+        <section class="detail-block"><h3>監視先</h3><p>${monitoringHistoryHtml(character)}</p></section>
       </div>
     </div>`;
   hydrateImages();
@@ -495,10 +543,9 @@ function familyGroupHtml(group) {
 function monitoringGroups() {
   const groups = new Map();
   characters.forEach(character => {
-    if (!Array.isArray(character.monitorFor)) return;
-    character.monitorFor.forEach(targetForce => {
-      if (!groups.has(targetForce)) groups.set(targetForce, []);
-      groups.get(targetForce).push(character);
+    getMonitorAssignments(character).forEach(assignment => {
+      if (!groups.has(assignment.targetForce)) groups.set(assignment.targetForce, []);
+      groups.get(assignment.targetForce).push(assignment);
     });
   });
 
@@ -506,7 +553,7 @@ function monitoringGroups() {
     .map(([targetForce, monitors]) => ({
       targetForce,
       targetPrince: characters.find(character => character.force === targetForce && character.category === "王子"),
-      monitors
+      monitors: monitors.sort((a, b) => a.historyIndex - b.historyIndex)
     }))
     .sort((a, b) => getForceOrder(a.targetForce) - getForceOrder(b.targetForce));
 }
@@ -522,13 +569,17 @@ function monitoringGroupHtml(group) {
       </button>
       <div class="monitor-arrow" aria-hidden="true"><span>↑</span><small>監視</small></div>
       <div class="monitor-list">
-        ${group.monitors.map(monitor => {
+        ${group.monitors.map((assignment, index) => {
+          const monitor = assignment.monitor;
           const deadClass = app.statusMode === "latest" && monitor.status === "死亡" ? "is-dead" : "";
+          const hasSuccessor = index < group.monitors.length - 1;
+          const stateLabel = app.statusMode === "safe" ? "監視元" : monitorAssignmentLabel(assignment, hasSuccessor);
           return `
+            ${app.statusMode === "latest" && index > 0 ? '<div class="monitor-transition" aria-hidden="true">→</div>' : ""}
             <article class="monitor-node ${deadClass}" data-person-id="${monitor.id}" tabindex="0" role="button">
               ${networkPortraitHtml(monitor)}
               <div><strong>${escapeHtml(monitor.name)}</strong><small>${escapeHtml(monitor.subName || monitor.category)}</small><button data-force="${escapeHtml(monitor.force)}" type="button">${escapeHtml(monitor.force)}</button></div>
-              <i>監視元</i>
+              <i>${stateLabel}</i>
             </article>`;
         }).join("")}
       </div>
@@ -537,7 +588,7 @@ function monitoringGroupHtml(group) {
 
 function mafiaRelationHtml(relation) {
   const prince = characters.find(character => String(character.id) === String(relation.princeId));
-  const mafia = forceRecords.find(record => record.name === relation.mafiaForce);
+  const mafia = getForceRecords().find(record => record.name === relation.mafiaForce);
   if (!prince || !mafia) return "";
 
   return `
@@ -556,7 +607,7 @@ function mafiaRelationHtml(relation) {
 
 function renderNetwork() {
   const monitorGroups = monitoringGroups();
-  const monitorCount = monitorGroups.reduce((total, group) => total + group.monitors.length, 0);
+  const monitorCount = new Set(monitorGroups.flatMap(group => group.monitors.map(assignment => assignment.monitor.id))).size;
   elements.viewContent.innerHTML = `
     <div class="network-intro">
       <div><strong>GROUPED RELATION VIEW</strong><p>自由配置ではなく、関係の種類ごとにグループ化して表示しています。</p></div>
@@ -978,7 +1029,7 @@ function renderPlaceholder(type) {
 }
 
 function populateFilters() {
-  const forceOptions = forceRecords.map(record => `<option value="${escapeHtml(record.name)}">${escapeHtml(record.name)}</option>`).join("");
+  const forceOptions = getForceRecords("safe").map(record => `<option value="${escapeHtml(record.name)}">${escapeHtml(record.name)}</option>`).join("");
   const categories = [...new Set(characters.map(character => character.category).filter(Boolean))].sort();
   elements.forceFilter.innerHTML = `<option value="">すべて</option>${forceOptions}`;
   elements.categoryFilter.innerHTML = `<option value="">すべて</option>${categories.map(category => `<option value="${escapeHtml(category)}">${escapeHtml(category)}</option>`).join("")}`;

@@ -280,10 +280,20 @@ button { color: inherit; }
 .monitor-arrow span { font-size: 17px; line-height: 1; }
 .monitor-arrow small { font-size: 7px; letter-spacing: .12em; }
 .monitor-list { display: grid; gap: 5px; }
+.monitor-transition { color: var(--steel); font-size: 18px; line-height: 1; text-align: center; }
+.monitoring-member-grid { display: flex; flex-wrap: wrap; align-items: stretch; }
+.monitoring-member-grid .member-card { flex: 1 1 180px; }
+.monitoring-member-grid .monitor-transition { display: grid; flex: 0 0 18px; place-items: center; }
 .monitor-node { position: relative; display: grid; grid-template-columns: 40px 1fr; gap: 7px; padding: 6px; border: 1px solid #384750; background: rgba(4,13,20,.75); cursor: pointer; }
 .monitor-node .network-portrait { width: 40px; height: 40px; }
 .monitor-node i { position: absolute; right: 4px; bottom: 4px; padding: 2px 4px; border: 1px solid var(--red); color: var(--red-soft); font-size: 7px; font-style: normal; }
 .monitor-node button { max-width: calc(100% - 40px); color: #b2635e; }
+.monitor-history { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+.monitor-history i { color: var(--steel); font-style: normal; }
+.monitor-history .monitor-complete { padding: 2px 6px; border: 1px solid var(--red); color: var(--red-soft); font-size: 9px; }
+.ability-name, .ability-description { display: block; }
+.ability-name { color: var(--gold-soft); }
+.ability-description { margin-top: 8px; color: var(--muted); font-size: 11px; line-height: 1.75; }
 .mafia-relation-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
 .mafia-relation-card { display: grid; grid-template-columns: minmax(0,1fr) 56px minmax(0,1fr); align-items: center; gap: 8px; padding: 11px; border: 1px solid var(--red); background: linear-gradient(100deg, rgba(9,22,31,.9), rgba(39,14,19,.7)); }
 .backer-prince { display: grid; grid-template-columns: 46px 1fr; gap: 7px; min-width: 0; cursor: pointer; }
@@ -521,6 +531,8 @@ button { color: inherit; }
   .force-grid, .force-grid.mafia-grid { grid-template-columns: 1fr; }
   .force-card { grid-template-columns: 105px 1fr; }
   .member-grid { grid-template-columns: 1fr; }
+  .monitoring-member-grid { flex-direction: column; }
+  .monitoring-member-grid .member-card, .monitoring-member-grid .monitor-transition { flex-basis: auto; }
   .detail-hero, .person-detail .detail-hero { grid-template-columns: 90px 1fr; padding: 12px; gap: 13px; }
   .detail-hero .hero-image { width: 90px; }
   .detail-hero h2 { font-size: 22px; }
