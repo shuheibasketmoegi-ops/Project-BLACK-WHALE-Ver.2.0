@@ -1005,10 +1005,16 @@ const timelineEvents = [
       "day": null,
       "dayCertainty": "unknown",
       "time": null,
-      "timeLabel": "日時不明（朝）",
+      "timeLabel": "5日目20:00～8日目20:00の間",
+      "timeRange": {
+        "startDay": 5,
+        "startTime": "20:00",
+        "endDay": 8,
+        "endTime": "20:00"
+      },
       "orderInDay": 1,
-      "orderCertainty": "confirmed",
-      "chronologyNote": "正確な航海日・時刻は不明。提示順に基づき配置"
+      "orderCertainty": "estimated",
+      "chronologyNote": "航海5日目20:00から8日目20:00までの間に発生。区間内の正確な日時は不明"
     },
     "location": {
       "tier": null,
@@ -1057,10 +1063,16 @@ const timelineEvents = [
       "day": null,
       "dayCertainty": "unknown",
       "time": null,
-      "timeLabel": "日時不明",
+      "timeLabel": "5日目20:00～8日目20:00の間",
+      "timeRange": {
+        "startDay": 5,
+        "startTime": "20:00",
+        "endDay": 8,
+        "endTime": "20:00"
+      },
       "orderInDay": 2,
-      "orderCertainty": "confirmed",
-      "chronologyNote": "正確な航海日・時刻は不明。提示順に基づき配置"
+      "orderCertainty": "estimated",
+      "chronologyNote": "航海5日目20:00から8日目20:00までの間に発生。区間内では鳴動【2回目】の後に配置"
     },
     "location": {
       "tier": null,
@@ -2115,8 +2127,8 @@ const timelineEvents = [
   },
   {
     "id": "event-0049",
-    "title": "司法省に総合指令本部設置（ベンジャミン）",
-    "summary": "司法省に総合指令本部設置（ベンジャミン）",
+    "title": "司法局に総合指令本部設置（ベンジャミン）",
+    "summary": "司法局に総合指令本部設置（ベンジャミン）",
     "detail": "",
     "image": {
       "src": "images/timeline/event-0049.png",
@@ -2143,10 +2155,9 @@ const timelineEvents = [
     },
     "primaryType": "監視・配置",
     "tags": [
-      "司法省",
+      "司法局",
       "総合指令本部",
-      "ベンジャミン",
-      "司法局"
+      "ベンジャミン"
     ],
     "relatedPersonIds": [
       1
