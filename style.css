@@ -175,6 +175,10 @@ button { color: inherit; }
 .mafia .force-info h3 { color: #e2c6b9; }
 .leader-name { margin: 3px 0 0; color: #c5ae86; font-size: 11px; }
 .force-total { margin: 6px 0; padding-bottom: 5px; border-bottom: 1px solid rgba(255,255,255,.08); color: #aaa095; font-size: 10px; }
+.mafia-patron { display: grid; gap: 2px; margin: 8px 0; padding: 7px 8px; border: 1px solid rgba(166,63,59,.45); background: rgba(8,17,23,.5); }
+.mafia-patron span { color: #a99e8f; font-size: 8px; letter-spacing: .12em; }
+.mafia-patron strong { color: #e2c6b9; font: 11px Georgia, "Yu Mincho", serif; font-weight: 500; }
+.detail-hero .mafia-patron { max-width: 320px; margin-top: 10px; }
 .summary-row { display: grid; grid-template-columns: 47px 1fr; gap: 5px; align-items: start; margin: 3px 0; font-size: 9px; }
 .summary-label { color: #a99e8f; }
 .summary-icons { display: flex; flex-wrap: wrap; gap: 2px; max-height: 22px; overflow: hidden; }

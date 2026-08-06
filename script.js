@@ -119,7 +119,7 @@ function getForceRecords() {
 const forceRecords = getForceRecords();
 
 // Ver.1.0の人物データには、王子とマフィアの後ろ盾関係がないため、
-// 相関画面専用の小さな対応表として分離しています。
+// 相関画面と勢力表示で共用する小さな対応表として分離しています。
 const mafiaBackingRelations = [
   { princeId: 3, mafiaForce: "シュウ＝ウ一家" },
   { princeId: 4, mafiaForce: "エイ＝イ一家" },
@@ -302,6 +302,22 @@ function summaryIconsHtml(count, className) {
   return `<span class="summary-icons" aria-label="${count}名">${`<i class="person-dot ${className}"></i>`.repeat(count)}</span>`;
 }
 
+function mafiaPatronHtml(record) {
+  const relation = mafiaBackingRelations.find(item => item.mafiaForce === record.name);
+  const prince = relation
+    ? characters.find(character => String(character.id) === String(relation.princeId))
+    : null;
+  const princeLabel = prince
+    ? `${prince.subName || "王子"} ${prince.name}`
+    : "情報未登録";
+
+  return `
+    <div class="mafia-patron">
+      <span>ケツモチ</span>
+      <strong>${escapeHtml(princeLabel)}</strong>
+    </div>`;
+}
+
 function forceCardHtml(record) {
   const leader = record.leader || { name: "代表者情報未登録", image: "", subName: "" };
   return `
@@ -310,10 +326,12 @@ function forceCardHtml(record) {
       <div class="force-info">
         <h3>${escapeHtml(record.name)}</h3>
         <p class="leader-name">${escapeHtml(leader.name)} <small>代表者</small></p>
-        <p class="force-total">登録 ${record.members.length}名</p>
-        ${summaryCategories(record).map(row => `
-          <div class="summary-row"><span class="summary-label">${row.category}</span>${summaryIconsHtml(row.count, row.className)}</div>
-        `).join("")}
+        ${record.type === "マフィア"
+          ? mafiaPatronHtml(record)
+          : `<p class="force-total">登録 ${record.members.length}名</p>
+             ${summaryCategories(record).map(row => `
+               <div class="summary-row"><span class="summary-label">${row.category}</span>${summaryIconsHtml(row.count, row.className)}</div>
+             `).join("")}`}
         <span class="details-link">詳細を見る →</span>
       </div>
     </article>`;
@@ -373,8 +391,10 @@ function renderForceDetail(forceName) {
       <div>
         <p>${record.type === "マフィア" ? "LOWER DECK FORCE" : "PRINCE FORCE"}</p>
         <h2>${escapeHtml(record.name)}</h2>
-        <p>代表者：${escapeHtml(leader?.name || "情報未登録")}　／　登録構成員：${record.members.length}名</p>
-        <div>${summaryCategories(record).map(row => `<div class="summary-row"><span class="summary-label">${row.category}</span>${summaryIconsHtml(row.count, row.className)}</div>`).join("")}</div>
+        <p>代表者：${escapeHtml(leader?.name || "情報未登録")}${record.type === "マフィア" ? "" : `　／　登録構成員：${record.members.length}名`}</p>
+        <div>${record.type === "マフィア"
+          ? mafiaPatronHtml(record)
+          : summaryCategories(record).map(row => `<div class="summary-row"><span class="summary-label">${row.category}</span>${summaryIconsHtml(row.count, row.className)}</div>`).join("")}</div>
       </div>
     </section>
     ${record.type === "王子陣営" && leader ? princeExtraHtml(leader) : ""}
