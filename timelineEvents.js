@@ -393,9 +393,9 @@ const timelineEvents = [
   },
   {
     id: "event-0012",
-    title: "\"11人いる!\"（ｻｲﾚﾝﾄﾏｼﾞｮﾘﾃｨｰ）発動",
-    summary: "\"11人いる!\"（ｻｲﾚﾝﾄﾏｼﾞｮﾘﾃｨｰ）発動",
-    detail: "バリゲン死亡",
+    title: "\"11人いる！\"（サイレントマジョリティー）発動",
+    summary: "第13王子マラヤーム陣営・第7王妃兵バリゲンが死亡する",
+    detail: "1名に黒ぼっこを視せ、別の1名をツチボッコで攻撃する能力",
     image: {
       src: "images/timeline/event-0012.png",
       alt: "床に座り込みバリゲンの名を叫ぶ男性",
@@ -611,8 +611,8 @@ const timelineEvents = [
   },
   {
     "id": "event-0017",
-    "title": "フウゲツが守護霊獣の能力を発動",
-    "summary": "フウゲツが守護霊獣の能力を発動",
+    "title": "フウゲツ、守護霊獣の能力を発動",
+    "summary": "",
     "detail": "\"魔法の抜け道\"（マジカルワーム）を発動",
     "image": {
       "src": "images/timeline/event-0017.png",
@@ -660,8 +660,8 @@ const timelineEvents = [
   {
     "id": "event-0018",
     "title": "ハルケンブルグの守護霊獣による鳴動",
-    "summary": "ハルケンブルグの守護霊獣による鳴動",
-    "detail": "",
+    "summary": "1回目の鳴動",
+    "detail": "この様子を第1王子私設兵シカクが目撃、報告を行う",
     "image": {
       "src": "images/timeline/event-0018.png",
       "alt": "ハルケンブルグ陣営の周囲で発生する鳴動",
@@ -706,9 +706,9 @@ const timelineEvents = [
   },
   {
     "id": "event-0019",
-    "title": "\"11人いる！（サイレントマジョリティー）\"発動【②回目】",
-    "summary": "\"11人いる！（サイレントマジョリティー）\"発動【②回目】",
-    "detail": "ミュハン死亡",
+    "title": "\"11人いる！\"（サイレントマジョリティー）発動",
+    "summary": "2回目の発動",
+    "detail": "第4王子私設兵ミュハンが死亡",
     "image": {
       "src": "images/timeline/event-0019.png",
       "alt": "1014号室で発生した異変を警戒する講習会参加者",
@@ -755,8 +755,8 @@ const timelineEvents = [
   },
   {
     "id": "event-0020",
-    "title": "ツェリードニヒが水見式で念系統が判明する",
-    "summary": "ツェリードニヒが水見式で念系統が判明する",
+    "title": "水見式でツェリードニヒの念系統が判明",
+    "summary": "特質系…禍々しい事だけが確か……!!",
     "detail": "",
     "image": {
       "src": "images/timeline/event-0020.png",
