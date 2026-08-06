@@ -549,7 +549,1822 @@ guardianSpiritBeast: {
     category: "私設兵",
     status: "不明",
     description: "第3王子チョウライの私設兵。名前・詳細は未入力。",
-    image: …13884 tokens truncated…s: "生存",
+    image: "images/第3王子/304.png"
+  },
+  {
+    id: 305,
+    name: "不明2",
+    subName: "チョウライ私設兵",
+    force: "第3王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第3王子チョウライの私設兵。名前・詳細は未入力。",
+    image: "images/第3王子/305.png"
+  },
+  {
+    id: 306,
+    name: "不明3",
+    subName: "チョウライ私設兵",
+    force: "第3王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第3王子チョウライの私設兵。名前・詳細は未入力。",
+    image: "images/第3王子/306.png"
+  },
+  {
+    id: 307,
+    name: "不明4",
+    subName: "チョウライ私設兵",
+    force: "第3王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第3王子チョウライの私設兵。名前・詳細は未入力。",
+    image: "images/第3王子/307.png"
+  },
+  {
+    id: 308,
+    name: "不明5",
+    subName: "チョウライ私設兵",
+    force: "第3王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第3王子チョウライの私設兵。名前・詳細は未入力。",
+    image: "images/第3王子/308.png"
+  },
+  {
+    id: 309,
+    name: "不明6",
+    subName: "チョウライ私設兵",
+    force: "第3王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第3王子チョウライの私設兵。名前・詳細は未入力。",
+    image: "images/第3王子/309.png"
+  },
+  {
+    id: 310,
+    name: "不明7",
+    subName: "チョウライ私設兵",
+    force: "第3王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第3王子チョウライの私設兵。名前・詳細は未入力。",
+    image: "images/第3王子/310.png"
+  },
+  {
+    id: 311,
+    name: "不明8",
+    subName: "チョウライ陣営従事者",
+    force: "第3王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第3王子チョウライ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 312,
+    name: "不明9",
+    subName: "チョウライ陣営従事者",
+    force: "第3王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第3王子チョウライ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 313,
+    name: "不明10",
+    subName: "チョウライ陣営従事者",
+    force: "第3王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第3王子チョウライ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 314,
+    name: "不明11",
+    subName: "チョウライ私設兵（準協会）",
+    force: "第3王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第3王子チョウライの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 315,
+    name: "不明12",
+    subName: "チョウライ私設兵（準協会）",
+    force: "第3王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第3王子チョウライの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 316,
+    name: "不明13",
+    subName: "チョウライ私設兵（準協会）",
+    force: "第3王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第3王子チョウライの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 317,
+    name: "不明14",
+    subName: "チョウライ私設兵（準協会）",
+    force: "第3王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第3王子チョウライの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 318,
+    name: "不明15",
+    subName: "チョウライ私設兵（準協会）",
+    force: "第3王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第3王子チョウライの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+
+  {
+    id: 4,
+    name: "ツェリードニヒ",
+    subName: "第4王子",
+    force: "第4王子陣営",
+    category: "王子",
+    status: "生存",
+    description: "カキン帝国第4王子。高い知性と異常性を併せ持つ危険人物。念の習得も急速に進めている。",
+    image: "images/第4王子/4.png",
+
+mother: {
+  name: "ウンマ",
+  title: "第1王妃",
+  image: "images/王妃/01.png"
+},
+
+guardianSpiritBeast: {
+  name: "不明",
+  description: "対象の嘘や敵意に反応し、段階的に異変を与えるとみられる寄生型の念獣。詳細な能力は未確定。",
+  image: "images/第4王子/4x.png"
+},
+
+nenAbility: {
+  name: "不明",
+  description: "絶の状態で目を閉じることで10秒先の未来を体験し、その後の現実を改変するように行動できる念能力。"
+}
+  },
+
+  {
+    id: 401,
+    name: "テータ",
+    subName: "ツェリードニヒ私設兵",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第4王子ツェリードニヒの私設兵。念の指導役としてツェリードニヒに関わる。",
+    image: "images/第4王子/401.png"
+  },
+  {
+    id: 402,
+    name: "サルコフ",
+    subName: "ツェリードニヒ私設兵",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第4王子ツェリードニヒの私設兵。テータとともにツェリードニヒの念習得に関わる。",
+    image: "images/第4王子/402.png"
+  },
+  {
+    id: 403,
+    name: "ミュハン",
+    subName: "ツェリードニヒ私設兵",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "死亡",
+    description: "第4王子ツェリードニヒの私設兵。ツェリードニヒ陣営に属する兵士。",
+    image: "images/第4王子/403.png"
+  },
+  {
+    id: 404,
+    name: "ダンジン",
+    subName: "ツェリードニヒ私設兵",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第4王子ツェリードニヒの私設兵。ツェリードニヒ陣営に属する兵士。",
+    image: "images/第4王子/404.png"
+  },
+  {
+    id: 405,
+    name: "ヴァンダイン",
+    subName: "ツェリードニヒ私設兵",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第4王子ツェリードニヒの私設兵。ツェリードニヒ陣営に属する兵士。",
+    image: "images/第4王子/405.png"
+  },
+  {
+    id: 406,
+    name: "不明1",
+    subName: "ツェリードニヒ私設兵",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第4王子ツェリードニヒの私設兵。名前・詳細は未入力。",
+    image: "images/第4王子/406.png"
+  },
+  {
+    id: 407,
+    name: "不明2",
+    subName: "ツェリードニヒ私設兵",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第4王子ツェリードニヒの私設兵。名前・詳細は未入力。",
+    image: "images/第4王子/407.png"
+  },
+  {
+    id: 408,
+    name: "不明3",
+    subName: "ツェリードニヒ私設兵",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第4王子ツェリードニヒの私設兵。名前・詳細は未入力。",
+    image: "images/第4王子/408.png"
+  },
+  {
+    id: 409,
+    name: "不明4",
+    subName: "ツェリードニヒ私設兵",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第4王子ツェリードニヒの私設兵。名前・詳細は未入力。",
+    image: "images/第4王子/409.png"
+  },
+  {
+    id: 410,
+    name: "不明5",
+    subName: "ツェリードニヒ私設兵",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第4王子ツェリードニヒの私設兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 411,
+    name: "不明6",
+    subName: "ツェリードニヒ陣営従事者",
+    force: "第4王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第4王子ツェリードニヒ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 412,
+    name: "不明7",
+    subName: "ツェリードニヒ陣営従事者",
+    force: "第4王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第4王子ツェリードニヒ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 413,
+    name: "不明8",
+    subName: "ツェリードニヒ陣営従事者",
+    force: "第4王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第4王子ツェリードニヒ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 414,
+    name: "不明9",
+    subName: "ツェリードニヒ陣営従事者",
+    force: "第4王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第4王子ツェリードニヒ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 415,
+    name: "不明10",
+    subName: "ツェリードニヒ陣営従事者",
+    force: "第4王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第4王子ツェリードニヒ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 416,
+    name: "不明11",
+    subName: "ツェリードニヒ私設兵（準協会員）",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第4王子ツェリードニヒの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 417,
+    name: "不明12",
+    subName: "ツェリードニヒ私設兵（準協会員）",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第4王子ツェリードニヒの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 418,
+    name: "不明13",
+    subName: "ツェリードニヒ私設兵（準協会員）",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第4王子ツェリードニヒの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 419,
+    name: "不明14",
+    subName: "ツェリードニヒ私設兵（準協会員）",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第4王子ツェリードニヒの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 420,
+    name: "不明15",
+    subName: "ツェリードニヒ私設兵（準協会員）",
+    force: "第4王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第4王子ツェリードニヒの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+
+  {
+    id: 5,
+    name: "ツベッパ",
+    subName: "第5王子",
+    force: "第5王子陣営",
+    category: "王子",
+    status: "生存",
+    description: "カキン帝国第5王子。合理的で研究者肌の人物。王位継承戦ではクラピカとの協力関係を模索する。",
+    image: "images/第5王子/5.png",
+
+mother: {
+  name: "ドゥアズル",
+  title: "第2王妃",
+  image: "images/王妃/02.png"
+},
+
+guardianSpiritBeast: {
+  name: "不明",
+  description: "体内で様々な効果を持つ薬品を生成する能力を持つとみられる念獣。能力発動には協力者が必要。",
+  image: "images/第5王子/5x.png"
+}
+  },
+
+  {
+    id: 501,
+    name: "マオール",
+    subName: "ツベッパ私設兵",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第5王子ツベッパの私設兵。ツベッパ陣営に属する兵士。",
+    image: "images/第5王子/501.png"
+  },
+  {
+    id: 502,
+    name: "ロンギ",
+    subName: "ツベッパ私設兵",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第5王子ツベッパの私設兵。ツベッパ陣営に属する兵士。",
+    image: "images/第5王子/502.png"
+  },
+  {
+    id: 503,
+    name: "不明1",
+    subName: "ツベッパ私設兵",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第5王子ツベッパの私設兵。名前・詳細は未入力。",
+    image: "images/第5王子/503.png"
+  },
+  {
+    id: 504,
+    name: "不明2",
+    subName: "ツベッパ私設兵",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第5王子ツベッパの私設兵。名前・詳細は未入力。",
+    image: "images/第5王子/504.png"
+  },
+  {
+    id: 505,
+    name: "不明3",
+    subName: "ツベッパ私設兵",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第5王子ツベッパの私設兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 506,
+    name: "不明4",
+    subName: "ツベッパ私設兵",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第5王子ツベッパの私設兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 507,
+    name: "不明5",
+    subName: "ツベッパ私設兵",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第5王子ツベッパの私設兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 508,
+    name: "不明6",
+    subName: "ツベッパ私設兵",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第5王子ツベッパの私設兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 509,
+    name: "不明7",
+    subName: "ツベッパ私設兵",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第5王子ツベッパの私設兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 510,
+    name: "不明8",
+    subName: "ツベッパ陣営従事者",
+    force: "第5王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第5王子ツベッパ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 511,
+    name: "不明9",
+    subName: "ツベッパ陣営従事者",
+    force: "第5王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第5王子ツベッパ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 512,
+    name: "不明10",
+    subName: "ツベッパ陣営従事者",
+    force: "第5王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第5王子ツベッパ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 513,
+    name: "不明11",
+    subName: "ツベッパ陣営従事者",
+    force: "第5王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第5王子ツベッパ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 514,
+    name: "不明12",
+    subName: "ツベッパ陣営従事者",
+    force: "第5王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第5王子ツベッパ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 515,
+    name: "不明13",
+    subName: "ツベッパ私設兵（準協会員）",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第5王子ツベッパの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 516,
+    name: "不明14",
+    subName: "ツベッパ私設兵（準協会員）",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第5王子ツベッパの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 517,
+    name: "不明15",
+    subName: "ツベッパ私設兵（準協会員）",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第5王子ツベッパの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 518,
+    name: "不明16",
+    subName: "ツベッパ私設兵（準協会員）",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第5王子ツベッパの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 519,
+    name: "不明17",
+    subName: "ツベッパ私設兵（準協会員）",
+    force: "第5王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第5王子ツベッパの私設兵。準協会員。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+
+  {
+    id: 6,
+    name: "タイソン",
+    subName: "第6王子",
+    force: "第6王子陣営",
+    category: "王子",
+    status: "生存",
+    description: "カキン帝国第6王子。愛や幸福を重視する独特の思想を持ち、信奉者のような従者たちに囲まれている。",
+    image: "images/第6王子/6.png",
+
+mother: {
+  name: "カットローノ",
+  title: "第4王妃",
+  image: "images/王妃/04.png"
+},
+
+guardianSpiritBeast: {
+  name: "不明",
+  description: "教典に触れた者からオーラを集め、幸福感と信奉心を与える念獣。禁忌を破ると罰が下る。",
+  image: "images/第6王子/6x.png"
+}
+  },
+
+  {
+    id: "022",
+    name: "不明1",
+    subName: "第2王妃兵（監視）",
+    force: "第6王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第6王子タイソン陣営を監視する第2王妃所属の王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: "031",
+    name: "不明2",
+    subName: "第3王妃兵（監視）",
+    force: "第6王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第6王子タイソン陣営を監視する第3王妃所属の王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 601,
+    name: "不明3",
+    subName: "タイソン私設兵",
+    force: "第6王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第6王子タイソンの私設兵。名前・詳細は未入力。",
+    image: "images/第6王子/601.png"
+  },
+  {
+    id: 602,
+    name: "不明4",
+    subName: "タイソン私設兵",
+    force: "第6王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第6王子タイソンの私設兵。名前・詳細は未入力。",
+    image: "images/第6王子/602.png"
+  },
+  {
+    id: 603,
+    name: "不明5",
+    subName: "タイソン私設兵",
+    force: "第6王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第6王子タイソンの私設兵。名前・詳細は未入力。",
+    image: "images/第6王子/603.png"
+  },
+  {
+    id: 604,
+    name: "不明6",
+    subName: "タイソン私設兵",
+    force: "第6王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第6王子タイソンの私設兵。名前・詳細は未入力。",
+    image: "images/第6王子/604.png"
+  },
+  {
+    id: 605,
+    name: "不明7",
+    subName: "タイソン私設兵",
+    force: "第6王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第6王子タイソンの私設兵。名前・詳細は未入力。",
+    image: "images/第6王子/605.png"
+  },
+  {
+    id: 606,
+    name: "イズナビ",
+    subName: "ハンター",
+    force: "第6王子陣営",
+    category: "ハンター",
+    status: "生存",
+    description: "第6王子タイソン陣営に関わるハンター。王位継承戦に護衛として参加する。",
+    image: "images/第6王子/606.png"
+  },
+  {
+    id: 607,
+    name: "ジュリアーノ",
+    subName: "協専ハンター",
+    force: "第6王子陣営",
+    category: "ハンター",
+    status: "生存",
+    description: "第6王子タイソン陣営に関わる協専ハンター。タイソン陣営の護衛を担当する。",
+    image: "images/第6王子/607.png"
+  },
+  {
+    id: 608,
+    name: "マドウィッグ",
+    subName: "タイソン陣営従事者",
+    force: "第6王子陣営",
+    category: "従事者",
+    status: "生存",
+    description: "第6王子タイソン陣営の従事者。タイソン陣営に仕える人物。",
+    image: "images/第6王子/608.png"
+  },
+  {
+    id: 609,
+    name: "ヒマンセ",
+    subName: "タイソン陣営従事者",
+    force: "第6王子陣営",
+    category: "従事者",
+    status: "生存",
+    description: "第6王子タイソン陣営の従事者。タイソン陣営に仕える人物。",
+    image: "images/第6王子/609.png"
+  },
+  {
+    id: 610,
+    name: "ヒュウガ",
+    subName: "タイソン陣営従事者",
+    force: "第6王子陣営",
+    category: "従事者",
+    status: "生存",
+    description: "第6王子タイソン陣営の従事者。タイソン陣営に仕える人物。",
+    image: "images/第6王子/610.png"
+  },
+  {
+    id: 611,
+    name: "エンゼール",
+    subName: "タイソン陣営従事者",
+    force: "第6王子陣営",
+    category: "従事者",
+    status: "生存",
+    description: "第6王子タイソン陣営の従事者。タイソン陣営に仕える人物。",
+    image: "images/第6王子/611.png"
+  },
+  {
+    id: 612,
+    name: "不明8",
+    subName: "タイソン陣営従事者",
+    force: "第6王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第6王子タイソン陣営の従事者。名前・詳細は未入力。",
+    image: "images/第6王子/612.png"
+  },
+
+  {
+    id: 7,
+    name: "ルズールス",
+    subName: "第7王子",
+    force: "第7王子陣営",
+    category: "王子",
+    status: "生存",
+    description: "カキン帝国第7王子。マイペースで享楽的な雰囲気を持つ王子。継承戦では慎重に状況を見ている。",
+    image: "images/第7王子/7.png",
+
+mother: {
+  name: "ドゥアズル",
+  title: "第2王妃",
+  image: "images/王妃/02.png"
+},
+
+guardianSpiritBeast: {
+  name: "不明",
+  description: "対象の欲望に応じたものを餌として具現化し、満たされた瞬間に罠を発動する念獣。",
+  image: "images/第7王子/7x.png"
+}
+  },
+
+  {
+    id: 701,
+    name: "サトビ",
+    subName: "第2王妃兵",
+    force: "第7王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第7王子ルズールス陣営に属する第2王妃兵。",
+    image: "images/第7王子/701.png"
+  },
+  {
+    id: 702,
+    name: "ハピエッチ",
+    subName: "第2王妃兵",
+    force: "第7王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第7王子ルズールス陣営に属する第2王妃兵。",
+    image: "images/第7王子/702.png"
+  },
+  {
+    id: 703,
+    name: "ファムール",
+    subName: "第2王妃兵",
+    force: "第7王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第7王子ルズールス陣営に属する第2王妃兵。",
+    image: "images/第7王子/703.png"
+  },
+  {
+    id: 704,
+    name: "ライス",
+    subName: "第2王妃兵",
+    force: "第7王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第7王子ルズールス陣営に属する第2王妃兵。",
+    image: "images/第7王子/704.png"
+  },
+  {
+    id: 705,
+    name: "オデッサ",
+    subName: "第2王妃兵",
+    force: "第7王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第7王子ルズールス陣営に属する第2王妃兵。",
+    image: "images/第7王子/705.png"
+  },
+  {
+    id: 706,
+    name: "ガドー",
+    subName: "第2王妃兵",
+    force: "第7王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第7王子ルズールス陣営に属する第2王妃兵。",
+    image: "images/第7王子/706.png"
+  },
+  {
+    id: 707,
+    name: "マクネ",
+    subName: "ルズールス私設兵",
+    force: "第7王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第7王子ルズールスの私設兵。ルズールス陣営に属する兵士。",
+    image: "images/第7王子/707.png"
+  },
+  {
+    id: 708,
+    name: "バラーテ",
+    subName: "ルズールス私設兵",
+    force: "第7王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第7王子ルズールスの私設兵。ルズールス陣営に属する兵士。",
+    image: "images/x.png"
+  },
+  {
+    id: 709,
+    name: "不明1",
+    subName: "ルズールス私設兵",
+    force: "第7王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第7王子ルズールスの私設兵。名前・詳細は未入力。",
+    image: "images/第7王子/709.png"
+  },
+  {
+    id: 710,
+    name: "不明2",
+    subName: "ルズールス私設兵",
+    force: "第7王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第7王子ルズールスの私設兵。名前・詳細は未入力。",
+    image: "images/第7王子/710.png"
+  },
+  {
+    id: 711,
+    name: "バショウ",
+    subName: "ハンター",
+    force: "第7王子陣営",
+    category: "ハンター",
+    status: "生存",
+    description: "第7王子ルズールス陣営の護衛として王位継承戦に参加するハンター。",
+    image: "images/第7王子/711.png"
+  },
+  {
+    id: 712,
+    name: "リッジ",
+    subName: "協専ハンター",
+    force: "第7王子陣営",
+    category: "ハンター",
+    status: "生存",
+    description: "第7王子ルズールス陣営に関わる協専ハンター。",
+    image: "images/第7王子/712.png"
+  },
+  {
+    id: 713,
+    name: "スカルト",
+    subName: "協専ハンター",
+    force: "第7王子陣営",
+    category: "ハンター",
+    status: "生存",
+    description: "第7王子ルズールス陣営に関わる協専ハンター。",
+    image: "images/第7王子/713.png"
+  },
+  {
+    id: 714,
+    name: "不明3",
+    subName: "ルズールス陣営従事者",
+    force: "第7王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第7王子ルズールス陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+
+  {
+    id: 8,
+    name: "サレサレ",
+    subName: "第8王子",
+    force: "第8王子陣営",
+    category: "王子",
+    status: "死亡",
+    description: "カキン帝国第8王子。享楽的な性格で、継承戦への危機感は薄かった。",
+    image: "images/第8王子/8.png",
+
+mother: {
+  name: "スィンコスィンコ",
+  title: "第5王妃",
+  image: "images/王妃/05.png"
+},
+
+guardianSpiritBeast: {
+  name: "不明",
+  description: "無数の口から煙を放ち、吸い込んだ者のサレサレへの好感度を高める拡散型の念獣。",
+  image: "images/第8王子/8x.png"
+}
+  },
+
+  {
+    id: "023",
+    name: "不明1",
+    subName: "第2王妃兵",
+    force: "第8王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第8王子サレサレ陣営を監視する第2王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: "032",
+    name: "コロアプデ",
+    subName: "第3王妃兵",
+    force: "第8王子陣営",
+    category: "監視",
+    status: "生存",
+    description: "第8王子サレサレ陣営を監視する第3王妃兵。",
+    image: "images/第8王子/032.png"
+  },
+  {
+    id: "041",
+    name: "不明2",
+    subName: "第4王妃兵",
+    force: "第8王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第8王子サレサレ陣営を監視する第4王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 801,
+    name: "ムシャホ",
+    subName: "第2王妃兵",
+    force: "第8王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第8王子サレサレ陣営に属する第2王妃兵。",
+    image: "images/第8王子/801.png"
+  },
+  {
+    id: 802,
+    name: "不明3",
+    subName: "第2王妃兵",
+    force: "第8王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第8王子サレサレ陣営に属する第2王妃兵。名前・詳細は未入力。",
+    image: "images/第8王子/802.png"
+  },
+  {
+    id: 803,
+    name: "不明4",
+    subName: "第2王妃兵",
+    force: "第8王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第8王子サレサレ陣営に属する第2王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 804,
+    name: "不明5",
+    subName: "サレサレ私設兵",
+    force: "第8王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第8王子サレサレの私設兵。名前・詳細は未入力。",
+    image: "images/第8王子/804.png"
+  },
+  {
+    id: 805,
+    name: "不明6",
+    subName: "サレサレ私設兵",
+    force: "第8王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第8王子サレサレの私設兵。名前・詳細は未入力。",
+    image: "images/第8王子/805.png"
+  },
+  {
+    id: 806,
+    name: "不明7",
+    subName: "サレサレ私設兵",
+    force: "第8王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第8王子サレサレの私設兵。名前・詳細は未入力。",
+    image: "images/第8王子/806.png"
+  },
+  {
+    id: 807,
+    name: "不明8",
+    subName: "サレサレ私設兵",
+    force: "第8王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第8王子サレサレの私設兵。名前・詳細は未入力。",
+    image: "images/第8王子/807.png"
+  },
+  {
+    id: 808,
+    name: "不明9",
+    subName: "サレサレ私設兵",
+    force: "第8王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第8王子サレサレの私設兵。名前・詳細は未入力。",
+    image: "images/第8王子/808.png"
+  },
+  {
+    id: 809,
+    name: "不明10",
+    subName: "サレサレ陣営従事者",
+    force: "第8王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第8王子サレサレ陣営の従事者。名前・詳細は未入力。",
+    image: "images/第8王子/809.png"
+  },
+  {
+    id: 810,
+    name: "不明11",
+    subName: "サレサレ陣営従事者",
+    force: "第8王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第8王子サレサレ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 811,
+    name: "不明12",
+    subName: "サレサレ陣営従事者",
+    force: "第8王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第8王子サレサレ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+
+  {
+    id: 9,
+    name: "ハルケンブルグ",
+    subName: "第9王子",
+    force: "第9王子陣営",
+    category: "王子",
+    status: "生存",
+    description: "カキン帝国第9王子。王制や継承戦そのものに批判的な理想主義者。支持者との結束が強い。",
+    image: "images/第9王子/9.png",
+
+mother: {
+  name: "ドゥアズル",
+  title: "第2王妃",
+  image: "images/王妃/02.png"
+},
+
+guardianSpiritBeast: {
+  name: "不明",
+  description: "賛同者に羽根の印を刻み、同じ意志を持つ者が集うほど集団のオーラを増幅する念獣。",
+  image: "images/第9王子/9x.png"
+}
+  },
+
+  {
+    id: 901,
+    name: "シェジュール",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第9王子ハルケンブルグの私設兵。ハルケンブルグ陣営に属する兵士。",
+    image: "images/第9王子/901.png"
+  },
+  {
+    id: 902,
+    name: "ユヒライ",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第9王子ハルケンブルグの私設兵。ハルケンブルグ陣営に属する兵士。",
+    image: "images/第9王子/902.png"
+  },
+  {
+    id: 903,
+    name: "スミドリ",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "死亡",
+    description: "第9王子ハルケンブルグの私設兵。ハルケンブルグ陣営に属する兵士。",
+    image: "images/第9王子/903.png"
+  },
+  {
+    id: 904,
+    name: "不明1",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第9王子ハルケンブルグの私設兵。名前・詳細は未入力。",
+    image: "images/第9王子/904.png"
+  },
+  {
+    id: 905,
+    name: "不明2",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第9王子ハルケンブルグの私設兵。名前・詳細は未入力。",
+    image: "images/第9王子/905.png"
+  },
+  {
+    id: 906,
+    name: "不明3",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第9王子ハルケンブルグの私設兵。名前・詳細は未入力。",
+    image: "images/第9王子/906.png"
+  },
+  {
+    id: 907,
+    name: "不明4",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第9王子ハルケンブルグの私設兵。名前・詳細は未入力。",
+    image: "images/第9王子/907.png"
+  },
+  {
+    id: 908,
+    name: "不明5",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第9王子ハルケンブルグの私設兵。名前・詳細は未入力。",
+    image: "images/第9王子/908.png"
+  },
+  {
+    id: 909,
+    name: "不明6",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第9王子ハルケンブルグの私設兵。名前・詳細は未入力。",
+    image: "images/第9王子/909.png"
+  },
+  {
+    id: 910,
+    name: "不明7",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第9王子ハルケンブルグの私設兵。名前・詳細は未入力。",
+    image: "images/第9王子/910.png"
+  },
+  {
+    id: 911,
+    name: "不明8",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第9王子ハルケンブルグの私設兵。名前・詳細は未入力。",
+    image: "images/第9王子/911.png"
+  },
+  {
+    id: 912,
+    name: "不明9",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第9王子ハルケンブルグの私設兵。名前・詳細は未入力。",
+    image: "images/第9王子/912.png"
+  },
+  {
+    id: 913,
+    name: "不明10",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第9王子ハルケンブルグの私設兵。名前・詳細は未入力。",
+    image: "images/第9王子/913.png"
+  },
+  {
+    id: 914,
+    name: "不明11",
+    subName: "ハルケンブルグ私設兵",
+    force: "第9王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第9王子ハルケンブルグの私設兵。名前・詳細は未入力。",
+    image: "images/第9王子/914.png"
+  },
+  {
+    id: 10,
+    name: "カチョウ",
+    subName: "第10王子",
+    force: "第10王子陣営",
+    category: "王子",
+    status: "死亡",
+    description: "カキン帝国第10王子。フウゲツとは双子の姉妹。",
+    image: "images/第10王子/10.png",
+
+mother: {
+  name: "セイコ",
+  title: "第6王妃",
+  image: "images/王妃/06.png"
+},
+
+guardianSpiritBeast: {
+  name: "2人セゾン（キミガイナイ）",
+  description: "カチョウかフウゲツのどちらかが死亡した時、死者の姿を取り、残された一方を守る念獣。",
+  image: ""
+}
+  },
+  {
+    id: "024",
+    name: "不明1",
+    subName: "第2王妃兵",
+    force: "第10王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第10王子カチョウ陣営を監視する第2王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: "033",
+    name: "不明2",
+    subName: "第3王妃兵",
+    force: "第10王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第10王子カチョウ陣営を監視する第3王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: "042",
+    name: "不明3",
+    subName: "第4王妃兵",
+    force: "第10王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第10王子カチョウ陣営を監視する第4王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: "051",
+    name: "不明4",
+    subName: "第5王妃兵",
+    force: "第10王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第10王子カチョウ陣営を監視する第5王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1001,
+    name: "不明5",
+    subName: "第6王妃兵",
+    force: "第10王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第10王子カチョウ陣営に属する第6王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1002,
+    name: "不明6",
+    subName: "第6王妃兵",
+    force: "第10王子陣営",
+    category: "私設兵",
+    status: "不明",
+    description: "第10王子カチョウ陣営に属する第6王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1003,
+    name: "センリツ",
+    subName: "ハンター",
+    force: "第10王子陣営",
+    category: "ハンター",
+    status: "生存",
+    description: "第10王子カチョウ陣営の護衛として王位継承戦に参加するハンター。",
+    image: "images/第10王子/1003.png"
+  },
+  {
+    id: 1004,
+    name: "キーニ",
+    subName: "協専ハンター",
+    force: "第10王子陣営",
+    category: "ハンター",
+    status: "死亡",
+    description: "第10王子カチョウ陣営に関わる協専ハンター。",
+    image: "images/第10王子/1004.png"
+  },
+  {
+    id: 1005,
+    name: "不明7",
+    subName: "協専ハンター",
+    force: "第10王子陣営",
+    category: "ハンター",
+    status: "不明",
+    description: "第10王子カチョウ陣営に関わる協専ハンター。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1006,
+    name: "ロベリー",
+    subName: "カチョウ陣営従事者",
+    force: "第10王子陣営",
+    category: "従事者",
+    status: "生存",
+    description: "第10王子カチョウ陣営の従事者。カチョウに仕える人物。",
+    image: "images/第10王子/1006.png"
+  },
+  {
+    id: 1007,
+    name: "ユウリ",
+    subName: "カチョウ陣営従事者",
+    force: "第10王子陣営",
+    category: "従事者",
+    status: "生存",
+    description: "第10王子カチョウ陣営の従事者。カチョウに仕える人物。",
+    image: "images/第10王子/1007.png"
+  },
+  {
+    id: 1008,
+    name: "ロッコリー",
+    subName: "カチョウ陣営従事者",
+    force: "第10王子陣営",
+    category: "従事者",
+    status: "生存",
+    description: "第10王子カチョウ陣営の従事者。カチョウに仕える人物。",
+    image: "images/第10王子/1008.png"
+  },
+  {
+    id: 1009,
+    name: "リズルラ",
+    subName: "カチョウ陣営従事者",
+    force: "第10王子陣営",
+    category: "従事者",
+    status: "生存",
+    description: "第10王子カチョウ陣営の従事者。カチョウに仕える人物。",
+    image: "images/第10王子/1009.png"
+  },
+  {
+    id: 1010,
+    name: "不明8",
+    subName: "カチョウ陣営従事者",
+    force: "第10王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第10王子カチョウ陣営の従事者。名前・詳細は未入力。",
+    image: "images/第10王子/1010.png"
+  },
+  {
+    id: 11,
+    name: "フウゲツ",
+    subName: "第11王子",
+    force: "第11王子陣営",
+    category: "王子",
+    status: "生存",
+    description: "カキン帝国第11王子。カチョウとは双子の姉妹。気弱だが、姉妹で生き延びようとする意志を持つ。",
+    image: "images/第11王子/11.png",
+
+mother: {
+  name: "セイコ",
+  title: "第6王妃",
+  image: "images/王妃/06.png"
+},
+
+guardianSpiritBeast: {
+  name: "魔法の抜け道（マジカルワーム）",
+  description: "扉を出現させ、フウゲツを望む場所へ移動させる念獣。",
+  image: "images/第11王子/11x.png"
+}
+  },
+  {
+    id: "025",
+    name: "不明1",
+    subName: "第2王妃兵",
+    force: "第11王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第11王子フウゲツ陣営を監視する第2王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: "034",
+    name: "不明2",
+    subName: "第3王妃兵",
+    force: "第11王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第11王子フウゲツ陣営を監視する第3王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: "043",
+    name: "不明3",
+    subName: "第4王妃兵",
+    force: "第11王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第11王子フウゲツ陣営を監視する第4王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: "052",
+    name: "不明4",
+    subName: "第5王妃兵",
+    force: "第11王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第11王子フウゲツ陣営を監視する第5王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1101,
+    name: "リョウジ",
+    subName: "第6王妃兵",
+    force: "第11王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第11王子フウゲツ陣営に属する第6王妃兵。",
+    image: "images/第11王子/1101.png"
+  },
+  {
+    id: 1102,
+    name: "バチャエム",
+    subName: "第6王妃兵",
+    force: "第11王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第11王子フウゲツ陣営に属する第6王妃兵。",
+    image: "images/第11王子/1102.png"
+  },
+  {
+    id: 1103,
+    name: "イラルディア",
+    subName: "フウゲツ陣営従事者",
+    force: "第11王子陣営",
+    category: "従事者",
+    status: "生存",
+    description: "第11王子フウゲツ陣営の従事者。フウゲツに仕える人物。",
+    image: "images/第11王子/1103.png"
+  },
+  {
+    id: 1104,
+    name: "ラジオラス",
+    subName: "フウゲツ陣営従事者",
+    force: "第11王子陣営",
+    category: "従事者",
+    status: "生存",
+    description: "第11王子フウゲツ陣営の従事者。フウゲツに仕える人物。",
+    image: "images/第11王子/1104.png"
+  },
+  {
+    id: 1105,
+    name: "トネアスタ",
+    subName: "フウゲツ陣営従事者",
+    force: "第11王子陣営",
+    category: "従事者",
+    status: "生存",
+    description: "第11王子フウゲツ陣営の従事者。フウゲツに仕える人物。",
+    image: "images/第11王子/1105.png"
+  },
+  {
+    id: 1106,
+    name: "不明5",
+    subName: "フウゲツ陣営従事者",
+    force: "第11王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第11王子フウゲツ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1107,
+    name: "不明6",
+    subName: "フウゲツ陣営従事者",
+    force: "第11王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第11王子フウゲツ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1108,
+    name: "不明7",
+    subName: "フウゲツ陣営従事者",
+    force: "第11王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第11王子フウゲツ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1109,
+    name: "不明8",
+    subName: "フウゲツ陣営従事者",
+    force: "第11王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第11王子フウゲツ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1110,
+    name: "不明9",
+    subName: "フウゲツ陣営従事者",
+    force: "第11王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第11王子フウゲツ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 12,
+    name: "モモゼ",
+    subName: "第12王子",
+    force: "第12王子陣営",
+    category: "王子",
+    status: "死亡",
+    description: "カキン帝国第12王子。年少の王子のひとり。",
+    image: "images/第12王子/12.png",
+
+mother: {
+  name: "セヴァンチ",
+  title: "第7王妃",
+  image: "images/王妃/07.png"
+},
+
+guardianSpiritBeast: {
+  name: "不明",
+  description: "対象に問いかけ、条件を満たすと身体の自由を奪って操る操作系の念獣。",
+  image: "images/第12王子/12x.png"
+}
+  },
+  {
+    id: "026",
+    name: "ニペイパー",
+    subName: "第2王妃兵",
+    force: "第12王子陣営",
+    category: "監視",
+    status: "生存",
+    description: "第12王子モモゼ陣営を監視する第2王妃兵。",
+    image: "images/第12王子/026.png"
+  },
+  {
+    id: "035",
+    name: "ブラッヂ",
+    subName: "第3王妃兵",
+    force: "第12王子陣営",
+    category: "監視",
+    status: "生存",
+    description: "第12王子モモゼ陣営を監視する第3王妃兵。",
+    image: "images/第12王子/035.png"
+  },
+  {
+    id: "044",
+    name: "ラロック",
+    subName: "第4王妃兵",
+    force: "第12王子陣営",
+    category: "監視",
+    status: "生存",
+    description: "第12王子モモゼ陣営を監視する第4王妃兵。",
+    image: "images/第12王子/044.png"
+  },
+  {
+    id: "053",
+    name: "タフディー",
+    subName: "第5王妃兵",
+    force: "第12王子陣営",
+    category: "監視",
+    status: "生存",
+    description: "第12王子モモゼ陣営を監視する第5王妃兵。",
+    image: "images/第12王子/053.png"
+  },
+  {
+    id: "061",
+    name: "ナゴマム",
+    subName: "第6王妃兵",
+    force: "第12王子陣営",
+    category: "監視",
+    status: "生存",
+    description: "第12王子モモゼ陣営を監視する第6王妃兵。",
+    image: "images/第12王子/061.png"
+  },
+  {
+    id: 1201,
+    name: "ウェルゲー",
+    subName: "第7王妃兵",
+    force: "第12王子陣営",
+    category: "私設兵",
+    status: "生存",
+    description: "第12王子モモゼ陣営に属する第7王妃兵。",
+    image: "images/第12王子/1201.png"
+  },
+  {
+    id: 1202,
+    name: "ハンゾー",
+    subName: "ハンター",
+    force: "第12王子陣営",
+    category: "ハンター",
+    status: "生存",
+    description: "第12王子モモゼ陣営の護衛として王位継承戦に参加するハンター。",
+    image: "images/第12王子/1202.png"
+  },
+  {
+    id: 1203,
+    name: "不明1",
+    subName: "協専ハンター",
+    force: "第12王子陣営",
+    category: "ハンター",
+    status: "不明",
+    description: "第12王子モモゼ陣営に関わる協専ハンター。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1204,
+    name: "不明2",
+    subName: "協専ハンター",
+    force: "第12王子陣営",
+    category: "ハンター",
+    status: "不明",
+    description: "第12王子モモゼ陣営に関わる協専ハンター。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1205,
+    name: "不明3",
+    subName: "協専ハンター",
+    force: "第12王子陣営",
+    category: "ハンター",
+    status: "不明",
+    description: "第12王子モモゼ陣営に関わる協専ハンター。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1206,
+    name: "不明4",
+    subName: "協専ハンター",
+    force: "第12王子陣営",
+    category: "ハンター",
+    status: "不明",
+    description: "第12王子モモゼ陣営に関わる協専ハンター。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1207,
+    name: "不明5",
+    subName: "モモゼ陣営従事者",
+    force: "第12王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第12王子モモゼ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1208,
+    name: "不明6",
+    subName: "モモゼ陣営従事者",
+    force: "第12王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第12王子モモゼ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1209,
+    name: "不明7",
+    subName: "モモゼ陣営従事者",
+    force: "第12王子陣営",
+    category: "従事者",
+    status: "不明",
+    description: "第12王子モモゼ陣営の従事者。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 13,
+    name: "マラヤーム",
+    subName: "第13王子",
+    force: "第13王子陣営",
+    category: "王子",
+    status: "生存",
+    description: "カキン帝国第13王子。幼い王子。母セヴァンチや護衛たちに守られている。",
+    image: "images/第13王子/13.png",
+
+mother: {
+  name: "セヴァンチ",
+  title: "第7王妃",
+  image: "images/王妃/07.png"
+},
+
+guardianSpiritBeast: {
+  name: "不明",
+  description: "龍のような姿を持ち、部屋を隔離する結界を作ったとみられる念獣。能力の全貌は不明。",
+  image: "images/第13王子/13x.png"
+}
+  },
+  {
+    id: "027",
+    name: "不明1",
+    subName: "第2王妃兵",
+    force: "第13王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第13王子マラヤーム陣営を監視する第2王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: "036",
+    name: "不明2",
+    subName: "第3王妃兵",
+    force: "第13王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第13王子マラヤーム陣営を監視する第3王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: "045",
+    name: "不明3",
+    subName: "第4王妃兵",
+    force: "第13王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第13王子マラヤーム陣営を監視する第4王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: "054",
+    name: "不明4",
+    subName: "第5王妃兵",
+    force: "第13王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第13王子マラヤーム陣営を監視する第5王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: "062",
+    name: "不明5",
+    subName: "第6王妃兵",
+    force: "第13王子陣営",
+    category: "監視",
+    status: "不明",
+    description: "第13王子マラヤーム陣営を監視する第6王妃兵。名前・詳細は未入力。",
+    image: "images/x.png"
+  },
+  {
+    id: 1301,
+    name: "バリゲン",
+    subName: "第7王妃兵",
+    force: "第13王子陣営",
+    category: "私設兵",
+    status: "死亡",
+    description: "第13王子マラヤーム陣営に属する第7王妃兵。王位継承戦の中で死亡する。",
+    image: "images/第13王子/1301.png"
+  },
+  {
+    id: 1302,
+    name: "ビスケ",
+    subName: "ハンター",
+    force: "第13王子陣営",
+    category: "ハンター",
+    status: "生存",
     description: "第13王子マラヤーム陣営の護衛として王位継承戦に参加するハンター。",
     image: "images/第13王子/1302.png"
   },
