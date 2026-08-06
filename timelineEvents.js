@@ -393,7 +393,7 @@ const timelineEvents = [
   },
   {
     id: "event-0012",
-    title: "\"11人いる！\"（サイレントマジョリティー）発動",
+    title: "\"11人いる!\"(サイレントマジョリティー)発動",
     summary: "第13王子マラヤーム陣営・第7王妃兵バリゲンが死亡する",
     detail: "1名に黒ぼっこを視せ、別の1名をツチボッコで攻撃する能力",
     image: {
@@ -706,7 +706,7 @@ const timelineEvents = [
   },
   {
     "id": "event-0019",
-    "title": "\"11人いる！\"（サイレントマジョリティー）発動",
+    "title": "\"11人いる!\"(サイレントマジョリティー)発動",
     "summary": "2回目の発動",
     "detail": "第4王子私設兵ミュハンが死亡",
     "image": {
@@ -802,8 +802,8 @@ const timelineEvents = [
   },
   {
     "id": "event-0021",
-    "title": "幻影旅団が集結する。",
-    "summary": "幻影旅団が集結する。",
+    "title": "幻影旅団、集結",
+    "summary": "",
     "detail": "",
     "image": {
       "src": "images/timeline/event-0021.png",
@@ -845,8 +845,8 @@ const timelineEvents = [
   },
   {
     "id": "event-0022",
-    "title": "フウゲツが第３層に逃亡",
-    "summary": "フウゲツが第３層に逃亡",
+    "title": "フウゲツ、第３層に逃亡",
+    "summary": "",
     "detail": "",
     "image": {
       "src": "images/timeline/event-0022.png",
@@ -891,9 +891,9 @@ const timelineEvents = [
   },
   {
     "id": "event-0023",
-    "title": "センリツとカイザルが密談",
-    "summary": "センリツとカイザルが密談",
-    "detail": "",
+    "title": "カイザルがフウゲツの身辺監視を開始",
+    "summary": "不思議な心音…",
+    "detail": "司法局カイザルが第11王子フウゲツの72時間監視を開始する",
     "image": {
       "src": "images/timeline/event-0023.png",
       "alt": "カイザルがセンリツへ王子監視について話す場面",
@@ -938,8 +938,8 @@ const timelineEvents = [
   },
   {
     "id": "event-0024",
-    "title": "リハンの\"異邦人（プレデター）\"がサレサレの守護霊獣を捕食",
-    "summary": "リハンの\"異邦人（プレデター）\"がサレサレの守護霊獣を捕食",
+    "title": "\"異邦人\"(プレデター)がサレサレの守護霊獣を捕食",
+    "summary": "第1王子私設兵リハンの念能力が発動",
     "detail": "",
     "image": {
       "src": "images/timeline/event-0024.png",
@@ -1278,8 +1278,8 @@ const timelineEvents = [
   },
   {
     "id": "event-0031",
-    "title": "センリツとカイザルが対面",
-    "summary": "センリツとカイザルが対面",
+    "title": "センリツが司法局に拘束",
+    "summary": "この時間を利用して 何とか次の手を考えなくては…！",
     "detail": "",
     "image": {
       "src": "images/timeline/event-0031.png",
