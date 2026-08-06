@@ -360,6 +360,83 @@ button { color: inherit; }
 .pagination button { min-width: 34px; padding: 7px; border: 1px solid var(--line); background: #0b1721; cursor: pointer; }
 .pagination button.active { border-color: var(--gold); color: var(--gold-soft); }
 
+.map-log-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 280px;
+  gap: 14px;
+  height: calc(100dvh - 150px);
+  min-height: 620px;
+}
+.map-stack { display: grid; min-width: 0; grid-template-rows: minmax(210px,.82fr) minmax(320px,1.18fr); gap: 12px; }
+.residence-map-panel, .overall-map-panel, .map-timeline-rail { border: 1px solid var(--line); background: rgba(8,21,30,.88); }
+.residence-map-panel, .overall-map-panel { min-width: 0; padding: 12px 14px; overflow: hidden; }
+.overall-map-panel { display: flex; flex-direction: column; }
+.map-panel-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.map-panel-heading > div { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+.map-panel-heading h2 { margin: 0; color: var(--gold-soft); font: 17px Georgia, "Yu Mincho", serif; font-weight: 500; letter-spacing: .06em; }
+.map-panel-heading span { color: var(--gold); font: 8px monospace; letter-spacing: .13em; }
+.map-panel-heading small { flex: 0 0 auto; color: var(--muted); font: 8px monospace; }
+.residence-common-area {
+  display: flex; min-height: 34px; align-items: center; gap: 10px; margin-bottom: 7px; padding: 5px 9px;
+  border: 1px solid #34444e; background: rgba(3,12,18,.55); color: #8e9699; font-size: 9px;
+}
+.residence-common-area.has-event { border: 3px solid var(--gold); background: rgba(189,143,75,.11); color: var(--gold-soft); }
+.map-common-event { min-width: 0; color: #e5d2b2; font-size: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.map-common-event.minor { color: #aeb6b9; }
+.residence-room-grid { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); grid-template-rows: repeat(2,minmax(65px,1fr)); gap: 6px; height: calc(100% - 67px); }
+.map-room {
+  grid-row: var(--room-row); grid-column: var(--room-column); min-width: 0; padding: 5px 6px;
+  border: 1px solid #34444e; background: #0b1721; color: #8c969b; overflow: hidden;
+}
+.map-room.has-event { border: 3px solid var(--gold); background: rgba(189,143,75,.12); box-shadow: inset 0 0 0 1px #72582f; }
+.map-room > strong { display: block; color: #b9b1a4; font: 9px monospace; }
+.map-room-events { display: grid; gap: 2px; margin-top: 4px; }
+.map-room-event {
+  display: -webkit-box; color: #ead5b4; font-size: 8px; line-height: 1.35;
+  overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+}
+.map-room-event.minor { color: #aab3b7; }
+.map-wide-event { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; padding: 6px 9px; border-left: 3px solid var(--gold); background: rgba(189,143,75,.09); color: var(--gold-soft); font-size: 9px; }
+.map-wide-event.external { border-left-color: var(--red-soft); background: rgba(166,63,59,.09); color: var(--red-soft); }
+.map-wide-event-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ship-tier-stack { display: grid; flex: 1; grid-template-rows: repeat(5,minmax(48px,1fr)); gap: 3px; min-height: 0; }
+.ship-tier {
+  display: grid; grid-template-columns: 55px minmax(0,1fr); align-items: center; width: var(--tier-width,100%); margin-inline: auto; padding: 4px 12px;
+  border: 1px solid #34444e; background: #0b1721; color: #7d878c;
+  clip-path: polygon(4% 0,96% 0,100% 50%,96% 100%,4% 100%,0 50%);
+}
+.ship-tier:nth-child(1) { --tier-width: 56%; }
+.ship-tier:nth-child(2) { --tier-width: 76%; }
+.ship-tier:nth-child(3) { --tier-width: 90%; }
+.ship-tier:nth-child(4) { --tier-width: 100%; }
+.ship-tier:nth-child(5) { --tier-width: 80%; }
+.ship-tier.has-event { border: 3px solid var(--gold); background: rgba(189,143,75,.11); box-shadow: inset 0 0 0 1px #72582f; }
+.ship-tier-name { color: #bdb5a7; font: 12px Georgia, "Yu Mincho", serif; font-weight: 500; text-align: center; }
+.ship-tier-content { min-width: 0; }
+.ship-tier-areas { display: flex; flex-wrap: wrap; gap: 1px 9px; color: #748087; font-size: 7px; }
+.ship-tier-areas span::before { margin-right: 3px; color: #4b5a63; content: "·"; }
+.ship-tier-events { display: flex; gap: 7px; min-width: 0; margin-top: 2px; }
+.ship-tier-event { min-width: 0; color: #ebd6b4; font-size: 9px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ship-tier-event.minor { color: #aeb6b9; font-weight: 400; }
+.map-timeline-rail { display: flex; min-height: 0; flex-direction: column; overflow: hidden; }
+.map-timeline-heading { padding: 13px; border-bottom: 1px solid #5b4931; background: rgba(5,14,22,.82); }
+.map-timeline-heading > span { display: block; color: var(--gold); font: 8px monospace; letter-spacing: .14em; }
+.map-timeline-heading > strong { display: block; margin-top: 6px; color: var(--gold-soft); font: 11px monospace; }
+.map-timeline-heading p { margin: 6px 0 0; color: #d9cdb9; font: 14px "Yu Mincho", serif; line-height: 1.45; }
+.map-timeline-list { position: relative; flex: 1; min-height: 0; overflow-y: auto; padding: 8px 8px 14px 18px; scrollbar-color: #5b4931 #08131c; }
+.map-timeline-list::before { position: absolute; top: 8px; bottom: 14px; left: 9px; width: 1px; background: #394953; content: ""; }
+.map-timeline-event {
+  position: relative; display: grid; gap: 3px; width: 100%; margin-bottom: 4px; padding: 8px 8px 8px 13px;
+  border: 1px solid transparent; border-radius: 4px; background: transparent; color: #8f989c; text-align: left; cursor: pointer;
+}
+.map-timeline-event::before { position: absolute; top: 12px; left: -13px; width: 8px; height: 8px; border: 2px solid #67747b; border-radius: 50%; background: #08131c; content: ""; }
+.map-timeline-event:hover { border-color: #34444e; background: rgba(255,255,255,.025); }
+.map-timeline-event.active { border-color: var(--gold); background: rgba(189,143,75,.13); color: var(--text); }
+.map-timeline-event.active::before { border-color: var(--gold-soft); background: var(--gold); box-shadow: 0 0 7px rgba(189,143,75,.65); }
+.map-timeline-event > span { color: #8a9499; font: 8px monospace; }
+.map-timeline-event > strong { color: inherit; font: 10px "Yu Mincho", serif; font-weight: 500; line-height: 1.4; }
+.map-timeline-event > small { color: #657077; font: 7px monospace; }
+
 @media (min-width: 721px) and (max-height: 720px) {
   .brand { padding-block: 14px 12px; }
   .brand-mark { font-size: 34px; }
@@ -392,6 +469,10 @@ button { color: inherit; }
   .timeline-event-main { grid-template-columns: 70px 1fr; }
   .timeline-event-main.has-image { grid-template-columns: 70px 130px 1fr; }
   .event-expand-button { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.07); border-left: 0; }
+  .map-log-layout { grid-template-columns: minmax(0,1fr) 225px; }
+  .residence-room-grid { gap: 4px; }
+  .map-room { padding-inline: 4px; }
+  .ship-tier { padding-inline: 8px; }
 }
 @media (max-width: 720px) {
   body { padding-bottom: 68px; }
@@ -413,7 +494,7 @@ button { color: inherit; }
   .main-area { margin: 0; padding: 0 14px 28px; }
   .mobile-header { display: flex; height: 54px; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); color: var(--gold-soft); font: 10px monospace; letter-spacing: .08em; }
   .icon-button { border: 0; background: transparent; font-size: 22px; }
-  .mobile-nav { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: repeat(4,1fr); height: 64px; border-top: 1px solid #5b4931; background: rgba(5,14,22,.98); }
+  .mobile-nav { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: repeat(5,1fr); height: 64px; border-top: 1px solid #5b4931; background: rgba(5,14,22,.98); }
   .mobile-nav button { border: 0; background: transparent; color: #777f84; font-size: 10px; }
   .mobile-nav button span { display: block; margin-bottom: 3px; font-size: 19px; }
   .mobile-nav button.active { color: var(--gold-soft); background: rgba(189,143,75,.08); }
@@ -469,4 +550,23 @@ button { color: inherit; }
   .event-title-row { align-items: flex-start; }
   .event-relations { grid-template-columns: 1fr; }
   .event-expand-button { grid-column: auto; min-height: 38px; }
+  .map-log-layout { display: flex; height: auto; min-height: 0; flex-direction: column; }
+  .map-timeline-rail { order: -1; }
+  .map-timeline-heading { padding: 10px 12px; }
+  .map-timeline-list { display: flex; flex: none; gap: 6px; min-height: 0; overflow-x: auto; overflow-y: hidden; padding: 8px 10px; }
+  .map-timeline-list::before, .map-timeline-event::before { display: none; }
+  .map-timeline-event { flex: 0 0 210px; margin: 0; padding: 8px; border-color: #24333d; }
+  .map-stack { grid-template-rows: auto auto; }
+  .residence-map-panel, .overall-map-panel { padding: 11px 10px; overflow: visible; }
+  .residence-room-grid { grid-template-columns: repeat(4,minmax(0,1fr)); grid-template-rows: none; height: auto; }
+  .map-room { grid-row: auto !important; grid-column: auto !important; min-height: 74px; }
+  .ship-tier { width: 100%; min-height: 58px; clip-path: none; }
+  .ship-tier-stack { grid-template-rows: repeat(5,auto); }
+}
+
+@media (max-width: 480px) {
+  .residence-room-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .map-panel-heading > div { display: block; }
+  .map-panel-heading span { display: block; margin-top: 2px; }
+  .ship-tier { grid-template-columns: 45px minmax(0,1fr); }
 }
