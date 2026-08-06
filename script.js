@@ -14,7 +14,9 @@ const app = {
   timelineForce: "",
   timelineSearch: "",
   timelineSort: "asc",
-  expandedEventId: null
+  expandedEventId: null,
+  mapSelectedEventId: "event-0001",
+  mapTimelineScroll: 0
 };
 
 const elements = {
@@ -60,6 +62,11 @@ const viewSettings = {
     title: "時系列",
     english: "EVENT LOG",
     description: "王位継承戦で発生した出来事を時系列で確認"
+  },
+  map: {
+    title: "航海図",
+    english: "LIVE MAP LOG",
+    description: "主要イベントを選択して船内各層の動きを確認"
   }
 };
 
@@ -777,6 +784,171 @@ function renderTimeline() {
   });
 }
 
+function getMapVisibleEvents() {
+  return [...timelineEvents]
+    .filter(event => event.location?.locationIds?.length)
+    .filter(event => app.statusMode !== "safe" || !event.spoiler?.hideInSafeMode)
+    .sort((a, b) => (a.displayOrder ?? 9999) - (b.displayOrder ?? 9999));
+}
+
+function getSelectedMapEvent(events) {
+  const selected = events.find(event => event.id === app.mapSelectedEventId);
+  if (selected) return selected;
+  app.mapSelectedEventId = events[0]?.id || null;
+  return events[0] || null;
+}
+
+function mapEventTimeLabel(event) {
+  if (event.voyage.day != null) {
+    return `航海${event.voyage.day}日目 ${event.voyage.timeLabel || "時刻不明"}`;
+  }
+  return event.voyage.timeLabel || "日時不明";
+}
+
+function getMapVisualItems(event) {
+  if (!event) return [];
+
+  const majorEvent = {
+    id: event.id,
+    title: event.title,
+    mapLabel: event.mapLabel || event.title,
+    locationIds: event.location?.locationIds || [],
+    importance: "major"
+  };
+  const subEvents = mapSubEvents
+    .filter(subEvent => subEvent.parentEventId === event.id)
+    .map(subEvent => ({
+      ...subEvent,
+      mapLabel: subEvent.mapLabel || subEvent.label || subEvent.title,
+      locationIds: subEvent.locationIds || [subEvent.locationId].filter(Boolean),
+      importance: "minor"
+    }));
+  return [majorEvent, ...subEvents];
+}
+
+function mapItemLocations(item) {
+  return item.locationIds.map(getShipMapLocation).filter(Boolean);
+}
+
+function isResidenceMapLocation(location) {
+  if (!location) return false;
+  if (location.type === "room" || location.id === shipMapData.residence.id) return true;
+  let parentId = location.parentId;
+  while (parentId) {
+    if (parentId === shipMapData.residence.id) return true;
+    parentId = getShipMapLocation(parentId)?.parentId;
+  }
+  return false;
+}
+
+function mapItemHtml(item, className) {
+  return `<div class="${className} ${item.importance === "minor" ? "minor" : "major"}" title="${escapeHtml(item.title || item.mapLabel)}">${escapeHtml(item.mapLabel)}</div>`;
+}
+
+function residenceRoomHtml(roomId, visualItems) {
+  const room = getShipMapLocation(roomId);
+  const events = visualItems.filter(item => item.locationIds.includes(roomId));
+  return `
+    <div class="map-room ${events.length ? "has-event" : ""}" style="--room-row:${room.grid.row};--room-column:${room.grid.column}" aria-label="${escapeHtml(room.name)}${events.length ? `・${escapeHtml(events.map(item => item.title).join("・"))}` : ""}">
+      <strong>${escapeHtml(room.roomNumber)}</strong>
+      ${events.length ? `<div class="map-room-events">${events.map(item => mapItemHtml(item, "map-room-event")).join("")}</div>` : ""}
+    </div>`;
+}
+
+function residenceMapHtml(visualItems) {
+  const commonAreaIds = shipMapData.residence.commonAreaIds;
+  const commonEvents = visualItems.filter(item => item.locationIds.some(locationId => commonAreaIds.includes(locationId)));
+  return `
+    <section class="residence-map-panel" aria-labelledby="residenceMapTitle">
+      <div class="map-panel-heading">
+        <div><h2 id="residenceMapTitle">V・VIP居住区</h2><span>PRINCES' QUARTERS</span></div>
+        <small>第1層</small>
+      </div>
+      <div class="residence-common-area ${commonEvents.length ? "has-event" : ""}">
+        <span>V・VIP共用部</span>
+        ${commonEvents.map(item => mapItemHtml(item, "map-common-event")).join("")}
+      </div>
+      <div class="residence-room-grid">
+        ${shipMapData.residence.roomIds.map(roomId => residenceRoomHtml(roomId, visualItems)).join("")}
+      </div>
+    </section>`;
+}
+
+function tierMapHtml(tier, visualItems) {
+  const tierItems = visualItems.filter(item => mapItemLocations(item).some(location => location.tierIds?.includes(tier.id)));
+  const exactTierItems = tierItems.filter(item => mapItemLocations(item).some(location => (
+    location.tierIds?.includes(tier.id) &&
+    location.type !== "ship" &&
+    location.type !== "external" &&
+    !isResidenceMapLocation(location)
+  )));
+  const areas = tier.areaIds
+    .map(getShipMapLocation)
+    .filter(Boolean);
+
+  return `
+    <div class="ship-tier ${tierItems.length ? "has-event" : ""}" data-map-tier="${tier.id}">
+      <strong class="ship-tier-name">${escapeHtml(tier.name)}</strong>
+      <div class="ship-tier-content">
+        <div class="ship-tier-areas">${areas.map(area => `<span>${escapeHtml(area.name)}</span>`).join("")}</div>
+        ${exactTierItems.length ? `<div class="ship-tier-events">${exactTierItems.map(item => mapItemHtml(item, "ship-tier-event")).join("")}</div>` : ""}
+      </div>
+    </div>`;
+}
+
+function overallMapHtml(visualItems) {
+  const shipWideItems = visualItems.filter(item => mapItemLocations(item).some(location => location.type === "ship"));
+  const externalItems = visualItems.filter(item => mapItemLocations(item).some(location => location.type === "external"));
+  return `
+    <section class="overall-map-panel" aria-labelledby="overallMapTitle">
+      <div class="map-panel-heading">
+        <div><h2 id="overallMapTitle">ブラックホエール号 全体マップ</h2><span>ALL TIERS</span></div>
+        <small>第1層―第5層</small>
+      </div>
+      ${shipWideItems.length ? `<div class="map-wide-event ship-wide">${shipWideItems.map(item => mapItemHtml(item, "map-wide-event-label")).join("")}</div>` : ""}
+      ${externalItems.length ? `<div class="map-wide-event external">船外：${externalItems.map(item => mapItemHtml(item, "map-wide-event-label")).join("")}</div>` : ""}
+      <div class="ship-tier-stack">
+        ${shipMapData.tiers.map(tier => tierMapHtml(tier, visualItems)).join("")}
+      </div>
+    </section>`;
+}
+
+function mapTimelineEventHtml(event, selected) {
+  return `
+    <button class="map-timeline-event ${selected ? "active" : ""}" data-map-event-id="${event.id}" type="button" aria-pressed="${selected}">
+      <span>${escapeHtml(mapEventTimeLabel(event))}</span>
+      <strong>${escapeHtml(event.title)}</strong>
+      <small>第${event.episode.number}話</small>
+    </button>`;
+}
+
+function renderMap() {
+  const events = getMapVisibleEvents();
+  const selectedEvent = getSelectedMapEvent(events);
+  const visualItems = getMapVisualItems(selectedEvent);
+
+  elements.viewContent.innerHTML = selectedEvent ? `
+    <section class="map-log-layout">
+      <div class="map-stack">
+        ${residenceMapHtml(visualItems)}
+        ${overallMapHtml(visualItems)}
+      </div>
+      <aside class="map-timeline-rail" aria-label="主要イベント時系列">
+        <div class="map-timeline-heading">
+          <span>SELECTED EVENT</span>
+          <strong>${escapeHtml(mapEventTimeLabel(selectedEvent))}</strong>
+          <p>${escapeHtml(selectedEvent.title)}</p>
+        </div>
+        <div class="map-timeline-list">
+          ${events.map(event => mapTimelineEventHtml(event, event.id === selectedEvent.id)).join("")}
+        </div>
+      </aside>
+    </section>` : `<div class="no-results">表示できるマップイベントがありません。</div>`;
+
+  const rail = elements.viewContent.querySelector(".map-timeline-list");
+  if (rail) requestAnimationFrame(() => { rail.scrollTop = app.mapTimelineScroll; });
+}
+
 function renderPlaceholder(type) {
   const title = type === "network" ? "相関画面" : "時系列画面";
   const message = type === "network"
@@ -805,7 +977,7 @@ function setView(view, options = {}) {
   elements.pageTitle.textContent = settings.title;
   elements.pageEnglish.textContent = settings.english;
   elements.pageDescription.textContent = settings.description;
-  elements.toolbar.hidden = view === "network" || view === "timeline" || app.detail;
+  elements.toolbar.hidden = view === "network" || view === "timeline" || view === "map" || app.detail;
   elements.searchInput.placeholder = settings.placeholder || "検索";
   render();
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -828,6 +1000,7 @@ function render() {
   if (app.view === "people") return renderPeople();
   if (app.view === "network") return renderNetwork();
   if (app.view === "timeline") return renderTimeline();
+  if (app.view === "map") return renderMap();
   renderPlaceholder(app.view);
 }
 
@@ -927,6 +1100,13 @@ elements.viewContent.addEventListener("click", event => {
     elements.toolbar.hidden = true;
     render();
     window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+  const mapEventButton = event.target.closest("[data-map-event-id]");
+  if (mapEventButton) {
+    app.mapTimelineScroll = mapEventButton.closest(".map-timeline-list")?.scrollTop || 0;
+    app.mapSelectedEventId = mapEventButton.dataset.mapEventId;
+    renderMap();
     return;
   }
   const axis = event.target.closest("[data-timeline-axis]");
