@@ -91,7 +91,52 @@ function getForceOrder(forceName) {
   return mafiaOrder[forceName] || 999;
 }
 
-function getForceRecords() {
+function getMonitoringState(character) {
+  if (character.monitoring && Array.isArray(character.monitoring.targets)) {
+    return {
+      targets: character.monitoring.targets.filter(Boolean),
+      active: character.monitoring.active !== false
+    };
+  }
+
+  const targets = Array.isArray(character.monitorFor) ? character.monitorFor.filter(Boolean) : [];
+  return { targets, active: targets.length > 0 };
+}
+
+function getMonitorAssignments(character, statusMode = app.statusMode) {
+  const monitoring = getMonitoringState(character);
+  const visibleTargets = statusMode === "safe" ? monitoring.targets.slice(0, 1) : monitoring.targets;
+
+  return visibleTargets.map((targetForce, historyIndex) => ({
+    monitor: character,
+    targetForce,
+    historyIndex,
+    isLast: historyIndex === monitoring.targets.length - 1,
+    active: monitoring.active && historyIndex === monitoring.targets.length - 1
+  }));
+}
+
+function monitorAssignmentLabel(assignment, hasSuccessor = false) {
+  if (app.statusMode === "safe") return "監視担当";
+  if (!assignment.isLast) return "配置変更";
+  if (!assignment.active) return "任務終了";
+  if (hasSuccessor) return "以前";
+  return assignment.historyIndex > 0 ? "最新" : "監視担当";
+}
+
+function monitoringHistoryHtml(character) {
+  const monitoring = getMonitoringState(character);
+  const visibleTargets = app.statusMode === "safe" ? monitoring.targets.slice(0, 1) : monitoring.targets;
+  if (!visibleTargets.length) return "監視先なし";
+
+  const items = visibleTargets.map(target => `<span>${escapeHtml(target)}</span>`);
+  if (app.statusMode === "latest" && !monitoring.active) {
+    items.push('<span class="monitor-complete">任務終了</span>');
+  }
+  return `<span class="monitor-history">${items.join('<i aria-hidden="true">→</i>')}</span>`;
+}
+
+function getForceRecords(statusMode = app.statusMode) {
   const forceNames = [...new Set(characters.map(character => character.force).filter(Boolean))];
 
   return forceNames
@@ -101,22 +146,21 @@ function getForceRecords() {
       const leader = members.find(character =>
         type === "マフィア" ? character.category === "組長" : character.category === "王子"
       );
-      const monitoring = characters.filter(character =>
-        character.force !== name &&
-        Array.isArray(character.monitorFor) &&
-        character.monitorFor.includes(name)
-      );
+      const monitoringAssignments = characters
+        .filter(character => character.force !== name)
+        .flatMap(character => getMonitorAssignments(character, statusMode))
+        .filter(assignment => assignment.targetForce === name)
+        .sort((a, b) => a.historyIndex - b.historyIndex);
+      const monitoring = [...new Map(monitoringAssignments.map(assignment => [assignment.monitor.id, assignment.monitor])).values()];
       const monitoringMembers = [...new Map([
         ...members.filter(character => character.category === "監視"),
         ...monitoring
       ].map(character => [character.id, character])).values()];
 
-      return { name, type, leader, members, monitoring, monitoringMembers };
+      return { name, type, leader, members, monitoring, monitoringAssignments, monitoringMembers };
     })
     .sort((a, b) => getForceOrder(a.name) - getForceOrder(b.name));
 }
-
-const forceRecords = getForceRecords();
 
 // Ver.1.0の人物データには、王子とマフィアの後ろ盾関係がないため、
 // 相関画面と勢力表示で共用する小さな対応表として分離しています。
@@ -339,7 +383,7 @@ function forceCardHtml(record) {
 
 function filterForces() {
   const keyword = app.search.trim().toLowerCase();
-  return forceRecords.filter(record => {
+  return getForceRecords().filter(record => {
     const groupMatch = app.group === "すべて" || record.type === app.group;
     const forceMatch = !app.forceFilter || record.name === app.forceFilter;
     const categoryMatch = !app.categoryFilter || record.members.some(member => member.category === app.categoryFilter);
@@ -369,17 +413,17 @@ function renderForces() {
   hydrateImages();
 }
 
-function memberCardHtml(character, isMonitoring = false) {
+function memberCardHtml(character, isMonitoring = false, monitoringLabel = "監視担当") {
   const deadClass = app.statusMode === "latest" && character.status === "死亡" ? "is-dead" : "";
   return `
     <article class="member-card ${isMonitoring ? "monitor" : ""} ${deadClass}" data-person-id="${character.id}" tabindex="0" role="button">
       ${imageHtml(character, "")}
-      <div><h4>${escapeHtml(character.name)}</h4><p>${escapeHtml(isMonitoring ? "監視担当" : character.category)}</p><p>${escapeHtml(character.subName || "")}</p></div>
+      <div><h4>${escapeHtml(character.name)}</h4><p>${escapeHtml(isMonitoring ? monitoringLabel : character.category)}</p><p>${escapeHtml(character.subName || "")}</p></div>
     </article>`;
 }
 
 function renderForceDetail(forceName) {
-  const record = forceRecords.find(item => item.name === forceName);
+  const record = getForceRecords().find(item => item.name === forceName);
   if (!record) return renderForces();
   const leader = record.leader || record.members[0];
   const regularMembers = record.members.filter(member => member !== leader);
@@ -399,7 +443,10 @@ function renderForceDetail(forceName) {
     </section>
     ${record.type === "王子陣営" && leader ? princeExtraHtml(leader) : ""}
     ${record.monitoring.length ? `
-      <section class="member-section"><h3>外部からの監視担当</h3><div class="member-grid">${record.monitoring.map(member => memberCardHtml(member, true)).join("")}</div></section>` : ""}
+      <section class="member-section"><h3>外部からの監視担当</h3><div class="member-grid monitoring-member-grid">${record.monitoringAssignments.map((assignment, index) => `
+        ${app.statusMode === "latest" && index > 0 ? '<div class="monitor-transition" aria-hidden="true">→</div>' : ""}
+        ${memberCardHtml(assignment.monitor, true, monitorAssignmentLabel(assignment, index < record.monitoringAssignments.length - 1))}
+      `).join("")}</div></section>` : ""}
     <section class="member-section"><h3>${record.type === "マフィア" ? "組織構成" : "所属メンバー"}</h3><div class="member-grid">${regularMembers.map(member => memberCardHtml(member)).join("")}</div></section>`;
   hydrateImages();
 }
@@ -416,363 +463,7 @@ function princeExtraHtml(prince) {
     <div class="detail-blocks">
       <section class="detail-block prince-info-block">
         <h3>王妃</h3>
-        ${mother ? imageHtml({ ...mother, groupType: "王子陣営" }, "prince-info-image") : ""}
-        <p class="prince-info-name">${escapeHtml(mother?.name || "不明")}</p>
-        <p class="prince-info-title">${escapeHtml(mother?.title || "情報未登録")}</p>
-      </section>
-      <section class="detail-block prince-info-block">
-        <h3>守護霊獣</h3>
-        ${beast ? imageHtml({ ...beast, groupType: "王子陣営" }, "prince-info-image") : ""}
-        <p class="prince-info-name">${escapeHtml(beast?.name || "未判明")}</p>
-        <p class="prince-info-description">${escapeHtml(beast?.description || "説明は未登録です。")}</p>
-      </section>
-      <section class="detail-block prince-info-block"><h3>念能力</h3>${abilityContent}</section>
-    </div>`;
-}
-
-function renderPersonDetail(id) {
-  const character = characters.find(item => String(item.id) === String(id));
-  if (!character) return renderPeople();
-  const monitoring = Array.isArray(character.monitorFor) ? character.monitorFor : [];
-  const ability = app.statusMode === "safe"
-    ? `<span class="redaction"></span><span class="classified">CLASSIFIED</span>`
-    : escapeHtml(character.nenAbility?.name || "未判明");
-
-  elements.viewContent.innerHTML = `
-    <div class="person-detail">
-      <button class="back-button" data-back="${escapeHtml(app.detail?.returnView || "people")}" type="button">← 前の画面に戻る</button>
-      <section class="detail-hero ${getGroupType(character) === "マフィア" ? "mafia" : ""}">
-        ${imageHtml(character, "hero-image")}
-        <div>
-          ${statusMarkup(character)}
-          <h2>${escapeHtml(character.name)}</h2>
-          <p>${escapeHtml(character.subName || character.category)}</p>
-          <div class="detail-meta"><span class="chip">${escapeHtml(character.force)}</span><span class="chip">${escapeHtml(character.category)}</span></div>
-          <p>${escapeHtml(character.description || "人物説明は現在整理中です。")}</p>
-        </div>
-      </section>
-      <div class="detail-blocks">
-        <section class="detail-block"><h3>念能力</h3><p>${ability}</p></section>
-        <section class="detail-block"><h3>所属勢力</h3><p><button class="text-button" data-force="${escapeHtml(character.force)}" type="button">${escapeHtml(character.force)} →</button></p></section>
-        <section class="detail-block"><h3>監視先</h3><p>${monitoring.length ? monitoring.map(escapeHtml).join("<br>") : "監視先なし"}</p></section>
-      </div>
-    </div>`;
-  hydrateImages();
-}
-
-function networkPortraitHtml(character, extraClass = "") {
-  return `<span class="network-portrait ${extraClass}">${imageHtml(character, "")}</span>`;
-}
-
-function princeNetworkNodeHtml(prince) {
-  const deadClass = app.statusMode === "latest" && prince.status === "死亡" ? "is-dead" : "";
-  return `
-    <article class="network-person-node ${deadClass}" data-person-id="${prince.id}" tabindex="0" role="button">
-      ${networkPortraitHtml(prince)}
-      <div class="network-node-copy">
-        <strong>${escapeHtml(prince.name)}</strong>
-        <small>${escapeHtml(prince.subName || "王子")}</small>
-        <button class="network-force-link" data-force="${escapeHtml(prince.force)}" type="button">${escapeHtml(prince.force)} →</button>
-      </div>
-      ${deadClass ? `<span class="network-death">死亡</span>` : ""}
-    </article>`;
-}
-
-function familyGroupHtml(group) {
-  const queenCharacter = { ...group.mother, force: "カキン王室" };
-  return `
-    <section class="relation-group family-group">
-      <button class="queen-node" data-queen-key="${escapeHtml(group.key)}" type="button">
-        ${networkPortraitHtml(queenCharacter, "queen-portrait")}
-        <span><strong>${escapeHtml(group.mother.name)}</strong><small>${escapeHtml(group.mother.title)}</small></span>
-        <i>王妃</i>
-      </button>
-      <div class="relation-connector family-connector" aria-hidden="true"><span></span></div>
-      <div class="relation-children">${group.princes.map(princeNetworkNodeHtml).join("")}</div>
-    </section>`;
-}
-
-function monitoringGroups() {
-  const groups = new Map();
-  characters.forEach(character => {
-    if (!Array.isArray(character.monitorFor)) return;
-    character.monitorFor.forEach(targetForce => {
-      if (!groups.has(targetForce)) groups.set(targetForce, []);
-      groups.get(targetForce).push(character);
-    });
-  });
-
-  return [...groups.entries()]
-    .map(([targetForce, monitors]) => ({
-      targetForce,
-      targetPrince: characters.find(character => character.force === targetForce && character.category === "王子"),
-      monitors
-    }))
-    .sort((a, b) => getForceOrder(a.targetForce) - getForceOrder(b.targetForce));
-}
-
-function monitoringGroupHtml(group) {
-  const target = group.targetPrince;
-  return `
-    <section class="relation-group monitoring-group">
-      <button class="network-force-node target-force-node" data-force="${escapeHtml(group.targetForce)}" type="button">
-        ${target ? networkPortraitHtml(target) : ""}
-        <span><strong>${escapeHtml(group.targetForce)}</strong><small>${escapeHtml(target?.name || "代表者情報未登録")}</small></span>
-        <i>監視先</i>
-      </button>
-      <div class="monitor-arrow" aria-hidden="true"><span>↑</span><small>監視</small></div>
-      <div class="monitor-list">
-        ${group.monitors.map(monitor => {
-          const deadClass = app.statusMode === "latest" && monitor.status === "死亡" ? "is-dead" : "";
-          return `
-            <article class="monitor-node ${deadClass}" data-person-id="${monitor.id}" tabindex="0" role="button">
-              ${networkPortraitHtml(monitor)}
-              <div><strong>${escapeHtml(monitor.name)}</strong><small>${escapeHtml(monitor.subName || monitor.category)}</small><button data-force="${escapeHtml(monitor.force)}" type="button">${escapeHtml(monitor.force)}</button></div>
-              <i>監視元</i>
-            </article>`;
-        }).join("")}
-      </div>
-    </section>`;
-}
-
-function mafiaRelationHtml(relation) {
-  const prince = characters.find(character => String(character.id) === String(relation.princeId));
-  const mafia = forceRecords.find(record => record.name === relation.mafiaForce);
-  if (!prince || !mafia) return "";
-
-  return `
-    <section class="mafia-relation-card">
-      <article class="backer-prince" data-person-id="${prince.id}" tabindex="0" role="button">
-        ${networkPortraitHtml(prince)}
-        <div><strong>${escapeHtml(prince.name)}</strong><small>${escapeHtml(prince.subName)}</small><button data-force="${escapeHtml(prince.force)}" type="button">${escapeHtml(prince.force)}</button></div>
-      </article>
-      <div class="backing-arrow" aria-hidden="true"><span>後ろ盾</span><b>→</b></div>
-      <button class="backed-mafia" data-force="${escapeHtml(mafia.name)}" type="button">
-        ${networkPortraitHtml(mafia.leader)}
-        <span><strong>${escapeHtml(mafia.name)}</strong><small>組長：${escapeHtml(mafia.leader?.name || "不明")}</small></span>
-      </button>
-    </section>`;
-}
-
-function renderNetwork() {
-  const monitorGroups = monitoringGroups();
-  const monitorCount = monitorGroups.reduce((total, group) => total + group.monitors.length, 0);
-  elements.viewContent.innerHTML = `
-    <div class="network-intro">
-      <div><strong>GROUPED RELATION VIEW</strong><p>自由配置ではなく、関係の種類ごとにグループ化して表示しています。</p></div>
-      <div class="network-legend"><span><i class="legend-line gold"></i>血縁</span><span><i class="legend-line steel"></i>監視</span><span><i class="legend-line red"></i>後ろ盾</span></div>
-    </div>
-
-    <section class="network-section" id="familyRelations">
-      <header class="network-section-heading"><div><span>ROYAL FAMILY</span><h2>王妃 → 王子 → 陣営</h2></div><p>${queenGroups.length}人の王妃・14人の王子</p></header>
-      <div class="family-grid">${queenGroups.map(familyGroupHtml).join("")}</div>
-    </section>
-
-    <section class="network-section" id="monitorRelations">
-      <header class="network-section-heading"><div><span>SURVEILLANCE</span><h2>監視元 → 監視先</h2></div><p>${monitorCount}名の監視担当</p></header>
-      <div class="monitor-grid">${monitorGroups.map(monitoringGroupHtml).join("")}</div>
-    </section>
-
-    <section class="network-section mafia-network-section" id="mafiaRelations">
-      <header class="network-section-heading"><div><span>ROYAL BACKING</span><h2>王子 → 後ろ盾となるマフィア</h2></div><p>${mafiaBackingRelations.length}組の関係</p></header>
-      <div class="mafia-relation-grid">${mafiaBackingRelations.map(mafiaRelationHtml).join("")}</div>
-    </section>`;
-  hydrateImages();
-}
-
-function renderQueenDetail(key) {
-  const group = queenGroups.find(item => item.key === key);
-  if (!group) return renderNetwork();
-  const queenCharacter = { ...group.mother, force: "カキン王室" };
-  elements.viewContent.innerHTML = `
-    <div class="person-detail">
-      <button class="back-button" data-back="network" type="button">← 相関画面に戻る</button>
-      <section class="detail-hero">
-        ${imageHtml(queenCharacter, "hero-image")}
-        <div><p>ROYAL FAMILY</p><h2>${escapeHtml(group.mother.name)}</h2><p>${escapeHtml(group.mother.title)}</p><p>王子たちの母。王妃を起点とした親子関係を表示しています。</p></div>
-      </section>
-      <section class="member-section"><h3>実子</h3><div class="member-grid">${group.princes.map(prince => memberCardHtml(prince)).join("")}</div></section>
-    </div>`;
-  hydrateImages();
-}
-
-function getEventPeople(event) {
-  return event.relatedPersonIds
-    .map(personId => characters.find(character => String(character.id) === String(personId)))
-    .filter(Boolean);
-}
-
-function getTimelineFilterOptions() {
-  const personIds = [...new Set(timelineEvents.flatMap(event => event.relatedPersonIds).map(String))];
-  const people = personIds
-    .map(id => characters.find(character => String(character.id) === id))
-    .filter(Boolean)
-    .sort((a, b) => a.name.localeCompare(b.name, "ja"));
-  const forces = [...new Set(timelineEvents.flatMap(event => event.relatedForces))]
-    .sort((a, b) => getForceOrder(a) - getForceOrder(b));
-  return { people, forces };
-}
-
-function filterTimelineEvents() {
-  const keyword = app.timelineSearch.trim().toLowerCase();
-  return timelineEvents.filter(event => {
-    if (app.statusMode === "safe" && event.spoiler?.hideInSafeMode) return false;
-    if (app.timelineType !== "すべて" && event.primaryType !== app.timelineType) return false;
-    if (app.timelinePerson && !event.relatedPersonIds.some(id => String(id) === app.timelinePerson)) return false;
-    if (app.timelineForce && !event.relatedForces.includes(app.timelineForce)) return false;
-
-    const peopleNames = getEventPeople(event).map(person => person.name).join(" ");
-    const searchText = [
-      event.title,
-      event.summary,
-      event.detail,
-      event.primaryType,
-      ...(event.tags || []),
-      peopleNames,
-      ...(event.relatedForces || [])
-    ].join(" ").toLowerCase();
-    return searchText.includes(keyword);
-  });
-}
-
-function sortTimelineEvents(events) {
-  const sorted = [...events].sort((a, b) => {
-    if (app.timelineAxis === "episode") {
-      return (
-        a.episode.number - b.episode.number ||
-        (a.episode.order || 999) - (b.episode.order || 999) ||
-        a.displayOrder - b.displayOrder
-      );
-    }
-
-    const aDay = a.voyage.day ?? 9999;
-    const bDay = b.voyage.day ?? 9999;
-    return (
-      (a.displayOrder ?? 9999) - (b.displayOrder ?? 9999) ||
-      aDay - bDay ||
-      (a.voyage.orderInDay ?? 9999) - (b.voyage.orderInDay ?? 9999) ||
-      a.episode.number - b.episode.number
-    );
-  });
-  return app.timelineSort === "desc" ? sorted.reverse() : sorted;
-}
-
-function timelineGroupLabel(event) {
-  if (app.timelineAxis === "episode") return `第${event.episode.number}話`;
-  return event.voyage.day == null ? "日時不明" : `航海${event.voyage.day}日目`;
-}
-
-function groupTimelineEvents(events) {
-  const groups = [];
-  events.forEach(event => {
-    const label = timelineGroupLabel(event);
-    let group = groups.find(item => item.label === label);
-    if (!group) {
-      group = { label, events: [] };
-      groups.push(group);
-    }
-    group.events.push(event);
-  });
-  return groups;
-}
-
-function eventTypeClass(type) {
-  const typeMap = {
-    "戦闘": "combat",
-    "死亡・離脱": "death",
-    "監視・配置": "monitoring",
-    "交渉": "negotiation",
-    "念能力": "nen",
-    "王室": "royal",
-    "マフィア": "mafia-event",
-    "ハンター協会": "hunter-event"
-  };
-  return typeMap[type] || "other-event";
-}
-
-function timelinePersonChips(event) {
-  const people = getEventPeople(event);
-  const visible = people.slice(0, 4);
-  return `
-    ${visible.map(person => `
-      <button class="event-person-chip" data-person-id="${person.id}" type="button">
-        ${networkPortraitHtml(person)}<span>${escapeHtml(person.name)}</span>
-      </button>`).join("")}
-    ${people.length > visible.length ? `<span class="more-chip">ほか${people.length - visible.length}名</span>` : ""}`;
-}
-
-function timelineForceChips(event) {
-  const visible = event.relatedForces.slice(0, 4);
-  return `
-    ${visible.map(force => `<button class="event-force-chip" data-force="${escapeHtml(force)}" type="button">${escapeHtml(force)}</button>`).join("")}
-    ${event.relatedForces.length > visible.length ? `<span class="more-chip">ほか${event.relatedForces.length - visible.length}勢力</span>` : ""}`;
-}
-
-function eventImageHtml(event) {
-  if (!event.image?.src) return "";
-
-  return `
-    <figure class="event-image">
-      <img src="${escapeHtml(event.image.src)}" alt="${escapeHtml(event.image.alt || "")}" loading="lazy" decoding="async" data-event-image>
-      ${event.image.caption ? `<figcaption>${escapeHtml(event.image.caption)}</figcaption>` : ""}
-    </figure>`;
-}
-
-function eventTimeText(event) {
-  if (app.timelineAxis === "episode") {
-    return event.voyage.day == null
-      ? "航海日不明"
-      : `航海${event.voyage.day}日目 ${event.voyage.timeLabel || "時刻不明"}`;
-  }
-  return `第${event.episode.number}話`;
-}
-
-function eventCardHtml(event) {
-  const expanded = app.expandedEventId === event.id;
-  const location = [event.location?.tier, event.location?.place].filter(Boolean).join("・") || "場所不明";
-  const estimated = [event.voyage.dayCertainty, event.voyage.orderCertainty, event.occurrenceCertainty].includes("estimated");
-
-  return `
-    <article class="timeline-event-card ${eventTypeClass(event.primaryType)} ${expanded ? "expanded" : ""}">
-      <div class="timeline-event-main ${event.image?.src ? "has-image" : ""}">
-        <div class="event-meta-column"><strong>${escapeHtml(event.voyage.timeLabel || "時刻不明")}</strong><small>${escapeHtml(eventTimeText(event))}</small></div>
-        ${eventImageHtml(event)}
-        <div class="event-copy">
-          <div class="event-title-row"><h3>${escapeHtml(event.title)}</h3><span class="event-type">${escapeHtml(event.primaryType)}</span></div>
-          <p>${escapeHtml(event.summary)}</p>
-          <div class="event-submeta"><span>${escapeHtml(location)}</span>${estimated ? `<span class="estimated-label">推定を含む</span>` : ""}</div>
-        </div>
-        <button class="event-expand-button" data-event-id="${event.id}" type="button">${expanded ? "閉じる" : "詳細を見る"} ${expanded ? "↑" : "→"}</button>
-      </div>
-      <div class="event-relations">
-        ${event.relatedPersonIds.length ? `<div><small>関係人物</small><div class="event-chip-list">${timelinePersonChips(event)}</div></div>` : ""}
-        ${event.relatedForces.length ? `<div><small>関係勢力</small><div class="event-chip-list">${timelineForceChips(event)}</div></div>` : ""}
-      </div>
-      ${expanded ? `
-        <div class="event-detail-panel">
-          <dl>
-            <div><dt>掲載話</dt><dd>第${event.episode.number}話</dd></div>
-            <div><dt>航海日時</dt><dd>${event.voyage.day == null ? "不明" : `${event.voyage.day}日目`} ${escapeHtml(event.voyage.timeLabel || "時刻不明")}</dd></div>
-            <div><dt>確度</dt><dd>${event.occurrenceCertainty === "estimated" ? "推定" : "確定"}</dd></div>
-          </dl>
-          ${event.detail ? `<p>${escapeHtml(event.detail)}</p>` : ""}
-          ${event.voyage.chronologyNote ? `<p class="chronology-note">時系列メモ：${escapeHtml(event.voyage.chronologyNote)}</p>` : ""}
-        </div>` : ""}
-    </article>`;
-}
-
-function renderTimeline() {
-  const options = getTimelineFilterOptions();
-  const events = sortTimelineEvents(filterTimelineEvents());
-  const groups = groupTimelineEvents(events);
-  const activeTypes = ["すべて", ...timelineEventTypes.filter(type => timelineEvents.some(event => event.primaryType === type))];
-
-  elements.viewContent.innerHTML = `
-    <section class="timeline-toolbar">
-      <label class="timeline-search"><span>⌕</span><input id="timelineSearchInput" type="search" value="${escapeHtml(app.timelineSearch)}" placeholder="事件名・人物名・勢力名で検索"></label>
-      <div class="timeline-control-row">
-        <div class="timeline-axis-switch">
-          <button class="${app.timelineAxis === "voyage" ? "active" : ""}" data-timeline-axis="voyage" type="button">航海日</button>
+        ${mo…4559 tokens truncated…== "voyage" ? "active" : ""}" data-timeline-axis="voyage" type="button">航海日</button>
           <button class="${app.timelineAxis === "episode" ? "active" : ""}" data-timeline-axis="episode" type="button">話数</button>
         </div>
         <div class="timeline-type-filters">${activeTypes.map(type => `<button class="${app.timelineType === type ? "active" : ""}" data-event-type="${escapeHtml(type)}" type="button">${escapeHtml(type)}</button>`).join("")}</div>
@@ -978,7 +669,7 @@ function renderPlaceholder(type) {
 }
 
 function populateFilters() {
-  const forceOptions = forceRecords.map(record => `<option value="${escapeHtml(record.name)}">${escapeHtml(record.name)}</option>`).join("");
+  const forceOptions = getForceRecords("safe").map(record => `<option value="${escapeHtml(record.name)}">${escapeHtml(record.name)}</option>`).join("");
   const categories = [...new Set(characters.map(character => character.category).filter(Boolean))].sort();
   elements.forceFilter.innerHTML = `<option value="">すべて</option>${forceOptions}`;
   elements.categoryFilter.innerHTML = `<option value="">すべて</option>${categories.map(category => `<option value="${escapeHtml(category)}">${escapeHtml(category)}</option>`).join("")}`;
