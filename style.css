@@ -280,30 +280,23 @@ button { color: inherit; }
 .monitor-arrow span { font-size: 17px; line-height: 1; }
 .monitor-arrow small { font-size: 7px; letter-spacing: .12em; }
 .monitor-list { display: grid; gap: 5px; }
+.monitor-transition { color: var(--steel); font-size: 18px; line-height: 1; text-align: center; }
+.monitoring-member-grid { display: flex; flex-wrap: wrap; align-items: stretch; }
+.monitoring-member-grid .member-card { flex: 1 1 180px; }
+.monitoring-member-grid .monitor-transition { display: grid; flex: 0 0 18px; place-items: center; }
 .monitor-node { position: relative; display: grid; grid-template-columns: 40px 1fr; gap: 7px; padding: 6px; border: 1px solid #384750; background: rgba(4,13,20,.75); cursor: pointer; }
 .monitor-node .network-portrait { width: 40px; height: 40px; }
 .monitor-node i { position: absolute; right: 4px; bottom: 4px; padding: 2px 4px; border: 1px solid var(--red); color: var(--red-soft); font-size: 7px; font-style: normal; }
 .monitor-node button { max-width: calc(100% - 40px); color: #b2635e; }
+.monitor-history { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+.monitor-history i { color: var(--steel); font-style: normal; }
+.monitor-history .monitor-complete { padding: 2px 6px; border: 1px solid var(--red); color: var(--red-soft); font-size: 9px; }
+.ability-name, .ability-description { display: block; }
+.ability-name { color: var(--gold-soft); }
+.ability-description { margin-top: 8px; color: var(--muted); font-size: 11px; line-height: 1.75; }
 .mafia-relation-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
 .mafia-relation-card { display: grid; grid-template-columns: minmax(0,1fr) 56px minmax(0,1fr); align-items: center; gap: 8px; padding: 11px; border: 1px solid var(--red); background: linear-gradient(100deg, rgba(9,22,31,.9), rgba(39,14,19,.7)); }
-.backer-prince { display: grid; grid-template-columns: 46px 1fr; gap: 7px; min-width: 0; cursor: pointer; }
-.backer-prince .network-portrait, .backed-mafia .network-portrait { width: 46px; height: 46px; }
-.backing-arrow { color: var(--red-soft); text-align: center; }
-.backing-arrow span { display: block; font-size: 8px; }
-.backing-arrow b { font-size: 19px; font-weight: 400; }
-.backed-mafia { display: grid; grid-template-columns: 46px 1fr; align-items: center; gap: 7px; min-width: 0; padding: 0; }
-.backed-mafia strong { color: #dec6bb; font-size: 12px; }
-
-.timeline-toolbar { padding: 13px; border: 1px solid var(--line); background: rgba(8,21,30,.82); }
-.timeline-search { display: flex; align-items: center; gap: 10px; padding: 10px 13px; border: 1px solid #34444e; background: rgba(3,12,18,.65); color: var(--muted); }
-.timeline-search span { font-size: 22px; }
-.timeline-search input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--text); }
-.timeline-control-row { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; margin-top: 10px; }
-.timeline-axis-switch { display: grid; grid-template-columns: repeat(2,100px); }
-.timeline-axis-switch button, .timeline-type-filters button, .timeline-sort { padding: 8px 12px; border: 1px solid var(--line); background: #091721; color: #858d91; cursor: pointer; }
-.timeline-axis-switch button:first-child { border-radius: 5px 0 0 5px; }
-.timeline-axis-switch button:last-child { border-radius: 0 5px 5px 0; }
-.timeline-axis-switch button.active, .timeline-type-filters button.active { border-color: var(--gold); background: rgba(189,143,75,.14); color: var(--gold-soft); }
+.backer-prince { display: grid…391 tokens truncated…rder-color: var(--gold); background: rgba(189,143,75,.14); color: var(--gold-soft); }
 .timeline-type-filters { display: flex; min-width: 0; overflow-x: auto; }
 .timeline-type-filters button { min-width: max-content; }
 .timeline-sort { border-radius: 5px; }
@@ -521,6 +514,8 @@ button { color: inherit; }
   .force-grid, .force-grid.mafia-grid { grid-template-columns: 1fr; }
   .force-card { grid-template-columns: 105px 1fr; }
   .member-grid { grid-template-columns: 1fr; }
+  .monitoring-member-grid { flex-direction: column; }
+  .monitoring-member-grid .member-card, .monitoring-member-grid .monitor-transition { flex-basis: auto; }
   .detail-hero, .person-detail .detail-hero { grid-template-columns: 90px 1fr; padding: 12px; gap: 13px; }
   .detail-hero .hero-image { width: 90px; }
   .detail-hero h2 { font-size: 22px; }
