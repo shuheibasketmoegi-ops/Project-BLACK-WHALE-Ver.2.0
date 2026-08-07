@@ -167,11 +167,11 @@ const timelineEvents = [
     voyage: {
       day: 1,
       dayCertainty: "confirmed",
-      time: null,
-      timeLabel: "未明（昼）",
+      time: "15:00",
+      timeLabel: "推定15:00頃",
       orderInDay: 5,
-      orderCertainty: "confirmed",
-      chronologyNote: "正確な時刻は不明。提示順に基づき配置"
+      orderCertainty: "estimated",
+      chronologyNote: "時刻は推定"
     },
     location: {
       tier: null,
@@ -256,7 +256,7 @@ const timelineEvents = [
     id: "event-0008",
     title: "クラピカ、念能力を開示",
     summary: "第1,3,5王子私設兵が1014号室に入室",
-    detail: "",
+    detail: "オイトが\"裏窓\"（リトルアイ）を発動し、1014号室の調査を開始",
     image: {
       src: "images/timeline/event-0008.png",
       alt: "念能力の一端を見せると話すクラピカ",
@@ -266,11 +266,11 @@ const timelineEvents = [
     voyage: {
       day: 1,
       dayCertainty: "confirmed",
-      time: null,
-      timeLabel: "未明（夕）",
+      time: "16:00",
+      timeLabel: "推定16:00頃",
       orderInDay: 8,
-      orderCertainty: "confirmed",
-      chronologyNote: "正確な時刻は不明。提示順に基づき配置"
+      orderCertainty: "estimated",
+      chronologyNote: "時刻は推定"
     },
     location: {
       tier: null,
@@ -289,7 +289,7 @@ const timelineEvents = [
     id: "event-0009",
     title: "モモゼ暗殺",
     summary: "第12王子モモゼが何者かによって暗殺される",
-    detail: "絶対時間（エンペラータイム）3時間経過し、クラピカ失神",
+    detail: "絶対時間（エンペラータイム）3時間経過し、クラピカ失神。\"裏窓\"（リトルアイ）使用開始から約1時間経過",
     image: {
       src: "images/timeline/event-0009.png",
       alt: "ベッドの上に倒れているモモゼ",
@@ -299,11 +299,11 @@ const timelineEvents = [
     voyage: {
       day: 1,
       dayCertainty: "confirmed",
-      time: null,
-      timeLabel: "未明（夕）",
+      time: "17:00",
+      timeLabel: "推定17:00頃",
       orderInDay: 9,
-      orderCertainty: "confirmed",
-      chronologyNote: "正確な時刻は不明。提示順に基づき配置"
+      orderCertainty: "estimated",
+      chronologyNote: "時刻は推定"
     },
     location: {
       tier: null,
