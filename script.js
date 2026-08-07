@@ -16,7 +16,7 @@ const app = {
   timelineSort: "asc",
   expandedEventId: null,
   mapSelectedEventId: "event-0001",
-  mapTimelineScroll: 0
+  mapTimelineScroll: { left: 0, top: 0 }
 };
 
 const elements = {
@@ -34,9 +34,7 @@ const elements = {
   forceFilter: document.getElementById("forceFilter"),
   categoryFilter: document.getElementById("categoryFilter"),
   clearFilters: document.getElementById("clearFilters"),
-  safeModeButton: document.getElementById("safeModeButton"),
-  latestModeButton: document.getElementById("latestModeButton"),
-  mobileMode: document.getElementById("mobileMode"),
+  statusModeButtons: document.querySelectorAll("[data-status-mode]"),
   viewContent: document.getElementById("viewContent")
 };
 
@@ -993,7 +991,8 @@ function mapTimelineEventHtml(event, selected) {
     </button>`;
 }
 
-function renderMap() {
+function renderMap(options = {}) {
+  const { restorePageScrollY = null } = options;
   const events = getMapVisibleEvents();
   const selectedEvent = getSelectedMapEvent(events);
   const visualItems = getMapVisualItems(selectedEvent);
@@ -1017,7 +1016,15 @@ function renderMap() {
     </section>` : `<div class="no-results">表示できるマップイベントがありません。</div>`;
 
   const rail = elements.viewContent.querySelector(".map-timeline-list");
-  if (rail) requestAnimationFrame(() => { rail.scrollTop = app.mapTimelineScroll; });
+  requestAnimationFrame(() => {
+    if (rail) {
+      rail.scrollLeft = app.mapTimelineScroll.left;
+      rail.scrollTop = app.mapTimelineScroll.top;
+    }
+    if (Number.isFinite(restorePageScrollY)) {
+      window.scrollTo({ top: restorePageScrollY, behavior: "auto" });
+    }
+  });
 }
 
 function renderPlaceholder(type) {
@@ -1059,10 +1066,18 @@ function setSidebarOpen(isOpen) {
   elements.menuButton.setAttribute("aria-expanded", String(isOpen));
 }
 
+function setStatusMode(mode) {
+  if (mode !== "safe" && mode !== "latest") return;
+  app.statusMode = mode;
+  render();
+}
+
 function render() {
-  elements.safeModeButton.classList.toggle("active", app.statusMode === "safe");
-  elements.latestModeButton.classList.toggle("active", app.statusMode === "latest");
-  elements.mobileMode.textContent = app.statusMode === "safe" ? "SAFE" : "LATEST";
+  elements.statusModeButtons.forEach(button => {
+    const active = button.dataset.statusMode === app.statusMode;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
 
   if (app.detail?.type === "force") return renderForceDetail(app.detail.id);
   if (app.detail?.type === "person") return renderPersonDetail(app.detail.id);
@@ -1157,8 +1172,9 @@ elements.clearFilters.addEventListener("click", () => {
   elements.categoryFilter.value = "";
   render();
 });
-elements.safeModeButton.addEventListener("click", () => { app.statusMode = "safe"; render(); });
-elements.latestModeButton.addEventListener("click", () => { app.statusMode = "latest"; render(); });
+elements.statusModeButtons.forEach(button => {
+  button.addEventListener("click", () => setStatusMode(button.dataset.statusMode));
+});
 
 elements.viewContent.addEventListener("click", event => {
   const force = event.target.closest("[data-force]");
@@ -1175,9 +1191,14 @@ elements.viewContent.addEventListener("click", event => {
   }
   const mapEventButton = event.target.closest("[data-map-event-id]");
   if (mapEventButton) {
-    app.mapTimelineScroll = mapEventButton.closest(".map-timeline-list")?.scrollTop || 0;
+    const rail = mapEventButton.closest(".map-timeline-list");
+    app.mapTimelineScroll = {
+      left: rail?.scrollLeft || 0,
+      top: rail?.scrollTop || 0
+    };
+    const pageScrollY = window.scrollY;
     app.mapSelectedEventId = mapEventButton.dataset.mapEventId;
-    renderMap();
+    renderMap({ restorePageScrollY: pageScrollY });
     return;
   }
   const axis = event.target.closest("[data-timeline-axis]");

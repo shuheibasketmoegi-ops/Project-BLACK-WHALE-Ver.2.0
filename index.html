@@ -36,8 +36,8 @@
 
       <section class="spoiler-control" aria-labelledby="spoilerTitle">
         <p id="spoilerTitle">SPOILER CONTROL</p>
-        <button id="safeModeButton" class="spoiler-button active" type="button">◉ SAFE MODE</button>
-        <button id="latestModeButton" class="spoiler-button" type="button">◌ LATEST</button>
+        <button id="safeModeButton" class="spoiler-button active" data-status-mode="safe" type="button" aria-pressed="true">◉ SAFE MODE</button>
+        <button id="latestModeButton" class="spoiler-button" data-status-mode="latest" type="button" aria-pressed="false">◌ LATEST</button>
         <div class="classified-label">▣ CLASSIFIED<br><small>LEVEL 7 / BLACK</small></div>
       </section>
     </aside>
@@ -47,8 +47,11 @@
     <main class="main-area">
       <header class="mobile-header">
         <button id="menuButton" class="icon-button" type="button" aria-label="メニューを開く">☰</button>
-        <span>BLACK WHALE COMMAND</span>
-        <span id="mobileMode">SAFE</span>
+        <span class="mobile-header-title">BLACK WHALE COMMAND</span>
+        <div class="mobile-mode-switch" role="group" aria-label="表示モード">
+          <button class="mobile-mode-button active" data-status-mode="safe" type="button" aria-pressed="true">SAFE</button>
+          <button class="mobile-mode-button" data-status-mode="latest" type="button" aria-pressed="false">LATEST</button>
+        </div>
       </header>
 
       <section class="page-heading">
