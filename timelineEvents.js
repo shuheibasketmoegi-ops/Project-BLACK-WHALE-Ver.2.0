@@ -226,7 +226,7 @@ const timelineEvents = [
     detail: "",
     image: {
       src: "images/timeline/event-0007.png",
-      alt: "指で輪を作る男性を見て驚く女性",
+      alt: "1013号室で肥大化したマラヤームの念獣",
       caption: ""
     },
     episode: { number: 366, order: 1 },
@@ -241,13 +241,13 @@ const timelineEvents = [
     },
     location: {
       tier: null,
-      place: "1004号室",
+      place: "1013号室",
       certainty: "confirmed"
     },
     primaryType: "念能力",
-    tags: ["念修行", "1004号室"],
-    relatedPersonIds: [4],
-    relatedForces: ["第4王子陣営"],
+    tags: ["守護霊獣", "1013号室"],
+    relatedPersonIds: [13, 1302, 1202],
+    relatedForces: ["第13王子陣営"],
     occurrenceCertainty: "confirmed",
     spoiler: { visibleFromEpisode: 366, hideInSafeMode: false },
     displayOrder: 7
