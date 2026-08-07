@@ -818,7 +818,7 @@ nenAbility: {
     category: "私設兵",
     status: "不明",
     description: "第4王子ツェリードニヒの私設兵。名前・詳細は未入力。",
-    image: "images/x.png"
+    image: "images/第4王子/410.png"
   },
   {
     id: 411,
@@ -2254,7 +2254,7 @@ guardianSpiritBeast: {
     category: "従事者",
     status: "不明",
     description: "第12王子モモゼ陣営の従事者。名前・詳細は未入力。",
-    image: "images/x.png"
+    image: "images/第12王子/1207.png"
   },
   {
     id: 1208,
@@ -2264,7 +2264,7 @@ guardianSpiritBeast: {
     category: "従事者",
     status: "不明",
     description: "第12王子モモゼ陣営の従事者。名前・詳細は未入力。",
-    image: "images/x.png"
+    image: "images/第12王子/1208.png"
   },
   {
     id: 1209,
