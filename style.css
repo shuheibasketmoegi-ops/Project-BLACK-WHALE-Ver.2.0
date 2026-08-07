@@ -380,10 +380,11 @@ button { color: inherit; }
   gap: 14px;
   height: calc(100dvh - 150px);
   min-height: 620px;
+  align-items: stretch;
 }
 .map-stack { display: grid; min-width: 0; grid-template-rows: minmax(210px,.82fr) minmax(320px,1.18fr); gap: 12px; }
 .residence-map-panel, .overall-map-panel, .map-timeline-rail { border: 1px solid var(--line); background: rgba(8,21,30,.88); }
-.residence-map-panel, .overall-map-panel { min-width: 0; padding: 12px 14px; overflow: hidden; }
+.residence-map-panel, .overall-map-panel { min-width: 0; padding: 12px 14px; overflow-x: hidden; overflow-y: auto; }
 .overall-map-panel { display: flex; flex-direction: column; }
 .map-panel-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
 .map-panel-heading > div { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
@@ -395,24 +396,23 @@ button { color: inherit; }
   border: 1px solid #34444e; background: rgba(3,12,18,.55); color: #8e9699; font-size: 9px;
 }
 .residence-common-area.has-event { border: 3px solid var(--gold); background: rgba(189,143,75,.11); color: var(--gold-soft); }
-.map-common-event { min-width: 0; color: #e5d2b2; font-size: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.map-common-event { min-width: 0; color: #e5d2b2; font-size: 10px; line-height: 1.4; overflow-wrap: anywhere; white-space: normal; }
 .map-common-event.minor { color: #aeb6b9; }
-.residence-room-grid { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); grid-template-rows: repeat(2,minmax(65px,1fr)); gap: 6px; height: calc(100% - 67px); }
+.residence-room-grid { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); grid-template-rows: repeat(2,minmax(65px,auto)); align-content: start; gap: 6px; height: auto; }
 .map-room {
-  grid-row: var(--room-row); grid-column: var(--room-column); min-width: 0; padding: 5px 6px;
-  border: 1px solid #34444e; background: #0b1721; color: #8c969b; overflow: hidden;
+  grid-row: var(--room-row); grid-column: var(--room-column); min-width: 0; min-height: 65px; padding: 5px 6px;
+  border: 1px solid #34444e; background: #0b1721; color: #8c969b;
 }
 .map-room.has-event { border: 3px solid var(--gold); background: rgba(189,143,75,.12); box-shadow: inset 0 0 0 1px #72582f; }
 .map-room > strong { display: block; color: #b9b1a4; font: 9px monospace; }
 .map-room-events { display: grid; gap: 2px; margin-top: 4px; }
 .map-room-event {
-  display: -webkit-box; color: #ead5b4; font-size: 8px; line-height: 1.35;
-  overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  color: #ead5b4; font-size: 8px; line-height: 1.35; overflow-wrap: anywhere; white-space: normal;
 }
 .map-room-event.minor { color: #aab3b7; }
-.map-wide-event { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; padding: 6px 9px; border-left: 3px solid var(--gold); background: rgba(189,143,75,.09); color: var(--gold-soft); font-size: 9px; }
+.map-wide-event { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 6px; padding: 6px 9px; border-left: 3px solid var(--gold); background: rgba(189,143,75,.09); color: var(--gold-soft); font-size: 9px; }
 .map-wide-event.external { border-left-color: var(--red-soft); background: rgba(166,63,59,.09); color: var(--red-soft); }
-.map-wide-event-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.map-wide-event-label { min-width: 0; overflow-wrap: anywhere; white-space: normal; }
 .ship-tier-stack { display: grid; flex: 1; grid-template-rows: repeat(5,minmax(48px,1fr)); gap: 3px; min-height: 0; }
 .ship-tier {
   display: grid; grid-template-columns: 55px minmax(0,1fr); align-items: center; width: var(--tier-width,100%); margin-inline: auto; padding: 4px 12px;
@@ -429,8 +429,8 @@ button { color: inherit; }
 .ship-tier-content { min-width: 0; }
 .ship-tier-areas { display: flex; flex-wrap: wrap; gap: 1px 9px; color: #748087; font-size: 7px; }
 .ship-tier-areas span::before { margin-right: 3px; color: #4b5a63; content: "·"; }
-.ship-tier-events { display: flex; gap: 7px; min-width: 0; margin-top: 2px; }
-.ship-tier-event { min-width: 0; color: #ebd6b4; font-size: 9px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ship-tier-events { display: flex; flex-wrap: wrap; gap: 3px 7px; min-width: 0; margin-top: 2px; }
+.ship-tier-event { min-width: 0; flex: 1 1 180px; color: #ebd6b4; font-size: 9px; font-weight: 500; line-height: 1.35; overflow-wrap: anywhere; white-space: normal; }
 .ship-tier-event.minor { color: #aeb6b9; font-weight: 400; }
 .map-timeline-rail { display: flex; min-height: 0; flex-direction: column; overflow: hidden; }
 .map-timeline-heading { padding: 13px; border-bottom: 1px solid #5b4931; background: rgba(5,14,22,.82); }
@@ -506,8 +506,17 @@ button { color: inherit; }
   }
   .sidebar.open + .sidebar-backdrop { opacity: 1; pointer-events: auto; }
   .main-area { margin: 0; padding: 0 14px 28px; }
-  .mobile-header { display: flex; height: 54px; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); color: var(--gold-soft); font: 10px monospace; letter-spacing: .08em; }
+  .mobile-header {
+    position: sticky; top: 0; z-index: 15; display: grid; height: 54px;
+    grid-template-columns: 36px minmax(0,1fr) auto; align-items: center; gap: 6px;
+    border-bottom: 1px solid var(--line); background: rgba(5,14,22,.96); color: var(--gold-soft);
+    font: 10px monospace; letter-spacing: .08em; backdrop-filter: blur(8px);
+  }
+  .mobile-header-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .icon-button { border: 0; background: transparent; font-size: 22px; }
+  .mobile-mode-switch { display: grid; grid-template-columns: repeat(2,auto); padding: 2px; border: 1px solid var(--line); border-radius: 5px; background: #08131c; }
+  .mobile-mode-button { min-width: 48px; padding: 6px 7px; border: 0; border-radius: 3px; background: transparent; color: #788087; font: 9px monospace; cursor: pointer; }
+  .mobile-mode-button.active { background: rgba(189,143,75,.18); color: var(--gold-soft); box-shadow: inset 0 0 0 1px var(--gold); }
   .mobile-nav { position: fixed; inset: auto 0 0; z-index: 40; display: grid; grid-template-columns: repeat(5,1fr); height: 64px; border-top: 1px solid #5b4931; background: rgba(5,14,22,.98); }
   .mobile-nav button { border: 0; background: transparent; color: #777f84; font-size: 10px; }
   .mobile-nav button span { display: block; margin-bottom: 3px; font-size: 19px; }
