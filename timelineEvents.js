@@ -124,7 +124,7 @@ const timelineEvents = [
     id: "event-0004",
     title: "ワブル王子警護兵が壊滅",
     summary: "1014号室の警護が2人になる",
-    detail: "",
+    detail: "クラピカの絶対時間（エンペラータイム）開始。1秒につき1時間寿命が縮まる",
     image: {
       src: "images/timeline/event-0004.png",
       alt: "1014号室で警護人数について話すクラピカたち",
@@ -157,7 +157,7 @@ const timelineEvents = [
     id: "event-0005",
     title: "ビンセント襲撃",
     summary: "第1王子私設兵ビンセントが1014号室を襲撃",
-    detail: "クラピカの絶対時間（エンペラータイム）開始。1秒につき1時間寿命が縮まる。",
+    detail: "",
     image: {
       src: "images/timeline/event-0005.png",
       alt: "大柄な男性に肩を押さえられるクラピカ",
@@ -221,9 +221,9 @@ const timelineEvents = [
   },
   {
     id: "event-0007",
-    title: "ツェリードニヒ、念修行開始",
-    summary: "第4王子ツェリードニヒが念修行を開始する。",
-    detail: "私設兵テータが指導を行う。",
+    title: "マラヤームの念獣が肥大化",
+    summary: "各部屋で変化が起き始める",
+    detail: "",
     image: {
       src: "images/timeline/event-0007.png",
       alt: "指で輪を作る男性を見て驚く女性",
