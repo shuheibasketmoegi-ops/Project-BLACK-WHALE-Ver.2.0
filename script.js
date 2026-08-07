@@ -751,10 +751,12 @@ function timelinePersonChips(event) {
 }
 
 function timelineForceChips(event) {
-  const visible = event.relatedForces.slice(0, 4);
+  const sortedForces = [...event.relatedForces]
+    .sort((a, b) => getForceOrder(a) - getForceOrder(b) || a.localeCompare(b, "ja"));
+  const visible = sortedForces.slice(0, 4);
   return `
     ${visible.map(force => `<button class="event-force-chip" data-force="${escapeHtml(force)}" type="button">${escapeHtml(force)}</button>`).join("")}
-    ${event.relatedForces.length > visible.length ? `<span class="more-chip">ほか${event.relatedForces.length - visible.length}勢力</span>` : ""}`;
+    ${sortedForces.length > visible.length ? `<span class="more-chip">ほか${sortedForces.length - visible.length}勢力</span>` : ""}`;
 }
 
 function eventImageHtml(event) {

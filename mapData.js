@@ -143,7 +143,6 @@ const eventMapLocations = {
   "event-0012": ["room-1014"],
   "event-0013": ["room-1014"],
   "event-0014": ["room-1014"],
-  "event-0015": ["room-1013"],
   "event-0016": ["room-1002"],
   "event-0017": ["room-1011"],
   "event-0018": ["room-1009"],
@@ -357,6 +356,69 @@ const mapSubEvents = [
     parentEventId: "event-0009",
     locationId: "room-1014",
     title: "クラピカが失神"
+  },
+
+  {
+    id: "subevent-0013-01",
+    parentEventId: "event-0013",
+    locationId: "tier-1",
+    title: "モモゼの遺体が棺に納められる"
+  },
+  {
+    id: "subevent-0013-02",
+    parentEventId: "event-0013",
+    locationId: "tier-5",
+    title: "旅団がブオール一家と接触"
+  },
+  {
+    id: "subevent-0013-03",
+    parentEventId: "event-0013",
+    locationId: "room-1006",
+    title: "タイソンの守護霊獣が警護に憑りつき始める"
+  },
+  {
+    id: "subevent-0013-04",
+    parentEventId: "event-0013",
+    locationId: "room-1008",
+    title: "リハンがサレサレの守護霊獣を分析"
+  },
+  {
+    id: "subevent-0013-05",
+    parentEventId: "event-0013",
+    locationId: "room-1012",
+    title: "ハンゾーがタフディーを暗殺"
+  },
+  {
+    id: "subevent-0013-06",
+    parentEventId: "event-0013",
+    locationId: "room-1010",
+    title: "カイザルがセイコ王妃を尋問"
+  },
+
+  {
+    id: "subevent-0014-01",
+    parentEventId: "event-0014",
+    locationId: "room-1013",
+    title: "マラヤームの守護霊獣が念空間を生成"
+  },
+
+  {
+    id: "subevent-0016-01",
+    parentEventId: "event-0016",
+    locationId: "room-1001",
+    title: "ベンジャミンがムッセの能力を継承"
+  },
+  {
+    id: "subevent-0016-02",
+    parentEventId: "event-0016",
+    locationId: "room-1013",
+    title: "ウェルゲーがクラピカと交信"
+  },
+  {
+    id: "subevent-0016-03",
+    parentEventId: "event-0016",
+    locationId: "room-1014",
+    title: "ハンゾーの分身がクラピカに相談"
   }
 ];
 
