@@ -512,53 +512,6 @@ const timelineEvents = [
     "displayOrder": 14
   },
   {
-    "id": "event-0015",
-    "title": "マラヤームの守護霊獣、能力発動",
-    "summary": "",
-    "detail": "",
-    "image": {
-      "src": "images/timeline/event-0015.png",
-      "alt": "マラヤームの守護霊獣と向き合う警護兵",
-      "caption": ""
-    },
-    "episode": {
-      "number": 372,
-      "order": 2
-    },
-    "voyage": {
-      "day": 2,
-      "dayCertainty": "confirmed",
-      "time": null,
-      "timeLabel": "未明（昼）",
-      "orderInDay": 6,
-      "orderCertainty": "confirmed",
-      "chronologyNote": "正確な時刻は不明。提示順に基づき配置"
-    },
-    "location": {
-      "tier": null,
-      "place": "1013号室",
-      "certainty": "confirmed"
-    },
-    "primaryType": "念能力",
-    "tags": [
-      "守護霊獣",
-      "能力発動",
-      "1013号室"
-    ],
-    "relatedPersonIds": [
-      13
-    ],
-    "relatedForces": [
-      "第13王子陣営"
-    ],
-    "occurrenceCertainty": "confirmed",
-    "spoiler": {
-      "visibleFromEpisode": 372,
-      "hideInSafeMode": false
-    },
-    "displayOrder": 15
-  },
-  {
     "id": "event-0016",
     "title": "カミーラvsムッセ",
     "summary": "第2王子カミーラと第1王子私設兵ムッセが接敵",
