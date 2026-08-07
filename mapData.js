@@ -135,7 +135,7 @@ const eventMapLocations = {
   "event-0004": ["room-1014"],
   "event-0005": ["room-1014"],
   "event-0006": ["room-1003"],
-  "event-0007": ["room-1004"],
+  "event-0007": ["room-1013"],
   "event-0008": ["room-1014"],
   "event-0009": ["room-1012"],
   "event-0010": ["room-1014"],
@@ -191,7 +191,174 @@ const eventMapLocations = {
   "event-0060": ["room-1014"]
 };
 
-const mapSubEvents = [];
+const mapSubEvents = [
+  {
+    id: "subevent-0002-01",
+    parentEventId: "event-0002",
+    locationId: "area-tier-1-guest-house",
+    title: "出航セレモニー"
+  },
+
+  {
+    id: "subevent-0004-01",
+    parentEventId: "event-0004",
+    locationId: "area-tier-1-guest-house",
+    title: "ハルケンブルグ、王に継承戦の辞退を表明"
+  },
+  {
+    id: "subevent-0004-02",
+    parentEventId: "event-0004",
+    locationId: "room-1001",
+    title: "各部屋に私設兵を派遣"
+  },
+  {
+    id: "subevent-0004-03",
+    parentEventId: "event-0004",
+    locationId: "room-1004",
+    title: "守護霊獣の存在を確認"
+  },
+  {
+    id: "subevent-0004-04",
+    parentEventId: "event-0004",
+    locationId: "room-1006",
+    title: "守護霊獣の存在を確認"
+  },
+  {
+    id: "subevent-0004-05",
+    parentEventId: "event-0004",
+    locationId: "room-1007",
+    title: "守護霊獣の存在を確認"
+  },
+  {
+    id: "subevent-0004-06",
+    parentEventId: "event-0004",
+    locationId: "room-1008",
+    title: "守護霊獣の存在を確認"
+  },
+  {
+    id: "subevent-0004-07",
+    parentEventId: "event-0004",
+    locationId: "room-1009",
+    title: "守護霊獣の存在を確認"
+  },
+  {
+    id: "subevent-0004-08",
+    parentEventId: "event-0004",
+    locationId: "room-1012",
+    title: "モモゼ王子の警護が6人を除き1013号室に移動"
+  },
+
+  {
+    id: "subevent-0005-01",
+    parentEventId: "event-0005",
+    locationId: "room-1001",
+    title: "クラピカに通信"
+  },
+  {
+    id: "subevent-0005-02",
+    parentEventId: "event-0005",
+    locationId: "room-1003",
+    title: "クラピカに通信（15分後に面会）"
+  },
+  {
+    id: "subevent-0005-03",
+    parentEventId: "event-0005",
+    locationId: "room-1005",
+    title: "クラピカに通信（1時間後に再連絡）"
+  },
+
+  {
+    id: "subevent-0007-01",
+    parentEventId: "event-0007",
+    locationId: "room-1001",
+    title: "ヒュリコフが1014号室に派遣"
+  },
+  {
+    id: "subevent-0007-02",
+    parentEventId: "event-0007",
+    locationId: "room-1002",
+    title: "カミーラとドゥアズル王妃が会食"
+  },
+  {
+    id: "subevent-0007-03",
+    parentEventId: "event-0007",
+    locationId: "room-1003",
+    title: "ワブル王子陣営との面会が終了"
+  },
+  {
+    id: "subevent-0007-04",
+    parentEventId: "event-0007",
+    locationId: "room-1004",
+    title: "ツェリードニヒが念修行を開始"
+  },
+  {
+    id: "subevent-0007-05",
+    parentEventId: "event-0007",
+    locationId: "room-1005",
+    title: "マオールが1014号室と通信、面会に向かう"
+  },
+  {
+    id: "subevent-0007-06",
+    parentEventId: "event-0007",
+    locationId: "room-1006",
+    title: "タイソン教典が配布される"
+  },
+  {
+    id: "subevent-0007-07",
+    parentEventId: "event-0007",
+    locationId: "room-1007",
+    title: "バショウが王子と親交を深める"
+  },
+  {
+    id: "subevent-0007-08",
+    parentEventId: "event-0007",
+    locationId: "room-1008",
+    title: "サレサレ、晩餐会でのライブを企画"
+  },
+  {
+    id: "subevent-0007-09",
+    parentEventId: "event-0007",
+    locationId: "room-1009",
+    title: "ハルケンブルグが目覚める"
+  },
+  {
+    id: "subevent-0007-10",
+    parentEventId: "event-0007",
+    locationId: "room-1010",
+    title: "カチョウ、偽りの姿で周囲を威圧する"
+  },
+  {
+    id: "subevent-0007-11",
+    parentEventId: "event-0007",
+    locationId: "room-1011",
+    title: "フウゲツ、カチョウとの思い出を振り返る"
+  },
+  {
+    id: "subevent-0007-12",
+    parentEventId: "event-0007",
+    locationId: "room-1012",
+    title: "各監視警護兵がモモゼ暗殺を画策"
+  },
+  {
+    id: "subevent-0007-13",
+    parentEventId: "event-0007",
+    locationId: "tier-5",
+    title: "クロロが乗客に紛れる"
+  },
+
+  {
+    id: "subevent-0009-01",
+    parentEventId: "event-0009",
+    locationId: "room-1004",
+    title: "ツェリードニヒが\"凝\"を習得"
+  },
+  {
+    id: "subevent-0009-02",
+    parentEventId: "event-0009",
+    locationId: "room-1014",
+    title: "クラピカが失神"
+  }
+];
 
 function getShipMapLocation(locationId) {
   return shipMapData.locations.find(location => location.id === locationId) || null;
@@ -252,8 +419,10 @@ function validateShipMapData(events) {
   const locationIdSet = new Set(locationIds);
   const tierIdSet = new Set(shipMapData.tiers.map(tier => tier.id));
   const eventIdSet = new Set(events.map(event => event.id));
+  const subEventIds = mapSubEvents.map(subEvent => subEvent.id);
 
   if (locationIdSet.size !== locationIds.length) errors.push("場所IDが重複しています。");
+  if (new Set(subEventIds).size !== subEventIds.length) errors.push("小イベントIDが重複しています。");
 
   shipMapData.locations.forEach(location => {
     (location.tierIds || []).forEach(tierId => {
@@ -284,6 +453,7 @@ function validateShipMapData(events) {
   mapSubEvents.forEach(subEvent => {
     if (!eventIdSet.has(subEvent.parentEventId)) errors.push(`${subEvent.id}: 未定義の親イベント ${subEvent.parentEventId}`);
     if (!locationIdSet.has(subEvent.locationId)) errors.push(`${subEvent.id}: 未定義の場所ID ${subEvent.locationId}`);
+    if (!subEvent.title) errors.push(`${subEvent.id}: 小イベント名が未設定です。`);
   });
 
   return errors;
